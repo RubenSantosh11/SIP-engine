@@ -1,0 +1,12 @@
+{
+ "record_id": "tradingqna_d8b003bb2be3",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "cannot invest after fund restriction",
+   "quote": "I am not able to invest even through an AMC SIP",
+   "verified": true
+  }
+ ]
+}

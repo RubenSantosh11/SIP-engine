@@ -1,0 +1,18 @@
+{
+ "record_id": "appstore_e1c72601f149",
+ "source": "appstore",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "could not set up autopay",
+   "quote": "I was unable to set up autopay",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "lost trust after money dispute",
+   "quote": "this app is fraud",
+   "verified": true
+  }
+ ]
+}

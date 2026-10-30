@@ -1,0 +1,15 @@
+{
+ "record_id": "youtube_a2f6b94acd9d",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "amount too high, cannot reduce",
+   "quote": "there no option to reduce amount"
+  },
+  {
+   "question": "behaviour",
+   "code": "wants to restart with lower amount",
+   "quote": "need to start new with lesser amount"
+  }
+ ]
+}

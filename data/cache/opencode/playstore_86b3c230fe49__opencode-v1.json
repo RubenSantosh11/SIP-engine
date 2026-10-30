@@ -1,0 +1,18 @@
+{
+ "record_id": "playstore_86b3c230fe49",
+ "source": "playstore",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "missing flexible SIP options",
+   "quote": "Zerodha Coin provides features like quarterly SIPs and AMC SIPs, which I couldn't find on Groww",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "switched platform for features",
+   "quote": "I decided to shift from Groww to Zerodha Coin",
+   "verified": true
+  }
+ ]
+}

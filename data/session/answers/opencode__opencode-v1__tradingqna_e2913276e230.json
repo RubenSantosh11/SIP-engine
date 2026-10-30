@@ -1,0 +1,15 @@
+{
+ "record_id": "tradingqna_e2913276e230",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "deactivates SIPs weekly as workaround",
+   "quote": "we are keep going to deactivate the SIP weekly at least once"
+  },
+  {
+   "question": "stop",
+   "code": "multiple executions on one day",
+   "quote": "minimum 3 SIPs are executing on same day and same time"
+  }
+ ]
+}

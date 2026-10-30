@@ -1,0 +1,12 @@
+{
+ "record_id": "tradingqna_ea0a1a2577f1",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "pausing via AMC needs physical letter",
+   "quote": "having to send a physical request letter to the AMC and having to wait for a month to stop",
+   "verified": true
+  }
+ ]
+}

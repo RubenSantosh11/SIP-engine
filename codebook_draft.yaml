@@ -1,0 +1,649 @@
+# DRAFT codebook from Stage 3 open coding. Curate it into codebook.yaml (merge, rename, delete),
+# set status: final, and log your edits in corrections_log.md. draft_* fields are for your reference.
+status: draft
+addressability_scores:
+  high: 1.0
+  medium: 0.6
+  low: 0.3
+themes:
+- id: beh_steady_continuing
+  question: behaviour
+  name: Steady continuing
+  definition: Writer has kept SIPs going for months or years with no major issues.
+  include: Years of continuing, steady accumulation, easy ongoing management.
+  exclude: Continuing despite losses (use beh_holding_through_falls).
+  example: using this application from last 3 years for sip management
+  example_source: appstore
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 9
+  draft_n_records: 8
+  draft_sources:
+  - appstore
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - was steady for 3 years
+  - long-term continuing investor
+  - long-time SIP user adding new SIPs
+  - continuing since 2020 with easy management
+  - easy SIP management
+  - steady accumulation keeps them going
+  - 5 years in
+  - 1.5 years in and continuing
+  - agent-started SIPs still running
+- id: beh_monitoring_returns
+  question: behaviour
+  name: 'Watching returns: flat, negative or disappointing'
+  definition: Writer tracks returns in the months/years after starting and reports flat, negative or disappointing
+    results, or feeling misled.
+  include: Being at a loss, zero returns after N years, comparing to index levels, feeling misled about returns.
+  exclude: Stopping because of returns (use stop_poor_returns).
+  example: I started sip in small cap fund in jan 2024 and continue till now
+  example_source: youtube
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 9
+  draft_n_records: 8
+  draft_sources:
+  - appstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - 3 years in, comparing fund performance
+  - tracks portfolio regularly
+  - sitting on losses after peak entry
+  - feels misled by creator advice
+  - flat value after 2 years
+  - disappointed by single-digit returns
+  - zero returns for over two years but continued
+  - tracks returns against index level
+  - 2 years in and at a loss
+- id: beh_switching_restructuring
+  question: behaviour
+  name: Switching / restructuring holdings
+  definition: Switches platform or plan, restarts in another mode, trims funds, or times cancellation around exit
+    load.
+  include: Platform switches, regular to direct, restarting mode, too many funds, exit-load timing.
+  exclude: Switch-driven stops (use stop_switch_plan_or_platform).
+  example: I just switched to coins from my previous Brokerage house because of facility of Direct funds
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 7
+  draft_n_records: 7
+  draft_sources:
+  - tradingqna
+  draft_member_codes:
+  - delays cancellation to avoid exit load
+  - switched platform for direct funds
+  - restarted SIP in new mode
+  - 5-year SIP investor switching platform
+  - cancelled and restarted SIP in another mode
+  - learns about commission and reconsiders
+  - spread over too many funds, wants to trim
+- id: beh_holding_through_falls
+  question: behaviour
+  name: Holding through losses or falls
+  definition: Keeps investing despite losses or market falls, often reassured by experience or education.
+  include: '''Will not stop'', continuing despite loss, SIP beat own picking, reassurance from content.'
+  exclude: Writer who did stop (use stop_market_fall_panic).
+  example: I hv tried to buy stocks myself where I got xirr of 10% but my sip portfolio xirr is 17%
+  example_source: youtube
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 6
+  draft_n_records: 6
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - SIP beat own stock picking, keeps SIP
+  - continues despite loss
+  - learned regular SIP beats timing
+  - won't stop in falling market
+  - education reassured, will continue
+  - keeps SIP while holding cash for correction
+- id: beh_pause_skip_reduce_intent
+  question: behaviour
+  name: Wanting to pause, skip or reduce
+  definition: Considers pausing, skipping a month, reducing or restarting lower rather than cancelling.
+  include: Skip this month, pause vs exit, restart with lower amount, pause not cancel.
+  exclude: Actual cancellation (use stop_* themes).
+  example: I wish to discontinue SIP investments in couple of Direct Plan Mutual funds where I have been invested
+    for less than a year
+  example_source: tradingqna
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 7
+  draft_n_records: 6
+  draft_sources:
+  - appstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - wants to skip an instalment
+  - under a year in, wants to discontinue
+  - weighing pause vs exit
+  - wants to pause not cancel
+  - new SIP, wants pause/edit
+  - wants to restart with lower amount
+  - wants skip-this-month option
+- id: beh_increase_stepup
+  question: behaviour
+  name: Increasing / step-up
+  definition: Wants to or does increase the SIP amount or use step-up.
+  include: Step-up, top-up, increase amount after N years.
+  exclude: Being unable to modify (code that under stop_missing_controls too if it leads to stopping).
+  example: after 2 ya 3 year's baad sip ki emi increase kr skte hai
+  example_source: youtube
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 5
+  draft_n_records: 5
+  draft_sources:
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - long-time user wants to increase via step-up
+  - increasing SIP via step-up
+  - wants to increase SIP amount
+  - wants to increase SIP after 2-3 years
+  - wants to increase SIP amount
+- id: beh_manual_workarounds
+  question: behaviour
+  name: Manual workarounds and forgetting
+  definition: Has to pay or act manually each month (or deactivate SIPs), and sometimes forgets and skips.
+  include: Manual payment, weekly deactivation, changing bank for autopay, forgetting manual buys.
+  exclude: Pure payment failures (use stop_payment_autopay_failure).
+  example: If i don't open the app and do payment of sip manually the payment does not happen
+  example_source: playstore
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 5
+  draft_n_records: 5
+  draft_sources:
+  - appstore
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - forced to invest manually
+  - forgets manual monthly buy and skips
+  - changed bank for autopay
+  - has to pay manually to avoid missing
+  - deactivates SIPs weekly as workaround
+- id: beh_set_and_forget
+  question: behaviour
+  name: Set and forget / check rarely
+  definition: Deliberately stops checking or checks returns only after years.
+  include: Automated SIPs, not visiting the app, 'check after 5 years'.
+  exclude: Active monitoring of returns (use beh_monitoring_returns).
+  example: I have lately stopped visiting since all SIP are automated
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 3
+  draft_n_records: 3
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - set and forget
+  - set and forget, stops checking
+  - decides to check returns only after 5 years
+- id: beh_market_timing
+  question: behaviour
+  name: Market-timing urges
+  definition: Tries or plans to time instalments to market levels (pause at highs, invest at dips).
+  include: Pausing at highs, executing early on dips, waiting for a dip.
+  exclude: Holding steady (use beh_holding_through_falls).
+  example: I also plan to ‘time the market’ by Pausing SIPs during Highs and investing the missed SIPs during Lows
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 3
+  draft_n_records: 3
+  draft_sources:
+  - tradingqna
+  draft_member_codes:
+  - plans to time market by pausing
+  - waited for a dip instead of SIP, regretted
+  - wants to time instalment on market dips
+- id: other_behaviour
+  question: behaviour
+  name: Other behaviour
+  definition: Behaviour codes that fit no other theme.
+  include: Lock-in completed and redeeming.
+  exclude: '-'
+  example: I have completed 3 years in ELSS
+  example_source: tradingqna
+  addressability: low
+  exclude_from_droppers: false
+  draft_n_codes: 1
+  draft_n_records: 1
+  draft_sources:
+  - tradingqna
+  draft_member_codes:
+  - 3 years in ELSS, wants to cancel and redeem
+- id: start_return_expectation
+  question: start
+  name: Specific return or corpus expectations
+  definition: Starts with a concrete expectation of returns or a target corpus (e.g. a % return, '1 crore in 10
+    years', 'become rich'), including expectations set by ads or creators.
+  include: Stated % returns, crore targets, 'make us rich', expectations from videos/ads.
+  exclude: General long-term or compounding motives without a number (use start_long_horizon_compounding).
+  example: All ads on MF sahi hai etc have built the euphoria during market peaks
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 9
+  draft_n_records: 9
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - ads built euphoria at market peaks
+  - expects 2 crore in 15 years
+  - was told 5 years gives good returns
+  - expects 12% return
+  - 25 year plan expecting 12%
+  - chasing high-return fund
+  - target 1 crore in 10 years
+  - target 1 crore in 10 years
+  - expects to become rich
+- id: start_long_horizon_compounding
+  question: start
+  name: Long horizon / compounding belief
+  definition: Starts believing in long holding periods and compounding, often with a multi-decade horizon.
+  include: 20-40 year horizons, compounding, 'small amounts grow', tax-saving long-term plans.
+  exclude: Specific numeric targets (use start_return_expectation).
+  example: build wealth over time by investing a fixed amount regularly and benefiting from compounding
+  example_source: youtube
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 6
+  draft_n_records: 6
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - wants to stay invested 25-30 years
+  - long-term goal and tax saving
+  - wealth via compounding
+  - started small, believes it grows
+  - 40-year horizon
+  - wants 25-30 year SIP
+- id: start_advised_by_intermediary
+  question: start
+  name: Started on someone else's advice
+  definition: SIP was started through an agent, bank RM, distributor or 'manager', often in regular plans without
+    full understanding.
+  include: Agents, bank reps, fund managers/advisers, started regular plan unknowingly.
+  exclude: Self-directed starts via app.
+  example: because I don’t know at the time of started SIP in regular plan
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 6
+  draft_n_records: 6
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - started offline through fund agent
+  - invested via intermediary
+  - bank rep pushing SIP
+  - started through an agent
+  - started in regular plan unknowingly
+  - started on manager's advice
+- id: start_family_security
+  question: start
+  name: Family and future security
+  definition: Starts a SIP to secure family, children or old age, or to build a saving habit.
+  include: Family's future, children, next generation, old-age support, saving money, safety.
+  exclude: Explicit return targets (use start_return_expectation).
+  example: Every SIP installment is a promise to my family’s future
+  example_source: youtube
+  addressability: low
+  exclude_from_droppers: false
+  draft_n_codes: 6
+  draft_n_records: 5
+  draft_sources:
+  - playstore
+  - youtube
+  draft_member_codes:
+  - wants to save money
+  - SIP for child with crore target
+  - build wealth for next generation
+  - regret of missing past wealth
+  - wants safety
+  - family's future security
+- id: start_beginner_first_sip
+  question: start
+  name: Beginner / first SIP
+  definition: Writer is a first-time or new investor starting their first SIP (young, late, or just beginning).
+  include: First SIP, beginner, just started, age-based starting.
+  exclude: Experienced investors adding SIPs.
+  example: I began my stock market investment journey and SIPs with the Groww trading app in 2023
+  example_source: appstore
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 6
+  draft_n_records: 5
+  draft_sources:
+  - appstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - first SIP
+  - beginner starting investing journey
+  - easy app lowers intimidation
+  - just placed first order
+  - young starter
+  - late starter at 42
+- id: start_setup_friction
+  question: start
+  name: Friction when setting up a SIP
+  definition: 'Problems or confusion during SIP setup: minimum amounts, tenure options, SIP not activating, checking
+    exit options first.'
+  include: Minimum amount surprises, tenure limits, SIP not starting, asking how to stop before starting.
+  exclude: Problems after the SIP is running (use stop_* themes).
+  example: usme option sirf 1 year se lekr 5 years tk show ho rha
+  example_source: youtube
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 4
+  draft_n_records: 4
+  draft_sources:
+  - youtube
+  draft_member_codes:
+  - checking flexibility before committing
+  - app only shows short tenure options
+  - minimum amount higher than planned
+  - SIP not starting in app
+- id: stop_payment_autopay_failure
+  question: stop
+  name: Autopay / mandate / payment failure
+  definition: SIP instalments miss or fail because of autopay, mandate, bank or funding problems, or lack of auto-debit.
+  include: Autopay fails, mandate not arriving, orders rejected, bank blocked, manual top-up burden, multiple debits.
+  exclude: Deliberate cancellation; post-cancellation confusion.
+  example: when I click on sip activate autopay - with my phonepe or googlepay upi it shows something went wrong
+  example_source: appstore
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 14
+  draft_n_records: 14
+  draft_sources:
+  - appstore
+  - playstore
+  - tradingqna
+  draft_member_codes:
+  - multiple mandate debits confuse
+  - SIPs cancelled despite autopay and balance
+  - SIP orders rejected without reason
+  - could not set up autopay
+  - mandate not arriving on time
+  - cannot verify autopay is working
+  - SIP instalment silently not placed
+  - autopay activation fails for new SIP
+  - bank account blocked so SIP debits fail
+  - instalment skipped by app bug
+  - autopay fails with no retry
+  - manual monthly transfer with fee
+- id: stop_platform_or_fund_initiated
+  question: stop
+  name: Stopped or changed by platform or fund
+  definition: SIP was paused, deleted, cancelled or changed by the fund house or platform, not by the investor.
+  include: Fund suspensions, SIPs deleted after rule changes, platform reducing SIP or forcing switches, fear of
+    such breaks.
+  exclude: Investor-chosen stops.
+  example: there is no guarantee that my current AMC provides with lumpsum or not
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 11
+  draft_n_records: 10
+  draft_sources:
+  - playstore
+  - tradingqna
+  draft_member_codes:
+  - platform reduced SIP without permission
+  - pushed into fund switches
+  - SIP deleted by platform after fund rule change
+  - weekly SIP deleted by platform
+  - fear platform rules may break continuity
+  - fund suspension forced SIP change
+  - SIP deleted after fund restriction
+  - fund-paused SIP not auto-resumed
+  - SIP cancelled by fund suspension
+  - fund house paused SIP
+  - cannot invest after fund restriction
+- id: stop_poor_returns
+  question: stop
+  name: Poor, flat or negative returns
+  definition: Stops or considers stopping because returns are low, flat or negative over months/years, or believes
+    SIPs underperform.
+  include: Not performing, no returns for years, loss, prefers DIY strategy over SIP.
+  exclude: Market-crash panic framing (use stop_market_fall_panic).
+  example: I have invested in SIP of Franklin prima fund for 5 years & then stopped SIP
+  example_source: youtube
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 10
+  draft_n_records: 8
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - fund underperforming after 2 years
+  - recent underperformance prompts switch
+  - low growth over 3 years
+  - was about to exit
+  - loss turns them against SIP
+  - belief SIP returns are weak
+  - prefers DIY strategy over SIP
+  - stopped after 5 years
+  - loss makes them warn others off
+  - no returns for years
+- id: stop_switch_plan_or_platform
+  question: stop
+  name: Switching plan, fund or platform (not a real drop)
+  definition: 'Stops a SIP only to restart elsewhere: regular to direct, another fund, or another platform.'
+  include: Regular to direct, better fund, leaving the platform for another.
+  exclude: Leaving SIP investing altogether.
+  example: I want to stop my existing sips so that I can start new sips for the same mutual funds under direct plan
+  example_source: youtube
+  addressability: high
+  exclude_from_droppers: true
+  draft_n_codes: 8
+  draft_n_records: 8
+  draft_sources:
+  - appstore
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - leaving the platform
+  - wants regular to direct switch
+  - moved tracking to another platform
+  - switched platform for features
+  - stop regular to restart as direct
+  - found a better alternative fund
+  - stopped regular SIPs to restart in direct
+  - considering redeeming over commission
+- id: stop_trust_support_breakdown
+  question: stop
+  name: Trust and support breakdown
+  definition: Stops or leaves after unresolved support issues, unresponsive agents or loss of trust.
+  include: Unresponsive support/agent, money disputes, 'can't trust', not knowing how to stop an agent SIP.
+  exclude: Pure technical failures without trust language.
+  example: I’ve contacted Groww support multiple times, but the issue is still not resolved
+  example_source: playstore
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 7
+  draft_n_records: 7
+  draft_sources:
+  - appstore
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - unresponsive support pushes them to leave
+  - withdrew everything after losing trust
+  - agent unresponsive
+  - lost trust after money dispute
+  - lost trust in system
+  - unsure how to stop agent SIP
+  - support not resolving SIP issue
+- id: stop_missing_controls
+  question: stop
+  name: Missing pause / edit / reduce controls
+  definition: Investor wants to pause, skip, edit or reduce but the option does not exist or is hard, so they cancel
+    or consider it.
+  include: No pause/edit button, cannot reduce amount, skip bug, physical letter to pause, missing SIP options.
+  exclude: Payment failures.
+  example: Zerodha Coin provides features like quarterly SIPs and AMC SIPs, which I couldn't find on Groww
+  example_source: playstore
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 6
+  draft_n_records: 6
+  draft_sources:
+  - appstore
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - app bug blocks skipping instalment
+  - missing flexible SIP options
+  - cannot modify amount, only terminate
+  - no pause or edit option
+  - amount too high, cannot reduce
+  - pausing via AMC needs physical letter
+- id: stop_app_reliability
+  question: stop
+  name: App reliability and execution errors
+  definition: SIP orders execute wrongly or slowly, or holdings show incorrectly.
+  include: Holiday executions, multiple executions, slow processing, missing instalments in holdings.
+  exclude: Autopay failures (use stop_payment_autopay_failure).
+  example: few of them got triggered yesterday - even though it was a holiday yesterday
+  example_source: tradingqna
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 5
+  draft_n_records: 5
+  draft_sources:
+  - playstore
+  - tradingqna
+  draft_member_codes:
+  - slow SIP order processing
+  - SIPs deduct on holidays
+  - instalment missing from holdings
+  - multiple executions on one day
+  - SIPs trigger on holidays
+- id: stop_post_cancel_money_confusion
+  question: stop
+  name: Confusion about money after cancelling
+  definition: After cancelling, investor is confused or anxious about where the money went, refunds or ongoing autopay.
+  include: Money not returned, cancelled SIP vanished, autopay still showing, deduction after cancel.
+  exclude: Reasons for cancelling.
+  example: jisko mene cancel kiya dikha nhi yani mere paise chale gaye
+  example_source: youtube
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 5
+  draft_n_records: 5
+  draft_sources:
+  - youtube
+  draft_member_codes:
+  - cancelled SIP disappears, fears loss
+  - cancelled but money not withdrawn
+  - money not returned after cancel
+  - deduction after autopay stopped
+  - autopay still shows after cancel
+- id: stop_early_cancel_confusion
+  question: stop
+  name: Early or accidental cancellation
+  definition: Cancels within days of starting or by mistake, often from confusion about how SIP instalments work.
+  include: Same-day cancel, accidental cancel, confused about next instalment date.
+  exclude: Cancellation for returns or cash reasons.
+  example: I am confused about next sip installment on which date my next instalment done so today I cancel my buy
+    order
+  example_source: tradingqna
+  addressability: high
+  exclude_from_droppers: false
+  draft_n_codes: 5
+  draft_n_records: 5
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - confused about next instalment date, cancelled
+  - cancelled same day
+  - accidental cancellation
+  - stopped for unstated reason, wants refund
+  - needs to stop right after starting
+- id: stop_cash_need_affordability
+  question: stop
+  name: Cash need / affordability
+  definition: Stops, pauses or withdraws because money is needed elsewhere or the amount becomes hard to sustain.
+  include: Compulsion to withdraw, no funds for months, house purchase, step-up hard to sustain.
+  exclude: Planned goal completion (use other_stop).
+  example: 10% step up will lead to 10k then 15k then 20k then 25k to 30k per month sip which is difficult to continue
+    for average person
+  example_source: youtube
+  addressability: low
+  exclude_from_droppers: false
+  draft_n_codes: 4
+  draft_n_records: 4
+  draft_sources:
+  - playstore
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - withdraws SIP money when forced by need
+  - no money for next months
+  - needs money for house
+  - step-up becomes hard to sustain
+- id: stop_market_fall_panic
+  question: stop
+  name: Market fall / panic
+  definition: Stops or considers stopping in a falling market, or describes investors panicking.
+  include: Market fall, panic, buy high sell low, thinking of stopping during falls.
+  exclude: Long-run underperformance without a fall (use stop_poor_returns).
+  example: Some investors who monitor their portfolio panic in such continuous market fall & stop SIPs
+  example_source: tradingqna
+  addressability: medium
+  exclude_from_droppers: false
+  draft_n_codes: 4
+  draft_n_records: 3
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - panic in market fall makes investors stop
+  - investors stop when markets fall
+  - buy high sell low behaviour
+  - was thinking of stopping
+- id: other_stop
+  question: stop
+  name: Other stop reasons
+  definition: Stop codes that fit no other theme, including stops with no stated reason.
+  include: Lock-in completed, stopped with no reason given.
+  exclude: '-'
+  example: Can I cancelled SIP and redeem all the amount now
+  example_source: tradingqna
+  addressability: low
+  exclude_from_droppers: false
+  draft_n_codes: 2
+  draft_n_records: 2
+  draft_sources:
+  - tradingqna
+  - youtube
+  draft_member_codes:
+  - tax lock-in over, wants to redeem
+  - stopped in 2021

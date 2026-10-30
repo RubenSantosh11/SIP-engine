@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_aa45a4cd6abc",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "start",
+   "code": "invested via intermediary",
+   "quote": "I had invested offline through an intermediary",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "unsure how to stop agent SIP",
+   "quote": "Whats the proper way of doing this?",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_ded5b976a956",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "found a better alternative fund",
+   "quote": "there is another better alternative",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "delays cancellation to avoid exit load",
+   "quote": "I dont want to cancel my SIP in this fund now as the exit load term is another 6 months away",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "record_id": "playstore_8a0ba7c0f25e",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "autopay fails with no retry",
+   "quote": "auto payment fails in mutual fund sip and there is no retry done by the app"
+  },
+  {
+   "question": "behaviour",
+   "code": "has to pay manually to avoid missing",
+   "quote": "If i don't open the app and do payment of sip manually the payment does not happen"
+  }
+ ]
+}

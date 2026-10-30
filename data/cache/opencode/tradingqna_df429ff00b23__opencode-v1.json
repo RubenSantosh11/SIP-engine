@@ -1,0 +1,30 @@
+{
+ "record_id": "tradingqna_df429ff00b23",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "panic in market fall makes investors stop",
+   "quote": "Some investors who monitor their portfolio panic in such continuous market fall & stop SIPs",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "ads built euphoria at market peaks",
+   "quote": "All ads on MF sahi hai etc have built the euphoria during market peaks",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "sitting on losses after peak entry",
+   "quote": "many are sitting on losses",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "set and forget",
+   "quote": "Most SIP investors set it up & forget",
+   "verified": true
+  }
+ ]
+}

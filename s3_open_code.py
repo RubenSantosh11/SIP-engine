@@ -51,7 +51,8 @@ put rare one-offs into an "other_<question>" theme).
 For each theme return: id (snake_case), question (start|behaviour|stop), name, definition (one sentence),
 include (what counts), exclude (what does not, and which other theme to use instead),
 addressability (high = Groww can change it in product/copy/flows; medium = Groww can influence it via
-education, reminders or defaults; low = mostly outside Groww's control), and members (the code numbers).
+education, reminders or defaults; low = mostly outside Groww's control), exclude_from_droppers (true only for
+"stops" that are really switches of plan/platform, not leaving SIP investing), and members (the code numbers).
 Every code number must appear in exactly one theme. No fund or stock recommendations, and no fear/FOMO/urgency wording.
 
 Return a JSON array: [{{"id": "...", "question": "...", "name": "...", "definition": "...", "include": "...",
@@ -69,6 +70,7 @@ class DraftTheme(BaseModel):
     include: str
     exclude: str
     addressability: str
+    exclude_from_droppers: bool = False
     members: list[int]
 
 
@@ -145,6 +147,7 @@ def main() -> None:
             "example": quotes[0][2]["quote"] if quotes else "",
             "example_source": quotes[0][1] if quotes else "",
             "addressability": t.addressability,
+            "exclude_from_droppers": t.exclude_from_droppers,
             "draft_n_codes": len(members),                               # counted in Python
             "draft_n_records": len({m[0] for m in members}),
             "draft_sources": sorted({m[1] for m in members}),

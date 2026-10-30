@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_f1b38796a28e",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "start",
+   "code": "first SIP",
+   "quote": "I started my first sip on mutual fund",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "confused about next instalment date, cancelled",
+   "quote": "I am confused about next sip installment on which date my next instalment done so today I cancel my buy order",
+   "verified": true
+  }
+ ]
+}

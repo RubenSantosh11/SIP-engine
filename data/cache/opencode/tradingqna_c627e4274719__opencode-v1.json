@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_c627e4274719",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "no money for next months",
+   "quote": "for next 4 months there will be no fund in my equity wallet",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "wants to pause not cancel",
+   "quote": "if i dnt want to cancel",
+   "verified": true
+  }
+ ]
+}

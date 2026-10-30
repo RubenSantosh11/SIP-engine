@@ -1,0 +1,24 @@
+{
+ "record_id": "appstore_b36952b0e8cd",
+ "source": "appstore",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "SIP orders rejected without reason",
+   "quote": "it is rejected after 7-8 days dont know why",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "unresponsive support pushes them to leave",
+   "quote": "I have raised a ticket but they are not responding",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "leaving the platform",
+   "quote": "I will not use groww anymore",
+   "verified": true
+  }
+ ]
+}

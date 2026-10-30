@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_510f9705cf46",
+ "source": "youtube",
+ "codes": [
+  {
+   "question": "start",
+   "code": "wants 25-30 year SIP",
+   "quote": "mujhe maximum 25 to 30 years k liye invest krna",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "wants to increase SIP after 2-3 years",
+   "quote": "after 2 ya 3 year's baad sip ki emi increase kr skte hai",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "app only shows short tenure options",
+   "quote": "usme option sirf 1 year se lekr 5 years tk show ho rha",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "record_id": "appstore_514c08a39c91",
+ "source": "appstore",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "long-time SIP user adding new SIPs",
+   "quote": "using this application from last 3 years for sip management",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "autopay activation fails for new SIP",
+   "quote": "when I click on sip activate autopay - with my phonepe or googlepay upi it shows something went wrong",
+   "verified": true
+  }
+ ]
+}

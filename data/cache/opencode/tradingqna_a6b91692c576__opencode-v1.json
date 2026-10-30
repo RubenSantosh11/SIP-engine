@@ -1,0 +1,24 @@
+{
+ "record_id": "tradingqna_a6b91692c576",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "start",
+   "code": "started in regular plan unknowingly",
+   "quote": "because I don’t know at the time of started SIP in regular plan",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "learns about commission and reconsiders",
+   "quote": "why do I unnecessarily give the commission from my profit to the broker?",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "considering redeeming over commission",
+   "quote": "do I redeem my SIP or continue to invest?",
+   "verified": true
+  }
+ ]
+}

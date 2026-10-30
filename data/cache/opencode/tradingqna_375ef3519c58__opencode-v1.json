@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_375ef3519c58",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "wants to time instalment on market dips",
+   "quote": "I may see a market opportunity and prefer to execute my SIP earlier",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "wants skip-this-month option",
+   "quote": "“Skip This Month”",
+   "verified": true
+  }
+ ]
+}

@@ -1,6 +1,10 @@
 # SIP Discovery Engine (Groww Growth, Part 1)
 
-Finds **why first-time mutual-fund investors pause or stop SIPs**, using public feedback.
+Uses public feedback to answer three questions about SIP investors:
+1. **Start**: why do people start a SIP, and what do they expect to happen?
+2. **Behaviour**: what changes in their behaviour in the months after starting?
+3. **Stop**: what leads investors to pause, reduce or stop a SIP?
+
 Design rule: **structured extraction, not summarisation**. The LLM fills a typed schema for one record
 at a time, with a verbatim evidence quote for every coded value (checked in code). All counting, scoring
 and ranking is plain Python. No fund/stock recommendations, no fear/FOMO/urgency language.
@@ -27,7 +31,7 @@ Every result is cached per `record_id` + prompt version in `data/cache/`, so re-
 |---|---|---|
 | 1 Collect | `python collect_playstore.py`, `collect_appstore.py`, `collect_youtube.py`, `collect_tradingqna.py` (add `--thin` for the thin slice) | `data/raw/*.jsonl` (gitignored) |
 | 2 Relevance filter | `python s2_filter.py` | `data/processed/relevant.jsonl`, `outputs/filter_stats.json` |
-| 3 Open coding + codebook | *(next)* | `codebook.yaml` (hand-curated) |
+| 3 Open coding + codebook | `python s3_open_code.py` | `outputs/open_codes.jsonl`, `codebook_draft.yaml` -> you curate `codebook.yaml` |
 | 4 Extract | `python s4_extract.py` | `data/processed/extractions.jsonl`, `outputs/span_check_stats.json` |
 | 5-8 | *(to come: aggregate/score, validate, report, Streamlit app)* | |
 

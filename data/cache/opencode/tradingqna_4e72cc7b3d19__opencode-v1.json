@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_4e72cc7b3d19",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "fund suspension forced SIP change",
+   "quote": "Reliance small cap fund stopped taking lump sum investment",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "restarted SIP in new mode",
+   "quote": "Now i have started AMC sip in Reliance small cap fund through Coin",
+   "verified": true
+  }
+ ]
+}

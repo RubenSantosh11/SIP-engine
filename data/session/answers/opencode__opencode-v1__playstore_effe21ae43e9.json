@@ -1,0 +1,15 @@
+{
+ "record_id": "playstore_effe21ae43e9",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "slow SIP order processing",
+   "quote": "Too slow in processing SIP orders"
+  },
+  {
+   "question": "stop",
+   "code": "moved tracking to another platform",
+   "quote": "I had to resort to another platform to track my portfolio"
+  }
+ ]
+}

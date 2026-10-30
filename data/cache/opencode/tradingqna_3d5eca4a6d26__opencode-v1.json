@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_3d5eca4a6d26",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "agent-started SIPs still running",
+   "quote": "currently investing in 4 different sip’s",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "started through an agent",
+   "quote": "They were started through an agent",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "record_id": "youtube_5fe522a868d6",
+ "source": "youtube",
+ "codes": [
+  {
+   "question": "start",
+   "code": "target 1 crore in 10 years",
+   "quote": "target 10 sal me 1 cr",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "young starter",
+   "quote": "My age 21",
+   "verified": true
+  }
+ ]
+}

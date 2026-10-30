@@ -1,0 +1,511 @@
+[
+ {
+  "id": "start_return_expectation",
+  "question": "start",
+  "name": "Specific return or corpus expectations",
+  "definition": "Starts with a concrete expectation of returns or a target corpus (e.g. a % return, '1 crore in 10 years', 'become rich'), including expectations set by ads or creators.",
+  "include": "Stated % returns, crore targets, 'make us rich', expectations from videos/ads.",
+  "exclude": "General long-term or compounding motives without a number (use start_long_horizon_compounding).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   50,
+   58,
+   69,
+   109,
+   117,
+   128,
+   155,
+   165,
+   170
+  ]
+ },
+ {
+  "id": "start_family_security",
+  "question": "start",
+  "name": "Family and future security",
+  "definition": "Starts a SIP to secure family, children or old age, or to build a saving habit.",
+  "include": "Family's future, children, next generation, old-age support, saving money, safety.",
+  "exclude": "Explicit return targets (use start_return_expectation).",
+  "addressability": "low",
+  "exclude_from_droppers": false,
+  "members": [
+   31,
+   57,
+   63,
+   64,
+   110,
+   161
+  ]
+ },
+ {
+  "id": "start_long_horizon_compounding",
+  "question": "start",
+  "name": "Long horizon / compounding belief",
+  "definition": "Starts believing in long holding periods and compounding, often with a multi-decade horizon.",
+  "include": "20-40 year horizons, compounding, 'small amounts grow', tax-saving long-term plans.",
+  "exclude": "Specific numeric targets (use start_return_expectation).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   85,
+   91,
+   93,
+   102,
+   108,
+   112
+  ]
+ },
+ {
+  "id": "start_advised_by_intermediary",
+  "question": "start",
+  "name": "Started on someone else's advice",
+  "definition": "SIP was started through an agent, bank RM, distributor or 'manager', often in regular plans without full understanding.",
+  "include": "Agents, bank reps, fund managers/advisers, started regular plan unknowingly.",
+  "exclude": "Self-directed starts via app.",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   23,
+   67,
+   87,
+   119,
+   139,
+   171
+  ]
+ },
+ {
+  "id": "start_beginner_first_sip",
+  "question": "start",
+  "name": "Beginner / first SIP",
+  "definition": "Writer is a first-time or new investor starting their first SIP (young, late, or just beginning).",
+  "include": "First SIP, beginner, just started, age-based starting.",
+  "exclude": "Experienced investors adding SIPs.",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   9,
+   44,
+   45,
+   123,
+   156,
+   164
+  ]
+ },
+ {
+  "id": "start_setup_friction",
+  "question": "start",
+  "name": "Friction when setting up a SIP",
+  "definition": "Problems or confusion during SIP setup: minimum amounts, tenure options, SIP not activating, checking exit options first.",
+  "include": "Minimum amount surprises, tenure limits, SIP not starting, asking how to stop before starting.",
+  "exclude": "Problems after the SIP is running (use stop_* themes).",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   98,
+   114,
+   129,
+   163
+  ]
+ },
+ {
+  "id": "beh_steady_continuing",
+  "question": "behaviour",
+  "name": "Steady continuing",
+  "definition": "Writer has kept SIPs going for months or years with no major issues.",
+  "include": "Years of continuing, steady accumulation, easy ongoing management.",
+  "exclude": "Continuing despite losses (use beh_holding_through_falls).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   15,
+   32,
+   36,
+   38,
+   39,
+   46,
+   79,
+   101,
+   118
+  ]
+ },
+ {
+  "id": "beh_set_and_forget",
+  "question": "behaviour",
+  "name": "Set and forget / check rarely",
+  "definition": "Deliberately stops checking or checks returns only after years.",
+  "include": "Automated SIPs, not visiting the app, 'check after 5 years'.",
+  "exclude": "Active monitoring of returns (use beh_monitoring_returns).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   52,
+   99,
+   122
+  ]
+ },
+ {
+  "id": "beh_monitoring_returns",
+  "question": "behaviour",
+  "name": "Watching returns: flat, negative or disappointing",
+  "definition": "Writer tracks returns in the months/years after starting and reports flat, negative or disappointing results, or feeling misled.",
+  "include": "Being at a loss, zero returns after N years, comparing to index levels, feeling misled about returns.",
+  "exclude": "Stopping because of returns (use stop_poor_returns).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   40,
+   47,
+   51,
+   70,
+   95,
+   126,
+   131,
+   132,
+   142
+  ]
+ },
+ {
+  "id": "beh_holding_through_falls",
+  "question": "behaviour",
+  "name": "Holding through losses or falls",
+  "definition": "Keeps investing despite losses or market falls, often reassured by experience or education.",
+  "include": "'Will not stop', continuing despite loss, SIP beat own picking, reassurance from content.",
+  "exclude": "Writer who did stop (use stop_market_fall_panic).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   105,
+   143,
+   146,
+   147,
+   151,
+   152
+  ]
+ },
+ {
+  "id": "beh_increase_stepup",
+  "question": "behaviour",
+  "name": "Increasing / step-up",
+  "definition": "Wants to or does increase the SIP amount or use step-up.",
+  "include": "Step-up, top-up, increase amount after N years.",
+  "exclude": "Being unable to modify (code that under stop_missing_controls too if it leads to stopping).",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   8,
+   90,
+   106,
+   113,
+   130
+  ]
+ },
+ {
+  "id": "beh_pause_skip_reduce_intent",
+  "question": "behaviour",
+  "name": "Wanting to pause, skip or reduce",
+  "definition": "Considers pausing, skipping a month, reducing or restarting lower rather than cancelling.",
+  "include": "Skip this month, pause vs exit, restart with lower amount, pause not cancel.",
+  "exclude": "Actual cancellation (use stop_* themes).",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   6,
+   19,
+   20,
+   62,
+   136,
+   159,
+   169
+  ]
+ },
+ {
+  "id": "beh_market_timing",
+  "question": "behaviour",
+  "name": "Market-timing urges",
+  "definition": "Tries or plans to time instalments to market levels (pause at highs, invest at dips).",
+  "include": "Pausing at highs, executing early on dips, waiting for a dip.",
+  "exclude": "Holding steady (use beh_holding_through_falls).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   92,
+   145,
+   168
+  ]
+ },
+ {
+  "id": "beh_switching_restructuring",
+  "question": "behaviour",
+  "name": "Switching / restructuring holdings",
+  "definition": "Switches platform or plan, restarts in another mode, trims funds, or times cancellation around exit load.",
+  "include": "Platform switches, regular to direct, restarting mode, too many funds, exit-load timing.",
+  "exclude": "Switch-driven stops (use stop_switch_plan_or_platform).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   78,
+   81,
+   89,
+   111,
+   121,
+   140,
+   166
+  ]
+ },
+ {
+  "id": "beh_manual_workarounds",
+  "question": "behaviour",
+  "name": "Manual workarounds and forgetting",
+  "definition": "Has to pay or act manually each month (or deactivate SIPs), and sometimes forgets and skips.",
+  "include": "Manual payment, weekly deactivation, changing bank for autopay, forgetting manual buys.",
+  "exclude": "Pure payment failures (use stop_payment_autopay_failure).",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   2,
+   11,
+   29,
+   72,
+   115
+  ]
+ },
+ {
+  "id": "other_behaviour",
+  "question": "behaviour",
+  "name": "Other behaviour",
+  "definition": "Behaviour codes that fit no other theme.",
+  "include": "Lock-in completed and redeeming.",
+  "exclude": "-",
+  "addressability": "low",
+  "exclude_from_droppers": false,
+  "members": [
+   3
+  ]
+ },
+ {
+  "id": "stop_payment_autopay_failure",
+  "question": "stop",
+  "name": "Autopay / mandate / payment failure",
+  "definition": "SIP instalments miss or fail because of autopay, mandate, bank or funding problems, or lack of auto-debit.",
+  "include": "Autopay fails, mandate not arriving, orders rejected, bank blocked, manual top-up burden, multiple debits.",
+  "exclude": "Deliberate cancellation; post-cancellation confusion.",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   0,
+   1,
+   12,
+   24,
+   26,
+   30,
+   34,
+   37,
+   48,
+   59,
+   71,
+   82,
+   127,
+   148
+  ]
+ },
+ {
+  "id": "stop_platform_or_fund_initiated",
+  "question": "stop",
+  "name": "Stopped or changed by platform or fund",
+  "definition": "SIP was paused, deleted, cancelled or changed by the fund house or platform, not by the investor.",
+  "include": "Fund suspensions, SIPs deleted after rule changes, platform reducing SIP or forcing switches, fear of such breaks.",
+  "exclude": "Investor-chosen stops.",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   16,
+   17,
+   27,
+   56,
+   86,
+   88,
+   97,
+   100,
+   154,
+   157,
+   160
+  ]
+ },
+ {
+  "id": "stop_missing_controls",
+  "question": "stop",
+  "name": "Missing pause / edit / reduce controls",
+  "definition": "Investor wants to pause, skip, edit or reduce but the option does not exist or is hard, so they cancel or consider it.",
+  "include": "No pause/edit button, cannot reduce amount, skip bug, physical letter to pause, missing SIP options.",
+  "exclude": "Payment failures.",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   7,
+   65,
+   107,
+   137,
+   158,
+   162
+  ]
+ },
+ {
+  "id": "stop_app_reliability",
+  "question": "stop",
+  "name": "App reliability and execution errors",
+  "definition": "SIP orders execute wrongly or slowly, or holdings show incorrectly.",
+  "include": "Holiday executions, multiple executions, slow processing, missing instalments in holdings.",
+  "exclude": "Autopay failures (use stop_payment_autopay_failure).",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   54,
+   73,
+   75,
+   116,
+   149
+  ]
+ },
+ {
+  "id": "stop_post_cancel_money_confusion",
+  "question": "stop",
+  "name": "Confusion about money after cancelling",
+  "definition": "After cancelling, investor is confused or anxious about where the money went, refunds or ongoing autopay.",
+  "include": "Money not returned, cancelled SIP vanished, autopay still showing, deduction after cancel.",
+  "exclude": "Reasons for cancelling.",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   5,
+   28,
+   135,
+   153,
+   167
+  ]
+ },
+ {
+  "id": "stop_early_cancel_confusion",
+  "question": "stop",
+  "name": "Early or accidental cancellation",
+  "definition": "Cancels within days of starting or by mistake, often from confusion about how SIP instalments work.",
+  "include": "Same-day cancel, accidental cancel, confused about next instalment date.",
+  "exclude": "Cancellation for returns or cash reasons.",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   10,
+   35,
+   43,
+   53,
+   124
+  ]
+ },
+ {
+  "id": "stop_poor_returns",
+  "question": "stop",
+  "name": "Poor, flat or negative returns",
+  "definition": "Stops or considers stopping because returns are low, flat or negative over months/years, or believes SIPs underperform.",
+  "include": "Not performing, no returns for years, loss, prefers DIY strategy over SIP.",
+  "exclude": "Market-crash panic framing (use stop_market_fall_panic).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   21,
+   41,
+   83,
+   84,
+   96,
+   103,
+   104,
+   125,
+   144,
+   172
+  ]
+ },
+ {
+  "id": "stop_market_fall_panic",
+  "question": "stop",
+  "name": "Market fall / panic",
+  "definition": "Stops or considers stopping in a falling market, or describes investors panicking.",
+  "include": "Market fall, panic, buy high sell low, thinking of stopping during falls.",
+  "exclude": "Long-run underperformance without a fall (use stop_poor_returns).",
+  "addressability": "medium",
+  "exclude_from_droppers": false,
+  "members": [
+   49,
+   133,
+   134,
+   150
+  ]
+ },
+ {
+  "id": "stop_cash_need_affordability",
+  "question": "stop",
+  "name": "Cash need / affordability",
+  "definition": "Stops, pauses or withdraws because money is needed elsewhere or the amount becomes hard to sustain.",
+  "include": "Compulsion to withdraw, no funds for months, house purchase, step-up hard to sustain.",
+  "exclude": "Planned goal completion (use other_stop).",
+  "addressability": "low",
+  "exclude_from_droppers": false,
+  "members": [
+   33,
+   61,
+   80,
+   120
+  ]
+ },
+ {
+  "id": "stop_switch_plan_or_platform",
+  "question": "stop",
+  "name": "Switching plan, fund or platform (not a real drop)",
+  "definition": "Stops a SIP only to restart elsewhere: regular to direct, another fund, or another platform.",
+  "include": "Regular to direct, better fund, leaving the platform for another.",
+  "exclude": "Leaving SIP investing altogether.",
+  "addressability": "high",
+  "exclude_from_droppers": true,
+  "members": [
+   14,
+   42,
+   55,
+   66,
+   74,
+   77,
+   94,
+   141
+  ]
+ },
+ {
+  "id": "stop_trust_support_breakdown",
+  "question": "stop",
+  "name": "Trust and support breakdown",
+  "definition": "Stops or leaves after unresolved support issues, unresponsive agents or loss of trust.",
+  "include": "Unresponsive support/agent, money disputes, 'can't trust', not knowing how to stop an agent SIP.",
+  "exclude": "Pure technical failures without trust language.",
+  "addressability": "high",
+  "exclude_from_droppers": false,
+  "members": [
+   13,
+   18,
+   22,
+   25,
+   60,
+   68,
+   76
+  ]
+ },
+ {
+  "id": "other_stop",
+  "question": "stop",
+  "name": "Other stop reasons",
+  "definition": "Stop codes that fit no other theme, including stops with no stated reason.",
+  "include": "Lock-in completed, stopped with no reason given.",
+  "exclude": "-",
+  "addressability": "low",
+  "exclude_from_droppers": false,
+  "members": [
+   4,
+   138
+  ]
+ }
+]
