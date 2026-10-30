@@ -1,6 +1,11 @@
 """The single LLM entry point (llm_call) plus request budget and on-disk cache.
 
-Swap providers by changing _gemini_generate only; callers never see provider details.
+Providers (config.LLM_PROVIDER):
+- "session": the prompt is written to data/session/requests/<key>.json and Claude, working in a
+  Claude Code session, writes the JSON answer to data/session/answers/<key>.json. Until it exists,
+  llm_call raises PendingAnswer and the stage moves on; re-running the stage picks the answer up.
+- "gemini": the Gemini REST API with retries and a daily request budget.
+Callers never see provider details.
 """
 import datetime as dt
 import json
@@ -9,7 +14,7 @@ import time
 import requests
 
 import config
-from sip.common import get_secret, log, sha
+from sip.common import get_secret, log
 
 
 class BudgetExhausted(Exception):
@@ -18,6 +23,10 @@ class BudgetExhausted(Exception):
 
 class LLMError(Exception):
     pass
+
+
+class PendingAnswer(Exception):
+    """Session provider: the request is queued and has no answer yet."""
 
 
 _last_call_at = 0.0
@@ -83,8 +92,30 @@ def _gemini_generate(model: str, prompt: str, system: str | None) -> str:
         raise LLMError(f"no text in response (finishReason={data.get('candidates', [{}])[0].get('finishReason')})")
 
 
-def llm_call(model: str, prompt: str, system: str | None = None) -> dict | list:
-    """Call the model once (with retries) and return parsed JSON. Counts every HTTP request against the budget."""
+def _session_call(key: str, model: str, prompt: str, system: str | None):
+    ans = config.SESSION_DIR / "answers" / f"{key}.json"
+    if ans.exists():
+        try:
+            return json.loads(ans.read_text())
+        except json.JSONDecodeError as e:
+            raise LLMError(f"malformed JSON in session answer {key}: {e}")
+    req = config.SESSION_DIR / "requests" / f"{key}.json"
+    req.parent.mkdir(parents=True, exist_ok=True)
+    req.write_text(json.dumps({"key": key, "model_role": model, "system": system, "prompt": prompt},
+                              ensure_ascii=False, indent=1))
+    raise PendingAnswer(key)
+
+
+def llm_call(model: str, prompt: str, system: str | None = None, key: str | None = None) -> dict | list:
+    """Call the model once and return parsed JSON.
+
+    `key` names the request (needed by the session provider; ignored by Gemini).
+    Gemini: retries on 429/5xx and counts every HTTP request against the daily budget.
+    """
+    if config.LLM_PROVIDER == "session":
+        if not key:
+            raise ValueError("session provider needs a request key")
+        return _session_call(key, model, prompt, system)
     global _last_call_at
     for attempt in range(config.MAX_RETRIES + 1):
         _check_budget(model)

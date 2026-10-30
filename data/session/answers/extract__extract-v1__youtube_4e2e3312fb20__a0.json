@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_4e2e3312fb20",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "cancelled kar dya",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "Paisa wapas account me nhi aya",
+   "severity": 2,
+   "confidence": 0.6
+  }
+ ],
+ "one_line_reason": "Cancelled a 500 SIP; money has not come back to the account."
+}

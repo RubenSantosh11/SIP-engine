@@ -1,0 +1,17 @@
+{
+ "record_id": "tradingqna_ea0a1a2577f1",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "extremely tough task of having to send a physical request letter to the AMC",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Pausing via the AMC needs a physical letter and a month's wait."
+}

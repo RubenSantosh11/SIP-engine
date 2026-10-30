@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_d5e5530cf1fc",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "sip cancel Kari hai",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "mandate_payment_issue",
+   "evidence_span": "lekin payment cut ho gaya",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Payment was debited after cancelling the SIP."
+}

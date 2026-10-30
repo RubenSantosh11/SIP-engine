@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_9ed5463481cb",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Mera sip mei cancel nahi thikara",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "Mera sip mei cancel nahi thikara",
+   "severity": 2,
+   "confidence": 0.6
+  }
+ ],
+ "one_line_reason": "Trying to cancel the SIP but cancellation is not working."
+}

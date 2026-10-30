@@ -1,0 +1,17 @@
+{
+ "record_id": "tradingqna_d240b0ba6e88",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "Pause & Edit button are not available",
+   "severity": 2,
+   "confidence": 0.9
+  }
+ ],
+ "one_line_reason": "New SIP shows only delete; no pause or edit option."
+}

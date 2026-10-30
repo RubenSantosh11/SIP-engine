@@ -95,7 +95,7 @@ if __name__ == "__main__":
     ap.add_argument("--thin", action="store_true")
     a = ap.parse_args()
     if a.thin:
-        main(config.THIN_SLICE_PER_SOURCE, config.YOUTUBE_SEARCH_QUERIES[:1], 3, 1)
+        main(config.THIN_SLICE_PER_SOURCE["youtube"], config.YOUTUBE_SEARCH_QUERIES[:1], 5, 1)
     else:
         main(config.TARGET_PER_SOURCE["youtube"], config.YOUTUBE_SEARCH_QUERIES,
              config.YOUTUBE_VIDEOS_PER_QUERY, config.YOUTUBE_MAX_COMMENT_PAGES_PER_VIDEO)

@@ -1,0 +1,29 @@
+{
+ "playstore": {
+  "raw": 252,
+  "dropped_prefilter": 250,
+  "pass_prefilter": 2,
+  "dropped_llm": 2
+ },
+ "appstore": {
+  "raw": 57,
+  "pass_prefilter": 4,
+  "kept": 3,
+  "dropped_prefilter": 53,
+  "dropped_llm": 1
+ },
+ "youtube": {
+  "raw": 282,
+  "dropped_prefilter": 164,
+  "pass_prefilter": 118,
+  "dropped_llm": 91,
+  "kept": 27
+ },
+ "tradingqna": {
+  "raw": 34,
+  "pass_prefilter": 24,
+  "kept": 11,
+  "dropped_prefilter": 10,
+  "dropped_llm": 13
+ }
+}

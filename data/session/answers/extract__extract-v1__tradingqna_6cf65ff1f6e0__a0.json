@@ -1,0 +1,17 @@
+{
+ "record_id": "tradingqna_6cf65ff1f6e0",
+ "source": "tradingqna",
+ "sip_status": "paused",
+ "sip_status_evidence": "my SIP in SBI Gold Fund was being paused",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "being paused with immediate effect",
+   "severity": 2,
+   "confidence": 0.7
+  }
+ ],
+ "one_line_reason": "Platform paused their SIP without their choice."
+}

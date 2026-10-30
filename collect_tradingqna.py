@@ -63,6 +63,6 @@ if __name__ == "__main__":
     ap.add_argument("--thin", action="store_true")
     a = ap.parse_args()
     if a.thin:
-        main(config.THIN_SLICE_PER_SOURCE, config.TRADINGQNA_SEARCH_QUERIES[:1], 3)
+        main(config.THIN_SLICE_PER_SOURCE["tradingqna"], config.TRADINGQNA_SEARCH_QUERIES[:3], 5)
     else:
         main(config.TARGET_PER_SOURCE["tradingqna"], config.TRADINGQNA_SEARCH_QUERIES, config.TRADINGQNA_MAX_TOPICS_PER_QUERY)

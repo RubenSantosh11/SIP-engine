@@ -12,7 +12,13 @@ CACHE_DIR = ROOT / "data" / "cache"
 STATE_DIR = ROOT / "data" / "state"
 OUTPUT_DIR = ROOT / "outputs"
 
-# ---- LLM provider (Gemini REST API) ----
+# ---- LLM provider ----
+# "session": prompts are written to data/session/requests/ and answered by Claude (Opus) inside a
+#            Claude Code session; answers land in data/session/answers/. No API key needed.
+# "gemini":  the Gemini REST API (needs GEMINI_API_KEY with available quota or credits).
+LLM_PROVIDER = "session"
+SESSION_DIR = ROOT / "data" / "session"
+SESSION_MODEL_LABEL = "claude-opus (Claude Code session)"
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 MODEL_FILTER = "gemini-3.5-flash-lite"   # Stage 2 relevance filter (batched)
 MODEL_EXTRACT = "gemini-3.8-flash"       # Stage 3 open coding + Stage 4 extraction
@@ -43,8 +49,8 @@ APPSTORE_COUNTRY = "in"
 HTTP_USER_AGENT = "SIP-discovery-research/0.1 (Nextleap student project; polite, low volume)"
 POLITE_DELAY_SECONDS = 1.0
 
-# Thin slice: the first end-to-end run caps each source at this many records.
-THIN_SLICE_PER_SOURCE = 15
+# Thin slice: per-source caps for the first end-to-end run (aims for ~50 relevant records).
+THIN_SLICE_PER_SOURCE = {"playstore": 300, "appstore": 50, "youtube": 300, "tradingqna": 80}
 
 # Full-run targets (about 2,500 raw records in total)
 TARGET_PER_SOURCE = {

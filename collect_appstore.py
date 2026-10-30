@@ -1,19 +1,25 @@
-"""Stage 1: Apple App Store reviews of Groww (India storefront) via the public RSS feed -> data/raw/appstore.jsonl
+"""Stage 1: Apple App Store reviews of Groww (India storefront) -> data/raw/appstore.jsonl
 
-The feed returns at most 10 pages x 50 of the most recent reviews.
+Two public, login-free routes:
+1. The legacy RSS feed (up to 500 recent reviews). As of Oct 2026 it returns no entries for Groww.
+2. The public app page's server-rendered data, which embeds only about 10 reviews.
+Apple's review API needs a bearer token pulled from the site's JavaScript; we do NOT use it.
 """
 import argparse
+import json
+import re
 import time
 
 import requests
 
 import config
-from sip.common import log, make_record, save_source
+from sip.common import dedupe, log, make_record, save_source
 
 FEED = "https://itunes.apple.com/{cc}/rss/customerreviews/page={page}/id={app}/sortby=mostrecent/json"
+PAGE = "https://apps.apple.com/{cc}/app/id{app}?see-all=reviews"
 
 
-def main(limit: int) -> None:
+def from_rss(limit: int) -> list[dict]:
     rows = []
     for page in range(1, 11):
         resp = requests.get(FEED.format(cc=config.APPSTORE_COUNTRY, page=page, app=config.GROWW_APPSTORE_ID),
@@ -34,15 +40,53 @@ def main(limit: int) -> None:
                 url=f"https://apps.apple.com/{config.APPSTORE_COUNTRY}/app/id{config.GROWW_APPSTORE_ID}",
                 author=e.get("author", {}).get("name", {}).get("label"),
             ))
-        log.info("appstore page %d: %d entries", page, len(entries))
         if len(rows) >= limit:
             break
         time.sleep(config.POLITE_DELAY_SECONDS)
-    save_source("appstore", rows[:limit])
+    log.info("appstore RSS: %d reviews", len(rows))
+    return rows
+
+
+def from_page() -> list[dict]:
+    resp = requests.get(PAGE.format(cc=config.APPSTORE_COUNTRY, app=config.GROWW_APPSTORE_ID),
+                        headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+    resp.raise_for_status()
+    m = re.search(r'id="serialized-server-data">(.*?)</script>', resp.text, re.S)
+    if not m:
+        return []
+    found = []
+
+    def walk(o):
+        if isinstance(o, dict):
+            if o.get("$kind") == "Review":
+                found.append(o)
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+
+    walk(json.loads(m.group(1)))
+    rows = []
+    for r in found:
+        title, body = r.get("title") or "", r.get("contents") or ""
+        rows.append(make_record(
+            "appstore", r["id"], (r.get("date") or "")[:10] or None,
+            f"{title}\n{body}" if title else body, rating=r.get("rating"),
+            url=f"https://apps.apple.com/{config.APPSTORE_COUNTRY}/app/id{config.GROWW_APPSTORE_ID}",
+            author=r.get("reviewerName"),
+        ))
+    log.info("appstore page: %d reviews", len(rows))
+    return rows
+
+
+def main(limit: int) -> None:
+    rows = from_rss(limit) or from_page()
+    save_source("appstore", dedupe(rows)[:limit])
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--thin", action="store_true")
     a = ap.parse_args()
-    main(config.THIN_SLICE_PER_SOURCE if a.thin else config.TARGET_PER_SOURCE["appstore"])
+    main(config.THIN_SLICE_PER_SOURCE["appstore"] if a.thin else config.TARGET_PER_SOURCE["appstore"])

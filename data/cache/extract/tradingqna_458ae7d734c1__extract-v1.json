@@ -1,0 +1,24 @@
+{
+ "record_id": "tradingqna_458ae7d734c1",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "market_drop_losses",
+   "evidence_span": "the falling Mutual Fund flows do seem to be a reaction to the pain",
+   "severity": 2,
+   "confidence": 0.7,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Observes SIP cancellations rising as markets fall.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "seed"
+}

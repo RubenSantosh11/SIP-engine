@@ -1,0 +1,43 @@
+# SEED codebook for the thin slice ONLY (plumbing test). It is NOT the research codebook.
+# Stage 3 (open coding) produces a draft; you hand-curate it here and set status: final.
+status: seed
+addressability_scores:   # mapping used in scoring (documented in README)
+  high: 1.0     # Groww can change this directly in product, copy or flows
+  medium: 0.6   # Groww can influence it (education, reminders, defaults)
+  low: 0.3      # mostly outside Groww's control (income shocks, macro)
+themes:
+  - id: market_drop_losses
+    name: Market fall / seeing losses
+    definition: Investor pauses or stops (or considers it) because of falling markets or negative returns.
+    include: Mentions of red portfolio, losses, crash, correction as a reason.
+    exclude: General complaints about returns without a market-fall framing (use low_returns).
+    example: ""
+    addressability: medium
+  - id: cash_flow
+    name: Cash-flow / affordability
+    definition: Investor cannot afford the instalment (job loss, expenses, emergencies).
+    include: Income loss, expenses, needing the money, salary delays.
+    exclude: Withdrawals for planned goals.
+    example: ""
+    addressability: medium
+  - id: mandate_payment_issue
+    name: Autopay / mandate / payment failure
+    definition: SIP missed or cancelled because of autopay, mandate, bank or payment failures.
+    include: Mandate not registered, bounced instalment, autopay failed, bank charges for failure.
+    exclude: Deliberate cancellation by the user.
+    example: ""
+    addressability: high
+  - id: app_friction
+    name: App friction in managing SIPs
+    definition: Difficulty pausing, modifying, cancelling or tracking SIPs in the app.
+    include: Bugs, confusing flows, can't find option, app errors around SIPs.
+    exclude: Payment-rail failures (use mandate_payment_issue).
+    example: ""
+    addressability: high
+  - id: low_returns
+    name: Low or slow returns / impatience
+    definition: Stops or doubts SIP because returns feel too low or too slow.
+    include: Saying returns are not growing, a fixed deposit is better, or comparing to other options.
+    exclude: Explicit market crash framing.
+    example: ""
+    addressability: medium

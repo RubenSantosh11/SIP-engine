@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_3ce9d9173c72",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Mene kiya cancel sip",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "jisko mene cancel kiya dikha nhi",
+   "severity": 2,
+   "confidence": 0.7,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "After cancelling, the SIP vanished from the app and they fear the money is lost.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "seed"
+}

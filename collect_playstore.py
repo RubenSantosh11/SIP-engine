@@ -23,11 +23,11 @@ def main(limit: int) -> None:
             ))
         if token is None:
             break
-    save_source("playstore", rows)
+    save_source("playstore", rows[:limit])
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--thin", action="store_true", help="thin-slice cap")
     a = ap.parse_args()
-    main(config.THIN_SLICE_PER_SOURCE if a.thin else config.TARGET_PER_SOURCE["playstore"])
+    main(config.THIN_SLICE_PER_SOURCE["playstore"] if a.thin else config.TARGET_PER_SOURCE["playstore"])
