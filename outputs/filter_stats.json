@@ -1,29 +1,30 @@
 {
  "playstore": {
-  "raw": 252,
-  "dropped_prefilter": 250,
-  "pass_prefilter": 2,
-  "dropped_llm": 2
+  "raw": 3856,
+  "dropped_prefilter": 3812,
+  "pass_prefilter": 44,
+  "dropped_llm": 32,
+  "kept": 12
  },
  "appstore": {
-  "raw": 57,
-  "pass_prefilter": 4,
-  "kept": 3,
-  "dropped_prefilter": 53,
-  "dropped_llm": 1
+  "raw": 465,
+  "pass_prefilter": 16,
+  "kept": 7,
+  "dropped_prefilter": 449,
+  "dropped_llm": 9
  },
  "youtube": {
-  "raw": 282,
-  "dropped_prefilter": 164,
-  "pass_prefilter": 118,
-  "dropped_llm": 91,
-  "kept": 27
+  "raw": 1349,
+  "dropped_prefilter": 890,
+  "pass_prefilter": 459,
+  "dropped_llm": 371,
+  "kept": 88
  },
  "tradingqna": {
-  "raw": 34,
-  "pass_prefilter": 24,
-  "kept": 11,
-  "dropped_prefilter": 10,
-  "dropped_llm": 13
+  "raw": 465,
+  "pass_prefilter": 211,
+  "kept": 40,
+  "dropped_prefilter": 254,
+  "dropped_llm": 171
  }
 }
