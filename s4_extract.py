@@ -28,16 +28,18 @@ Return one JSON object:
 {{
  "record_id": "{record_id}",
  "source": "{source}",
- "sip_status": "stopped" | "paused" | "continuing" | "unclear",   // the WRITER's own SIP status as stated
+ "sip_status": "stopped" | "paused" | "reduced" | "continuing" | "unclear",   // the WRITER's own SIP status as stated
  "sip_status_evidence": "<verbatim quote showing the status, or null if unclear>",
  "first_time_investor": "yes" | "no" | "unclear",                // only "yes"/"no" if the text says so
  "first_time_evidence": "<verbatim quote, or null if unclear>",
+ "time_since_start": "<1m" | "1-6m" | "6-12m" | ">12m" | "unclear",   // how long the writer has had the SIP, if stated
+ "time_since_start_evidence": "<verbatim quote, or null if unclear>",
  "themes": [{{"theme_id": "...", "evidence_span": "<verbatim quote>", "severity": 1|2|3, "confidence": 0.0-1.0}}],
  "one_line_reason": "<why they stopped/paused/continued, max 20 words, or null>"
 }}
 Rules:
-- stopped = cancelled/ended SIP; paused = paused/skipped/missed instalments but intends to keep it; continuing = still investing.
-- A theme is a REASON or friction around pausing/stopping/continuing. Only code themes the text actually supports.
+- stopped = cancelled/ended (or clearly says "I want to stop my SIP"); paused = paused/skipped/missed instalments but keeping it; reduced = lowered the amount; continuing = still investing. A question like "should I stop?" is unclear.
+- Themes answer three questions: why they started and what they expected (start), how their behaviour changed after starting (behaviour), what led them to pause/reduce/stop (stop). Code only themes the text actually supports.
 - severity: 1 = minor mention, 2 = clear reason or friction, 3 = decisive reason / strong distress.
 - Every evidence quote must be an exact substring of the text (you may shorten it, never reword or translate it).
 {retry_note}
@@ -53,8 +55,8 @@ def load_codebook() -> dict:
 
 
 def codebook_text(cb: dict) -> str:
-    return "\n".join(f"- {t['id']}: {t['name']}. {t['definition']} Include: {t['include']} Exclude: {t['exclude']}"
-                     for t in cb["themes"])
+    return "\n".join(f"- {t['id']} [{t.get('question', '?')}]: {t['name']}. {t['definition']} "
+                     f"Include: {t['include']} Exclude: {t['exclude']}" for t in cb["themes"])
 
 
 def failed_spans(ex: Extraction, text: str) -> list[str]:
@@ -63,6 +65,8 @@ def failed_spans(ex: Extraction, text: str) -> list[str]:
         bad.append(ex.sip_status_evidence or "<missing sip_status_evidence>")
     if ex.first_time_investor != "unclear" and not span_in_text(ex.first_time_evidence, text):
         bad.append(ex.first_time_evidence or "<missing first_time_evidence>")
+    if ex.time_since_start != "unclear" and not span_in_text(ex.time_since_start_evidence, text):
+        bad.append(ex.time_since_start_evidence or "<missing time_since_start_evidence>")
     return bad
 
 
@@ -101,6 +105,8 @@ def extract(r: dict, cb: dict) -> dict:
         t["verified"] = span_in_text(t["evidence_span"], r["text"])
     d["sip_status_verified"] = d["sip_status"] == "unclear" or span_in_text(d["sip_status_evidence"], r["text"])
     d["first_time_verified"] = d["first_time_investor"] == "unclear" or span_in_text(d["first_time_evidence"], r["text"])
+    d["time_since_start_verified"] = (d["time_since_start"] == "unclear"
+                                      or span_in_text(d["time_since_start_evidence"], r["text"]))
     d["model"] = config.SESSION_MODEL_LABEL if config.LLM_PROVIDER == "session" else config.MODEL_EXTRACT
     d["codebook_status"] = cb.get("status")
     return d
@@ -133,6 +139,7 @@ def main() -> None:
     spans = [t["verified"] for x in ok for t in x["themes"]]
     spans += [x["sip_status_verified"] for x in ok if x["sip_status"] != "unclear"]
     spans += [x["first_time_verified"] for x in ok if x["first_time_investor"] != "unclear"]
+    spans += [x["time_since_start_verified"] for x in ok if x.get("time_since_start", "unclear") != "unclear"]
     stats = {
         "records_extracted": len(rows),
         "malformed_after_retry": sum(x["status"] == "malformed" for x in rows),

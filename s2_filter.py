@@ -1,4 +1,4 @@
-"""Stage 2: relevance filter.
+"""Stage 2: relevance filter (research questions: start / behaviour after starting / pause-reduce-stop).
 
 1. Keyword pre-filter (free): the text must mention SIPs / auto-invest / monthly investing, OR the
    context (video or topic title) mentions SIPs and the text uses a stop/pause/continue-type word.
@@ -22,10 +22,13 @@ SIP_RE = re.compile("|".join(config.SIP_TERMS), re.I)
 ACTION_RE = re.compile("|".join(config.ACTION_TERMS), re.I)
 
 SYSTEM = "You are a careful research assistant classifying public feedback. Output JSON only."
-PROMPT = """Decide for each numbered item whether it is RELEVANT to a study of why people pause, stop or continue SIPs (systematic investment plans in mutual funds).
+PROMPT = """Decide for each numbered item whether it is RELEVANT to a study of SIPs (systematic investment plans in mutual funds, incl. auto-invest / monthly mutual-fund investing) with three questions:
+  (A) Why do people start a SIP, and what do they expect to happen?
+  (B) What changes in their behaviour in the months after starting (checking returns, increasing, reducing, skipping, redeeming, switching, sticking with it)?
+  (C) What leads investors to pause, reduce or stop a SIP?
 
-RELEVANT = the text itself talks about the writer's (or people's) SIPs / auto-invest / monthly mutual-fund investing AND says something about pausing, stopping, missing, cancelling, skipping, continuing or resuming them, or the reasons around that (including payment/mandate failures that make a SIP miss).
-NOT RELEVANT = generic praise or complaints, stock trading only, SIPs mentioned without anything about stopping/pausing/continuing, spam, or questions with no personal or behavioural content.
+RELEVANT = the text describes the writer's own (or other investors') SIP experience, motives, expectations, behaviour or decisions that speak to A, B or C - including payment/mandate/app problems that make a SIP miss or stop.
+NOT RELEVANT = generic praise or complaints about the app, stock trading only, SIPs merely named with nothing about motives/expectations/behaviour/decisions, spam or promotion, thanks to a video creator, or bare how-to questions with no personal situation.
 The context line (video or forum topic title) is background only; judge the text.
 
 Return a JSON array with one object per item: [{{"i": <item number>, "relevant": true|false}}]

@@ -10,7 +10,7 @@ import json
 import requests
 
 import config
-from sip.common import get_secret, log, make_record, read_jsonl, save_source
+from sip.common import get_secret, log, make_record, save_source
 
 API = "https://www.googleapis.com/youtube/v3/"
 VIDEOS_FILE = config.RAW_DIR / "youtube_videos.json"
@@ -57,13 +57,15 @@ def search_videos(queries: list[str], per_query: int) -> dict:
     return videos
 
 
-def main(limit: int, queries: list[str], per_query: int, max_pages: int) -> None:
+def main(limit: int, queries: list[str], per_query: int) -> None:
+    """Spread comments evenly: each video gets at most limit / n_videos top comments (by relevance)."""
     videos = search_videos(queries, per_query)
-    have = len(read_jsonl(config.RAW_DIR / "youtube.jsonl"))
+    per_video = -(-limit // max(1, len(videos["videos"])))
     rows = []
     for vid, v in videos["videos"].items():
-        while not v["finished"] and v["pages_done"] < max_pages and have + len(rows) < limit:
-            params = dict(part="snippet", videoId=vid, maxResults=min(100, limit - have - len(rows)),
+        v.setdefault("n", 0)
+        while not v["finished"] and v["n"] < per_video:
+            params = dict(part="snippet", videoId=vid, maxResults=min(100, per_video - v["n"]),
                           order="relevance", textFormat="plainText")
             if v["next"]:
                 params["pageToken"] = v["next"]
@@ -80,14 +82,13 @@ def main(limit: int, queries: list[str], per_query: int, max_pages: int) -> None
                     url=f"https://www.youtube.com/watch?v={vid}", context=v["title"],
                     author=s.get("authorChannelId", {}).get("value") or s.get("authorDisplayName"),
                 ))
+            v["n"] += len(data.get("items", []))
             v["pages_done"] += 1
             v["next"] = data.get("nextPageToken")
-            v["finished"] = v["next"] is None
+            v["finished"] = v["next"] is None or not data.get("items")
         VIDEOS_FILE.write_text(json.dumps(videos, indent=1))
-        if have + len(rows) >= limit:
-            break
     save_source("youtube", rows)
-    log.info("youtube units used today: %d", _units_today())
+    log.info("youtube: %d videos, cap %d comments each; units used today: %d", len(videos["videos"]), per_video, _units_today())
 
 
 if __name__ == "__main__":
@@ -95,7 +96,6 @@ if __name__ == "__main__":
     ap.add_argument("--thin", action="store_true")
     a = ap.parse_args()
     if a.thin:
-        main(config.THIN_SLICE_PER_SOURCE["youtube"], config.YOUTUBE_SEARCH_QUERIES[:1], 5, 1)
+        main(config.THIN_SLICE_PER_SOURCE["youtube"], config.YOUTUBE_SEARCH_QUERIES[:1], 5)
     else:
-        main(config.TARGET_PER_SOURCE["youtube"], config.YOUTUBE_SEARCH_QUERIES,
-             config.YOUTUBE_VIDEOS_PER_QUERY, config.YOUTUBE_MAX_COMMENT_PAGES_PER_VIDEO)
+        main(config.TARGET_PER_SOURCE["youtube"], config.YOUTUBE_SEARCH_QUERIES, config.YOUTUBE_VIDEOS_PER_QUERY)
