@@ -1,4 +1,4 @@
-"""Stage 1: Apple App Store reviews of Groww (India storefront) -> data/raw/appstore.jsonl
+"""Stage 1: Apple App Store reviews (India storefront) of Groww and other investing apps -> data/raw/appstore.jsonl
 
 Two public, login-free routes:
 1. The legacy RSS feed (up to 500 recent reviews). As of Oct 2026 it returns no entries for Groww.
@@ -19,10 +19,10 @@ FEED = "https://itunes.apple.com/{cc}/rss/customerreviews/page={page}/id={app}/s
 PAGE = "https://apps.apple.com/{cc}/app/id{app}?see-all=reviews"
 
 
-def from_rss(limit: int) -> list[dict]:
+def from_rss(name: str, app_id: str, limit: int) -> list[dict]:
     rows = []
     for page in range(1, 11):
-        resp = requests.get(FEED.format(cc=config.APPSTORE_COUNTRY, page=page, app=config.GROWW_APPSTORE_ID),
+        resp = requests.get(FEED.format(cc=config.APPSTORE_COUNTRY, page=page, app=app_id),
                             headers={"User-Agent": config.HTTP_USER_AGENT}, timeout=30)
         resp.raise_for_status()
         entries = resp.json().get("feed", {}).get("entry", [])
@@ -37,18 +37,18 @@ def from_rss(limit: int) -> list[dict]:
             rows.append(make_record(
                 "appstore", e["id"]["label"], e.get("updated", {}).get("label", "")[:10] or None,
                 f"{title}\n{body}" if title else body, rating=int(e["im:rating"]["label"]),
-                url=f"https://apps.apple.com/{config.APPSTORE_COUNTRY}/app/id{config.GROWW_APPSTORE_ID}",
-                author=e.get("author", {}).get("name", {}).get("label"),
+                url=f"https://apps.apple.com/{config.APPSTORE_COUNTRY}/app/id{app_id}",
+                author=e.get("author", {}).get("name", {}).get("label"), app=name,
             ))
         if len(rows) >= limit:
             break
         time.sleep(config.POLITE_DELAY_SECONDS)
-    log.info("appstore RSS: %d reviews", len(rows))
+    log.info("appstore %s RSS: %d reviews", name, len(rows))
     return rows
 
 
-def from_page() -> list[dict]:
-    resp = requests.get(PAGE.format(cc=config.APPSTORE_COUNTRY, app=config.GROWW_APPSTORE_ID),
+def from_page(name: str, app_id: str) -> list[dict]:
+    resp = requests.get(PAGE.format(cc=config.APPSTORE_COUNTRY, app=app_id),
                         headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
     resp.raise_for_status()
     m = re.search(r'id="serialized-server-data">(.*?)</script>', resp.text, re.S)
@@ -73,20 +73,25 @@ def from_page() -> list[dict]:
         rows.append(make_record(
             "appstore", r["id"], (r.get("date") or "")[:10] or None,
             f"{title}\n{body}" if title else body, rating=r.get("rating"),
-            url=f"https://apps.apple.com/{config.APPSTORE_COUNTRY}/app/id{config.GROWW_APPSTORE_ID}",
-            author=r.get("reviewerName"),
+            url=f"https://apps.apple.com/{config.APPSTORE_COUNTRY}/app/id{app_id}",
+            author=r.get("reviewerName"), app=name,
         ))
-    log.info("appstore page: %d reviews", len(rows))
+    log.info("appstore %s page: %d reviews", name, len(rows))
     return rows
 
 
-def main(limit: int) -> None:
-    rows = from_rss(limit) or from_page()
-    save_source("appstore", dedupe(rows)[:limit])
+def main(limit: int, thin: bool) -> None:
+    rows = []
+    for name, app_id in config.APPSTORE_APPS.items():
+        if thin and name != "groww":
+            continue
+        rows += dedupe(from_rss(name, app_id, limit) or from_page(name, app_id))[:limit]
+        time.sleep(config.POLITE_DELAY_SECONDS)
+    save_source("appstore", rows)
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--thin", action="store_true")
     a = ap.parse_args()
-    main(config.THIN_SLICE_PER_SOURCE["appstore"] if a.thin else config.TARGET_PER_SOURCE["appstore"])
+    main(config.THIN_SLICE_PER_SOURCE["appstore"] if a.thin else config.TARGET_PER_SOURCE["appstore"], a.thin)

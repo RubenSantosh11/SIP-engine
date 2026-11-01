@@ -17,7 +17,7 @@ from sip.common import log, read_jsonl, sha, write_jsonl
 from sip.llm import BudgetExhausted, LLMError, PendingAnswer, cache_get, cache_put, llm_call
 from sip.schema import FilterItem
 
-SOURCES = ["playstore", "appstore", "youtube", "tradingqna"]
+SOURCES = ["playstore", "appstore", "youtube", "tradingqna", "valuepickr"]
 SIP_RE = re.compile("|".join(config.SIP_TERMS), re.I)
 ACTION_RE = re.compile("|".join(config.ACTION_TERMS), re.I)
 

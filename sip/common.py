@@ -35,10 +35,11 @@ def author_hash(name: str | None) -> str | None:
 
 
 def make_record(source: str, native_id: str, date: str | None, text: str,
-                rating=None, url=None, context=None, author=None) -> dict:
+                rating=None, url=None, context=None, author=None, app=None) -> dict:
     return {
         "record_id": f"{source}_{sha(source + ':' + str(native_id), 12)}",
         "source": source,
+        "app": app,       # which app a store review is about (None for forums / YouTube)
         "date": date,
         "rating": rating,
         "text": text.strip(),

@@ -43,8 +43,29 @@ PROMPT_VERSION_EXTRACT = "extract-v2"
 FILTER_BATCH_SIZE = 10
 
 # ---- Collection ----
-GROWW_PLAY_ID = "com.nextbillion.groww"
-GROWW_APPSTORE_ID = "1404871703"
+# Apps whose public store reviews we collect. Groww is the focus; the others widen coverage of
+# first-time SIP investing in India (why people discontinue is not platform-specific).
+PLAY_APPS = {
+    "groww": "com.nextbillion.groww",
+    "coin": "com.zerodha.coin",
+    "etmoney": "com.smartspends",
+    "paytmmoney": "com.paytmmoney",
+    "indmoney": "in.indwealth",
+    "upstox": "in.upstox.app",
+    "angelone": "com.msf.angelmobile",
+    "fundsindia": "com.fundsindia",
+}
+APPSTORE_APPS = {
+    "groww": "1404871703",
+    "etmoney": "1212752482",
+    "paytmmoney": "1344431352",
+    "kuvera": "1329701793",
+    "indmoney": "1450178837",
+    "upstox": "1584953620",
+    "angelone": "1060530981",
+}
+PLAY_REVIEWS_PER_APP = {"groww": 8000}   # others use PLAY_REVIEWS_DEFAULT
+PLAY_REVIEWS_DEFAULT = 4000
 APPSTORE_COUNTRY = "in"
 HTTP_USER_AGENT = "SIP-discovery-research/0.1 (Nextleap student project; polite, low volume)"
 POLITE_DELAY_SECONDS = 1.0
@@ -60,9 +81,9 @@ THIN_SLICE_PER_SOURCE = {"playstore": 300, "appstore": 50, "youtube": 300, "trad
 # Full-run targets. Play Store reviews rarely mention SIPs, so we pull many and let the free
 # keyword pre-filter keep the SIP ones.
 TARGET_PER_SOURCE = {
-    "playstore": 8000,
-    "appstore": 500,      # public RSS feed: at most 500 recent reviews (often returns none)
-    "youtube": 1500,
+    "playstore": None,    # per app: PLAY_REVIEWS_PER_APP / PLAY_REVIEWS_DEFAULT
+    "appstore": 500,      # per app; public RSS feed returns at most 500 recent reviews
+    "youtube": 2200,
     "tradingqna": 500,
 }
 
@@ -84,6 +105,11 @@ YOUTUBE_SEARCH_QUERIES = [
     "continued SIP during market crash",
     "10 years of SIP journey",
     "SIP negative returns what to do",
+    # first-year discontinuation (added after the first full run)
+    "stopped SIP after 1 year",
+    "SIP band kar diya kyun",
+    "first year SIP loss beginner",
+    "mutual fund SIP mistakes I made",
 ]
 YOUTUBE_VIDEOS_PER_QUERY = 8
 YOUTUBE_DAILY_UNIT_BUDGET = 3000  # well below the 10k default
@@ -94,6 +120,15 @@ TRADINGQNA_SEARCH_QUERIES = [
     "started sip", "first sip", "sip returns", "increase sip", "step up sip", "sip negative returns",
 ]
 TRADINGQNA_MAX_TOPICS_PER_QUERY = 12
+
+# ValuePickr (Discourse). Its robots.txt disallows /search, so we list topics in these
+# categories via the public category JSON and keep those whose titles mention SIPs / mutual funds.
+VALUEPICKR_CATEGORIES = {9: "investing-strategies", 12: "q-a-questions-answers", 1: "uncategorized",
+                         72: "investment-journey", 44: "behavourial-management", 58: "newbies-must-read",
+                         32: "learning", 8: "lessons-from-mr-market"}
+VALUEPICKR_TITLE_TERMS = r"\bsips?\b|mutual fund|\bmfs?\b|index fund|systematic|monthly invest"
+VALUEPICKR_MAX_PAGES_PER_TOPIC = 3
+FORUM_TARGET = {"tradingqna": 500, "valuepickr": 500}
 
 # ---- Stage 2 keyword pre-filter ----
 SIP_TERMS = [
@@ -111,6 +146,10 @@ ACTION_TERMS = [
 ]
 
 # ---- Stage 4/5 ----
+# A theme is ranked only if at least MIN_THEME_RECORDS records mention it, from at least
+# MIN_THEME_SOURCES different sources; otherwise it is listed separately as "too little evidence".
+MIN_THEME_RECORDS = 30
+MIN_THEME_SOURCES = 2
 # Which sip_status values count as droppers vs continuers in the stop-lift contrast.
 DROPPER_STATUSES = ["stopped", "paused", "reduced"]
 CONTINUER_STATUSES = ["continuing"]
