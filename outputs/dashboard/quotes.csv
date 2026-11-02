@@ -1,0 +1,22 @@
+quote_id,theme_id,theme,quote,source,app
+app_reliability_errors-1,app_reliability_errors,"App bugs, slow processing and confusing status","their app did not show the transaction, i did not receive mutual fund unit neither my money was returned ever",Google Play,coin
+app_reliability_errors-2,app_reliability_errors,"App bugs, slow processing and confusing status",The manage SIP segment is mostly not showing which caused missing multiple SIPs,Apple App Store,paytmmoney
+app_reliability_errors-3,app_reliability_errors,"App bugs, slow processing and confusing status",jisko mene cancel kiya dikha nhi yani mere paise chale gaye,YouTube comments,
+payment_autopay_failure-1,payment_autopay_failure,Autopay / mandate / payment failures,I have been trying to make AMP SIPs for last 3months but it never executes. I have to do it manual each time,Google Play,coin
+payment_autopay_failure-2,payment_autopay_failure,Autopay / mandate / payment failures,updating the bank account for SIP auto-debit usually force you to cancel the existing SIP and create a new one,Apple App Store,upstox
+payment_autopay_failure-3,payment_autopay_failure,Autopay / mandate / payment failures,"ek bhi kist miss hui, 150 se750 tk account se cut jayega bank panelty ke naam se",YouTube comments,
+support_trust_breakdown-1,support_trust_breakdown,Unresponsive support and loss of trust,they gave tentative deadline of refund every time but it has never been refunded,Google Play,coin
+support_trust_breakdown-2,support_trust_breakdown,Unresponsive support and loss of trust,raised the issue with customer support and they have refused to help,Apple App Store,paytmmoney
+support_trust_breakdown-3,support_trust_breakdown,Unresponsive support and loss of trust,vo abhi phone nahi uthata,YouTube comments,
+fees_paywall-1,fees_paywall,"New fees, paywalls and upselling",u are continuously forcing us to subscribe for ur paid service by disabling one by one features,Google Play,etmoney
+fees_paywall-2,fees_paywall,"New fees, paywalls and upselling",each time I have to pay Zerodha/payment gateway Rs 9,TradingQ&A forum,
+fees_paywall-3,fees_paywall,"New fees, paywalls and upselling",they are forcing people to Genius then only will allow to use basic functionalities,Google Play,etmoney
+disruptive_app_updates-1,disruptive_app_updates,App updates that break or hide SIP flows,with the update they seemed to have removed the functions where one could easily stop or pause his SIP's,Google Play,fundsindia
+disruptive_app_updates-2,disruptive_app_updates,App updates that break or hide SIP flows,I am not able to pay my SIP instalment since the update,Apple App Store,paytmmoney
+disruptive_app_updates-3,disruptive_app_updates,App updates that break or hide SIP flows,in the latest update i am not able to see manual payment option for monthly SIPs,Google Play,upstox
+missing_sip_controls-1,missing_sip_controls,"Can't pause, skip, reduce or cancel easily",the App still doesn't offer an option to cancel or discontinue the SIP despite the lock-in period having expired,Google Play,fundsindia
+missing_sip_controls-2,missing_sip_controls,"Can't pause, skip, reduce or cancel easily",The cancellation process goes through and their is confirmation on the app but the cancellation doesn’t happen,Apple App Store,paytmmoney
+missing_sip_controls-3,missing_sip_controls,"Can't pause, skip, reduce or cancel easily",having to send a physical request letter to the AMC and having to wait for a month to stop,TradingQ&A forum,
+returns_disappointment-1,returns_disappointment,Disappointing returns or market fear,Some investors who monitor their portfolio panic in such continuous market fall & stop SIPs,TradingQ&A forum,
+returns_disappointment-2,returns_disappointment,Disappointing returns or market fear,मेरे को 25 हजार का फटका लग गया है 2 साल से अभी भी वही वैल्यू है,YouTube comments,
+returns_disappointment-3,returns_disappointment,Disappointing returns or market fear,ET money has given me a return of negative 3 percent returns,Google Play,etmoney

@@ -1,0 +1,17 @@
+rank,theme_id,theme,question,records,reach,reach_low,reach_high,severity,stop_lift,stop_lift_low,stop_lift_high,addressability,priority_low,status,reason
+1,app_reliability_errors,"App bugs, slow processing and confusing status",stop,154,0.2213,0.1729,0.2786,2.0584,5.6,1.8121,17.3054,high,0.645,ranked,
+2,payment_autopay_failure,Autopay / mandate / payment failures,stop,134,0.1872,0.1425,0.242,2.1045,3.4286,1.2802,9.1822,high,0.384,ranked,
+3,support_trust_breakdown,Unresponsive support and loss of trust,stop,76,0.1191,0.0837,0.1668,2.0,19.7557,1.2246,318.7166,high,0.2051,ranked,
+4,fees_paywall,"New fees, paywalls and upselling",stop,48,0.1149,0.0802,0.162,2.5,2.7429,0.8565,8.7836,high,0.1717,ranked,
+5,disruptive_app_updates,App updates that break or hide SIP flows,stop,51,0.0809,0.0524,0.1228,2.0,2.9143,0.6936,12.2457,high,0.0726,ranked,
+6,missing_sip_controls,"Can't pause, skip, reduce or cancel easily",stop,109,0.0851,0.0558,0.1278,2.1376,1.9429,0.59,6.3982,high,0.0703,ranked,
+7,returns_disappointment,Disappointing returns or market fear,stop,38,0.0511,0.0294,0.0871,2.2895,0.3429,0.1149,1.0228,medium,0.0046,ranked,
+,switching_plan_or_platform,"Switching plan, fund or platform (not a real drop)",stop,62,0.1191,0.0837,0.1668,1.5323,19.7557,1.2246,318.7166,high,0.1571,not ranked,"switching is an outcome, not a cause (its causes are coded in other themes)"
+,early_confusion_first_months,Early confusion after the first instalment,behaviour,26,0.0681,0.0423,0.1077,1.6538,11.4375,0.6966,187.7909,high,0.0488,not ranked,only 26 records (< 30)
+,platform_or_fund_initiated,Stopped or changed by the platform or fund,stop,15,0.0553,0.0326,0.0923,2.1333,1.8857,0.4302,8.2661,medium,0.018,not ranked,only 15 records (< 30)
+,missed_reminders_forgetting,"No reminders, so instalments are forgotten",stop,20,0.0255,0.0118,0.0546,2.0,4.5057,0.2576,78.8111,high,0.0061,not ranked,only 20 records (< 30)
+,charges_lockin_surprise,"Surprise charges, lock-ins or tax at exit",stop,8,0.0085,0.0023,0.0305,2.125,,,,medium,0.003,not ranked,only 8 records (< 30)
+,cash_need_affordability,Cash need or amount too high,stop,14,0.0298,0.0145,0.0602,2.0714,0.2571,0.0592,1.1161,low,0.0005,not ranked,only 14 records (< 30)
+,conflicting_advice,Conflicting or misleading advice,behaviour,22,0.0255,0.0118,0.0546,1.9091,0.1714,0.0322,0.9124,medium,0.0004,not ranked,only 22 records (< 30)
+,return_expectations,Specific return expectations at the start,start,13,0.0213,0.0091,0.0488,1.8462,0.0857,0.0098,0.7519,medium,0.0001,not ranked,only 13 records (< 30)
+,long_term_discipline,Long-term discipline (protective),behaviour,39,0.1021,0.0696,0.1475,1.5385,0.0071,0.0004,0.1146,medium,0.0,not ranked,"contrast only (protective factor, not an opportunity)"

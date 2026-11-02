@@ -33,7 +33,17 @@ Every result is cached per `record_id` + prompt version in `data/cache/`, so re-
 | 2 Relevance filter | `python s2_filter.py` | `data/processed/relevant.jsonl`, `outputs/filter_stats.json` |
 | 3 Open coding + codebook | `python s3_open_code.py` | `outputs/open_codes.jsonl`, `codebook_draft.yaml` -> you curate `codebook.yaml` |
 | 4 Extract | `python s4_extract.py` | `data/processed/extractions.jsonl`, `outputs/span_check_stats.json` |
-| 5-8 | *(to come: aggregate/score, validate, report, Streamlit app)* | |
+| 5 Score | `python s5_aggregate.py` | `outputs/themes_ranked.csv`, `outputs/contrast_table.csv` |
+| 6 Validate | `python s6_validate.py blank` (before extraction), PM labels, then `python s6_validate.py score` | `outputs/golden_set_*.csv`, `outputs/validation_summary.json` |
+| 7 Report | `python s7_report.py` then `python s7_dashboard_csvs.py` | `outputs/results.md`, `outputs/evidence_log.md`, `outputs/dashboard/*.csv` (results page data) |
+
+## Scoring (Stage 5)
+- **reach**: share of records with a clear SIP status (dropper or continuer) that mention the theme via a verified quote; 95% Wilson interval.
+- **severity**: mean of 1-3 severities of verified mentions.
+- **stop-lift**: risk ratio P(theme | stopped/paused/reduced) / P(theme | continuing), Katz log 95% interval, 0.5 continuity correction for zero cells; set to 1 (neutral) if either group has < 10 records or the theme < 5 mentions. Records whose only stop theme is switching are not droppers.
+- **addressability**: codebook tag mapped high 1.0, medium 0.6, low 0.3.
+- **priority** = reach x severity x stop-lift x addressability; ranked by the lower bound (reach_low x severity x lift_low x addressability).
+- Ranked only with >= 30 records from >= 2 sources (`config.py`); contrast-only and switching themes are never ranked.
 
 Tests: `python -m pytest -q tests`
 

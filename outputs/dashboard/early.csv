@@ -1,0 +1,13 @@
+theme_id,theme,records
+app_reliability_errors,"App bugs, slow processing and confusing status",10
+early_confusion_first_months,Early confusion after the first instalment,8
+returns_disappointment,Disappointing returns or market fear,4
+support_trust_breakdown,Unresponsive support and loss of trust,3
+conflicting_advice,Conflicting or misleading advice,2
+payment_autopay_failure,Autopay / mandate / payment failures,2
+long_term_discipline,Long-term discipline (protective),2
+return_expectations,Specific return expectations at the start,2
+missed_reminders_forgetting,"No reminders, so instalments are forgotten",1
+disruptive_app_updates,App updates that break or hide SIP flows,1
+fees_paywall,"New fees, paywalls and upselling",1
+missing_sip_controls,"Can't pause, skip, reduce or cancel easily",1

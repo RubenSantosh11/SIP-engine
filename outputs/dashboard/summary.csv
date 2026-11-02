@@ -1,0 +1,12 @@
+metric,value
+raw_records,27745
+relevant_records,626
+extracted_records,626
+droppers,175
+continuers,60
+first_time_stated,7
+started_within_12m,31
+coded_values,1182
+span_failures,0
+span_pass_rate,1.0
+golden_labelled,0
