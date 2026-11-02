@@ -1,6 +1,7 @@
 # PROPOSED codebook: 12 themes merged from codebook_draft.yaml (28 themes from open coding of 100 records)
 # plus themes seen while filtering the expanded data (other apps' reviews, ValuePickr).
-# Focus: why first-time SIP investors pause, reduce or stop.
+# Focus: why first-time SIP investors who HAVE STARTED pause, reduce or stop, mainly within ~12 months of starting.
+# Barriers to starting at all (KYC, minimum/initial amounts, account opening) are out of scope.
 # YOUR TURN: edit freely (merge / rename / delete), then set status: final and log changes in corrections_log.md.
 status: proposed
 addressability_scores:   # mapping used in scoring (documented in README)
@@ -90,15 +91,15 @@ themes:
     addressability: high
     exclude_from_droppers: true
     merged_from: [stop_switch_plan_or_platform, beh_switching_restructuring]
-  - id: setup_onboarding_friction
-    question: start
-    name: Friction or confusion when starting
-    definition: Trouble or confusion in the first days, such as KYC, mandate setup, minimum or initial amounts, or not understanding how instalments work, which leads to early or accidental cancellation.
-    include: KYC failures, can't create mandate at start, initial investment requirement, minimum amount surprises, same-day or accidental cancellation, intermediary-started SIPs the investor did not understand.
-    exclude: Problems with an SIP that has been running for months.
-    example: "Concept of initial investment is totally unacceptable"
+  - id: early_confusion_first_months
+    question: behaviour
+    name: Early confusion after the first instalment
+    definition: In the first weeks or months after starting, the investor misunderstands how the SIP works (when instalments are taken, where the money is, what cancelling or redeeming does) and stops or cancels as a result.
+    include: Confusion about the next instalment date, cancelling within days or weeks of starting, accidental cancellation, not knowing whether the SIP is active, a first SIP that started but was not properly understood (e.g. via an agent).
+    exclude: Barriers before the first investment (minimum or initial amount, KYC, account opening) - out of scope because the focus is investors who have started. Long-running SIPs (other themes).
+    example: "I started my first sip on mutual fund after completing online payment but I am confused about next sip installment"
     addressability: high
-    merged_from: [start_setup_friction, stop_early_cancel_confusion, start_advised_by_intermediary, start_beginner_first_sip]
+    merged_from: [stop_early_cancel_confusion, start_advised_by_intermediary, start_beginner_first_sip]
   - id: return_expectations
     question: start
     name: Specific return expectations at the start
