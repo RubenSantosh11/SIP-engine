@@ -23,7 +23,7 @@ themes:
     definition: The investor wants to pause, skip, change the amount or date, or cancel, but the option is missing, broken or deliberately hard, so they cancel outright or feel trapped.
     include: No pause/skip/edit/step-up control, can't reduce amount, cancellation hidden or blocked, cancel flows full of upsell screens.
     exclude: Payment failures (payment_autopay_failure).
-    example: "no option to stop a sip without redeeming"
+    example: "Cannot pause the sip in the App"
     addressability: high
     merged_from: [stop_missing_controls, beh_pause_skip_reduce_intent, beh_increase_stepup (when blocked)]
   - id: app_reliability_errors
