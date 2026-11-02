@@ -115,6 +115,19 @@
     </div>
   </section>
 
+  <section class="sd-section" id="context">
+    <h2>What investors check, worry about and where they turn</h2>
+    <p class="muted">A second pass over the same records. Only posts containing a cue word were coded, so these counts are a floor. Age, income, source of money and influences are rarely stated in public posts; those answers have to come from interviews.</p>
+    <div class="sd-card">
+      <div class="sd-scroll">
+        <table id="context-table" data-source="context" data-row-key="row_id">
+          <thead><tr><th data-field="question">Question</th><th data-field="value">Answer</th><th class="n" data-field="records">Records</th><th class="n" data-field="dropper_records">Stopped or paused</th><th class="n" data-field="continuer_records">Still investing</th></tr></thead>
+          <tbody data-draw="contextrows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <section class="sd-section" id="method">
     <h2>How the scores work</h2>
     <div class="sd-card">
@@ -178,6 +191,7 @@
         <li>Most reviews are about apps other than Groww. The findings describe first-time SIP investing in India in general.</li>
         <li>Coding was done by Claude inside a Claude Code session, not through an API; the same model wrote the prompts. The hand-labelled golden set is the independent check, and it is small.</li>
         <li>Quotes were checked against their sources before submission as well as by the pipeline, so the verbatim pass rate reflects that self-check.</li>
+        <li>The second pass only coded posts with a cue word, so signals phrased differently are missed.</li>
       </ul>
     </div>
   </section>
@@ -328,6 +342,14 @@
   dash.draw('earlyrows', (tb) => {
     tb.replaceChildren();
     for (const r of rowsOf('early') || []) { const tr = tb.insertRow(); tr.dataset.key = r.theme_id; td(tr, r.theme, 'wrap'); td(tr, int(num(r.records)), 'n'); }
+  });
+
+  dash.draw('contextrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('context') || []) {
+      const tr = tb.insertRow(); tr.dataset.key = r.row_id;
+      td(tr, r.question); td(tr, r.value); td(tr, int(num(r.records)), 'n'); td(tr, int(num(r.dropper_records)), 'n'); td(tr, int(num(r.continuer_records)), 'n');
+    }
   });
 
   dash.draw('volrows', (tb) => {

@@ -1,0 +1,29 @@
+{
+ "record_id": "appstore_514c08a39c91",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "app_status_or_error",
+   "evidence_span": "it shows something went wrong"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

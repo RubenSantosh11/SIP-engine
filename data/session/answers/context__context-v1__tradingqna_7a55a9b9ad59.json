@@ -1,0 +1,24 @@
+{
+ "record_id": "tradingqna_7a55a9b9ad59",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "25-34",
+   "evidence_span": "I am 25"
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

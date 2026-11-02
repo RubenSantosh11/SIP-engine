@@ -55,3 +55,59 @@ class OpenCodeItem(BaseModel):
 class OpenCode(BaseModel):
     record_id: str
     codes: list[OpenCodeItem] = []
+
+
+# ---- Stage 4b: context fields for the brief's remaining questions ----
+CheckWhat = Literal["returns_or_value", "nav_or_units", "instalment_status", "portfolio_overall", "other"]
+Frequency = Literal["daily", "weekly", "monthly", "rarely", "unclear"]
+WorryKind = Literal["losing_money", "where_is_my_money", "how_sip_works", "charges_or_tax", "app_status_or_error",
+                    "whether_to_continue", "other"]
+Channel = Literal["youtube_creator", "friends_family", "advisor_agent_bank", "search_web", "social_or_forum",
+                  "customer_support", "other"]
+
+
+class Check(BaseModel):
+    what: CheckWhat
+    frequency: Frequency = "unclear"
+    evidence_span: str = Field(min_length=1)
+
+
+class Worry(BaseModel):
+    kind: WorryKind
+    evidence_span: str = Field(min_length=1)
+
+
+class OutsideHelp(BaseModel):
+    channel: Channel
+    evidence_span: str = Field(min_length=1)
+
+
+class Signal(BaseModel):
+    value: str
+    evidence_span: str | None = None   # required unless value is "unclear"
+
+
+class Segment(BaseModel):
+    age_band: Signal = Signal(value="unclear")          # <25 | 25-34 | 35-44 | 45+ | unclear
+    income_stability: Signal = Signal(value="unclear")  # salaried | irregular_or_business | student_no_income | retired | homemaker | unclear
+    money_source: Signal = Signal(value="unclear")      # salary_savings | lumpsum_or_windfall | family_money | unclear
+    influencer: Signal = Signal(value="unclear")        # self | youtube_creator | friends_family | advisor_agent_bank | ads_or_app | unclear
+
+    @field_validator("age_band", "income_stability", "money_source", "influencer")
+    @classmethod
+    def allowed(cls, v: Signal, info: ValidationInfo) -> Signal:
+        ok = {"age_band": {"<25", "25-34", "35-44", "45+"},
+              "income_stability": {"salaried", "irregular_or_business", "student_no_income", "retired", "homemaker"},
+              "money_source": {"salary_savings", "lumpsum_or_windfall", "family_money"},
+              "influencer": {"self", "youtube_creator", "friends_family", "advisor_agent_bank", "ads_or_app"}}[info.field_name]
+        if v.value != "unclear" and v.value not in ok:
+            raise ValueError(f"{info.field_name}: {v.value!r} not allowed")
+        return v
+
+
+class ContextExtraction(BaseModel):
+    record_id: str
+    checks: list[Check] = []          # what they check after starting, and how often
+    worries: list[Worry] = []         # what confuses or worries them inside the app
+    outside_help: list[OutsideHelp] = []  # what they do / who they turn to outside the app when unsure
+    segment: Segment = Segment()

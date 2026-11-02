@@ -1,0 +1,40 @@
+{
+ "record_id": "playstore_134fb4cd8e00",
+ "checks": [
+  {
+   "what": "instalment_status",
+   "frequency": "unclear",
+   "evidence_span": "etmoney sip shows missed"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "where_is_my_money",
+   "evidence_span": "amount debited from bank account but not transferred to MF house"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "customer_support",
+   "evidence_span": "docket booked"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

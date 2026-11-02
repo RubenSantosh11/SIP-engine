@@ -1,0 +1,24 @@
+{
+ "record_id": "appstore_bd5c94ec0111",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "record_id": "youtube_6ea46cc7b22b",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "other",
+   "evidence_span": "5000 se shuruwat nahi kar sakti"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "homemaker",
+   "evidence_span": "house wife hoo"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

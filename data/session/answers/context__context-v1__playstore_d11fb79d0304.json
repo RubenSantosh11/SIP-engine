@@ -1,0 +1,29 @@
+{
+ "record_id": "playstore_d11fb79d0304",
+ "checks": [],
+ "worries": [],
+ "outside_help": [
+  {
+   "channel": "advisor_agent_bank",
+   "evidence_span": "neither the advisor responds even after multiple attempts"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

@@ -28,6 +28,7 @@ LIMITATIONS = [
     "'Stopped' includes stopping SIPs on a platform; people who only moved to another app are excluded from the dropper group where switching was their only stop reason.",
     "Coding was done by Claude (Opus) inside a Claude Code session, not via an API, because the Gemini key had no credits. The same model designed the prompts and did the coding; the golden set is the independent check.",
     "Evidence-span checks were run by the coder before submitting answers, so the 100% span pass rate reflects that self-check; the pipeline still verifies every span in code.",
+    "The second pass (what people check, worries, help outside the app, segment) only coded records containing a cue word; signals phrased without one are missed. Segment signals (age, income stability, source of money, influencer) are rarely stated in public posts: at most 9 records per value, so segment differences must come from interviews.",
     "The golden set is small (20 records), so per-field agreement has wide uncertainty.",
     "Most store reviews come from apps other than Groww (Coin, ET Money, FundsIndia, Paytm Money and others). Findings describe first-time SIP investing in India generally, not Groww specifically.",
 ]
@@ -99,6 +100,10 @@ def main() -> None:
     early_themes = Counter(t["theme_id"] for x in early for t in x["themes"] if t.get("verified"))
     first_time = [x for x in ex if x.get("first_time_investor") == "yes"]
 
+    context = list(csv.DictReader(open(config.OUTPUT_DIR / "context_summary.csv", encoding="utf-8"))) \
+        if (config.OUTPUT_DIR / "context_summary.csv").exists() else []
+    context_stats = json.loads((config.OUTPUT_DIR / "context_stats.json").read_text()) \
+        if (config.OUTPUT_DIR / "context_stats.json").exists() else None
     status = Counter(x["sip_status"] for x in ex)
     corrections = [l for l in (config.ROOT / "corrections_log.md").read_text().splitlines()
                    if l.startswith("| 20")]
@@ -112,6 +117,7 @@ def main() -> None:
         "first_time_n": len(first_time),
         "validation": validation, "validation_failures": failures,
         "corrections": [[c.strip() for c in l.strip("|").split("|")] for l in corrections],
+        "context": context, "context_stats": context_stats,
         "limitations": LIMITATIONS, "addressability_scores": cb["addressability_scores"],
     }
     (config.OUTPUT_DIR / "report_data.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
@@ -159,6 +165,12 @@ def write_markdown(d: dict) -> None:
           f"{d['early']['n']} records state that the writer started less than 12 months ago; {d['first_time_n']} say they are first-time investors. Too few to score; most frequent themes among them:", ""]
     for tid, n in d["early"]["themes"][:6]:
         L.append(f"- {d['themes'].get(tid, {}).get('name', tid)}: {n}")
+    L += ["", "## What investors check, worry about, and where they turn", "",
+          "Second extraction pass. Only records containing a cue word were coded (the rest were set empty by rule), so counts are a floor. Records counted once per value.", "",
+          "| Question | Value | Records | Stopped/paused | Still investing |", "|---|---|---|---|---|"]
+    for c in d["context"]:
+        if c["field"] != "check_frequency":
+            L.append(f"| {c['field']} | {c['value']} | {c['records_all']} | {c['records_dropper']} | {c['records_continuer']} |")
     L += ["", "## Validation", ""] + validation_md(d) + ["", "## Limitations", ""] + [f"- {x}" for x in d["limitations"]]
     (config.OUTPUT_DIR / "results.md").write_text("\n".join(L) + "\n")
 

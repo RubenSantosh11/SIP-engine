@@ -1,0 +1,43 @@
+{
+ "record_id": "appstore_20195db4cf1a",
+ "checks": [
+  {
+   "what": "instalment_status",
+   "frequency": "unclear",
+   "evidence_span": "many sip got stucked"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "where_is_my_money",
+   "evidence_span": "NO REFUND or NO NAV allocated"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "customer_support",
+   "evidence_span": "i have already sent an email for the same"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

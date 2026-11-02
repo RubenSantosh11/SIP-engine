@@ -1,0 +1,32 @@
+{
+ "record_id": "playstore_880ab553e8c2",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "charges_or_tax",
+   "evidence_span": "the profit in the long term would be erased with 1-2%(personal exp) as commission"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 1,
+ "n_dropped": 0
+}

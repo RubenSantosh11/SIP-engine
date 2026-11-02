@@ -1,0 +1,29 @@
+{
+ "record_id": "playstore_185808ef7f7b",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "app_status_or_error",
+   "evidence_span": "my EMI and SIP payments cannot be processed"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "salaried",
+   "evidence_span": "I may not receive my salary"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

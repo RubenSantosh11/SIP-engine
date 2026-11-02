@@ -1,0 +1,37 @@
+{
+ "record_id": "youtube_367eb9ec4f50",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "whether_to_continue",
+   "evidence_span": "can I stop in 2 months"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "youtube_creator",
+   "evidence_span": "can I stop in 2 months"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "advisor_agent_bank",
+   "evidence_span": "As per manager advice I started"
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

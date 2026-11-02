@@ -1,0 +1,32 @@
+{
+ "record_id": "playstore_38db8562fe1a",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "charges_or_tax",
+   "evidence_span": "now ACH return charges have been applied by my bank"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 1,
+ "n_dropped": 0
+}

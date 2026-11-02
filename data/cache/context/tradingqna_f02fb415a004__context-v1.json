@@ -1,0 +1,32 @@
+{
+ "record_id": "tradingqna_f02fb415a004",
+ "checks": [],
+ "worries": [],
+ "outside_help": [
+  {
+   "channel": "social_or_forum",
+   "evidence_span": "I need suggestions for the following"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "35-44",
+   "evidence_span": "I am 42 yr old"
+  },
+  "income_stability": {
+   "value": "irregular_or_business",
+   "evidence_span": "now taking break for some time"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

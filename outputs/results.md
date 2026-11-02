@@ -112,6 +112,42 @@ Ranked by the lower confidence bound of priority = reach x severity x stop-lift 
 - Conflicting or misleading advice: 2
 - Autopay / mandate / payment failures: 2
 
+## What investors check, worry about, and where they turn
+
+Second extraction pass. Only records containing a cue word were coded (the rest were set empty by rule), so counts are a floor. Records counted once per value.
+
+| Question | Value | Records | Stopped/paused | Still investing |
+|---|---|---|---|---|
+| check | instalment_status | 14 | 7 | 0 |
+| check | nav_or_units | 5 | 0 | 0 |
+| check | portfolio_overall | 16 | 3 | 8 |
+| check | returns_or_value | 27 | 4 | 9 |
+| outside_help | advisor_agent_bank | 3 | 1 | 0 |
+| outside_help | customer_support | 27 | 8 | 0 |
+| outside_help | other | 3 | 1 | 1 |
+| outside_help | search_web | 3 | 1 | 0 |
+| outside_help | social_or_forum | 7 | 2 | 2 |
+| outside_help | youtube_creator | 20 | 4 | 6 |
+| segment_age_band | 25-34 | 1 | 0 | 0 |
+| segment_age_band | 35-44 | 3 | 0 | 2 |
+| segment_age_band | <25 | 4 | 0 | 4 |
+| segment_income_stability | homemaker | 2 | 0 | 0 |
+| segment_income_stability | irregular_or_business | 1 | 0 | 1 |
+| segment_income_stability | salaried | 9 | 1 | 2 |
+| segment_income_stability | student_no_income | 1 | 0 | 1 |
+| segment_influencer | ads_or_app | 2 | 0 | 0 |
+| segment_influencer | advisor_agent_bank | 5 | 0 | 0 |
+| segment_influencer | self | 5 | 0 | 4 |
+| segment_influencer | youtube_creator | 3 | 0 | 1 |
+| segment_money_source | salary_savings | 6 | 1 | 4 |
+| worry | app_status_or_error | 12 | 7 | 1 |
+| worry | charges_or_tax | 2 | 2 | 0 |
+| worry | how_sip_works | 17 | 5 | 1 |
+| worry | losing_money | 13 | 2 | 2 |
+| worry | other | 11 | 1 | 1 |
+| worry | where_is_my_money | 15 | 4 | 0 |
+| worry | whether_to_continue | 8 | 2 | 1 |
+
 ## Validation
 
 Evidence-span check: 1182 coded values, 0 failures, pass rate 100%.
@@ -127,5 +163,6 @@ Golden-set agreement: pending. The PM is labelling `outputs/golden_set_blank.csv
 - 'Stopped' includes stopping SIPs on a platform; people who only moved to another app are excluded from the dropper group where switching was their only stop reason.
 - Coding was done by Claude (Opus) inside a Claude Code session, not via an API, because the Gemini key had no credits. The same model designed the prompts and did the coding; the golden set is the independent check.
 - Evidence-span checks were run by the coder before submitting answers, so the 100% span pass rate reflects that self-check; the pipeline still verifies every span in code.
+- The second pass (what people check, worries, help outside the app, segment) only coded records containing a cue word; signals phrased without one are missed. Segment signals (age, income stability, source of money, influencer) are rarely stated in public posts: at most 9 records per value, so segment differences must come from interviews.
 - The golden set is small (20 records), so per-field agreement has wide uncertainty.
 - Most store reviews come from apps other than Groww (Coin, ET Money, FundsIndia, Paytm Money and others). Findings describe first-time SIP investing in India generally, not Groww specifically.

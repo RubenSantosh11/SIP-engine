@@ -65,6 +65,12 @@ def main() -> None:
     write("failures", ["failure_id", "record_id", "field", "pm_label", "engine_output", "likely_cause"],
           [[i, f["record_id"], f["field"], f["my_label"], f["engine_output"], f["likely_cause"]]
            for i, f in enumerate(d["validation_failures"], 1)])
+    labels = {"check": "Checks", "worry": "Worries in the app", "outside_help": "Turns to outside the app",
+              "segment_age_band": "Age", "segment_income_stability": "Income", "segment_money_source": "Source of money",
+              "segment_influencer": "Influenced by"}
+    write("context", ["row_id", "question", "value", "records", "dropper_records", "continuer_records"],
+          [[f"{c['field']}:{c['value']}", labels.get(c["field"], c["field"]), c["value"].replace("_", " "), c["records_all"],
+            c["records_dropper"], c["records_continuer"]] for c in d.get("context", []) if c["field"] in labels])
     write("corrections", ["entry", "date", "stage", "ai_said", "changed_to", "why"],
           [[i, *c[:5]] for i, c in enumerate(d["corrections"], 1)])
     print("wrote", sorted(p.name for p in OUT.glob("*.csv")))

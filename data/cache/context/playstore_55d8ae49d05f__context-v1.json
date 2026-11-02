@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_55d8ae49d05f",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "<25",
+   "evidence_span": "I am 18"
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "salary_savings",
+   "evidence_span": "I recently started doing SIP with my savings"
+  },
+  "influencer": {
+   "value": "self",
+   "evidence_span": "taking my first steps into investing"
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

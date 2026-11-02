@@ -1,0 +1,29 @@
+{
+ "record_id": "playstore_c046eefd7d2c",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "how_sip_works",
+   "evidence_span": "I really can't understand how to add money to the coin wallet for an SIP"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

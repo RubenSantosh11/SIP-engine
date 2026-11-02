@@ -1,0 +1,35 @@
+{
+ "record_id": "playstore_8f881b212ed8",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "rarely",
+   "evidence_span": "now in 2024 when i reviewed my folio"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "losing_money",
+   "evidence_span": "In last 7 & half yr i didnt even get return of 6%"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "advisor_agent_bank",
+   "evidence_span": "Lot many promises given by fundsindia in 2017"
+  }
+ }
+}

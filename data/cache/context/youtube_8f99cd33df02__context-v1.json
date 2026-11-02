@@ -1,0 +1,32 @@
+{
+ "record_id": "youtube_8f99cd33df02",
+ "checks": [],
+ "worries": [],
+ "outside_help": [
+  {
+   "channel": "youtube_creator",
+   "evidence_span": "Please bataye kya ye sahi hain?"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 1,
+ "n_dropped": 0
+}

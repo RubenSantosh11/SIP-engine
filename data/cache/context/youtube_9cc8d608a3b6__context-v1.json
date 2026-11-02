@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_9cc8d608a3b6",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "salaried",
+   "evidence_span": "The 5th date auto-debit tip really helps salaried beginners stick to it"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 1,
+ "n_dropped": 0
+}

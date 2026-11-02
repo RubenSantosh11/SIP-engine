@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_342d8225df7b",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "35-44",
+   "evidence_span": "as a 38-year-old"
+  },
+  "income_stability": {
+   "value": "salaried",
+   "evidence_span": "a percentage of my take-home"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 2,
+ "n_dropped": 0
+}
