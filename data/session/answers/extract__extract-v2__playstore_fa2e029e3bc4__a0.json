@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_fa2e029e3bc4",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I have been investing for the last 4 years",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "ET money has given me a return of negative 3 percent returns",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "by charging a handsome amount of Rs 399 per month",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Negative returns after 4 years while paying a monthly subscription."
+}

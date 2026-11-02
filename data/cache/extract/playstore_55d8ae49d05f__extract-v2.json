@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_55d8ae49d05f",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I recently started doing SIP with my savings",
+ "first_time_investor": "yes",
+ "first_time_evidence": "I recently started doing SIP with my savings",
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I recently started doing SIP with my savings",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "taking my first steps into investing",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "18-year-old first-time investor finds it easy.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

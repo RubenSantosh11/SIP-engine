@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_b81b075762f2",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "so I stopped all sips",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I can't see my investment easily",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Could not see investments, so stopped all SIPs."
+}

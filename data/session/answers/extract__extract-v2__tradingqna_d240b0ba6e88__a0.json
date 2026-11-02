@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_d240b0ba6e88",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I had started my SIP last month",
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "Pause & Edit button are not available",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "New SIP lacks pause and edit."
+}

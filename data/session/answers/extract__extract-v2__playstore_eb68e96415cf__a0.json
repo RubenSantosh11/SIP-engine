@@ -1,0 +1,31 @@
+{
+ "record_id": "playstore_eb68e96415cf",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "Just adds of Genius are everywhere",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "No option to modify SIP",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "Want to uninstall this app and switch to GROW",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Upsell everywhere and no modify option."
+}

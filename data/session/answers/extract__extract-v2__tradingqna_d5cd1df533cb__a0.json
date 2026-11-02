@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_d5cd1df533cb",
+ "source": "tradingqna",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I started with amc sip and cancelled",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "then starr same with coin sip",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cancelled and restarted in another mode."
+}

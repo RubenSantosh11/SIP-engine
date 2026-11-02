@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_7f38154b45c0",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Already cancelled all 5 SIPs",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "asking for Rs.1000 only for tracking MF",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Charged to track funds; cancelled all SIPs."
+}

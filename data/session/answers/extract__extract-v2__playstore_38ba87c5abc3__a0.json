@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_38ba87c5abc3",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I missed my SIP on 20th for the app's technical problem",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I missed my SIP on 20th for the app's technical problem",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "App would not open; missed SIP."
+}

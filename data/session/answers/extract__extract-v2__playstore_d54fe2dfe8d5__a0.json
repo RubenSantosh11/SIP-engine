@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_d54fe2dfe8d5",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "they need to have direct debit facility from bank",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Reflection of bought units in the a/c also takes considerable time",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No direct debit; slow unit reflection."
+}

@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_d5e5530cf1fc",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "sip cancel Kari hai",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "lekin payment cut ho gaya",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Payment debited after cancelling.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_38db8562fe1a",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "The auto-debit did not happen from my account",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "now ACH return charges have been applied by my bank",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Auto-debit failed despite balance; bank charged ACH return fees."
+}

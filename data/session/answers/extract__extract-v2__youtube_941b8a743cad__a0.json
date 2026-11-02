@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_941b8a743cad",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I'm starting 3 SIP with 5500",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I'm starting 3 SIP with 5500",
+ "themes": [
+  {
+   "theme_id": "return_expectations",
+   "evidence_span": "Jab 1cr hoga mai ake firse comment karunga",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Starting SIPs aiming for 1 crore."
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_e3e0d8e57d1e",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have started SIPs using the app but now feeling bad about it",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "it's asking for paid version to see my external investment",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Feels bad about starting SIPs after paywall."
+}

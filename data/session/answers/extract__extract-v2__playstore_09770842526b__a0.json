@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_09770842526b",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Stopped my SIPs on ET money and moved to MF central",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "moved that to premium feature",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "Stopped my SIPs on ET money and moved to MF central",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Consolidated view made premium; moved SIPs."
+}

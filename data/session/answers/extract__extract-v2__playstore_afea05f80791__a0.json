@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_afea05f80791",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "i have switched my most of SIP to ET money",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I am using this app since last 4 years",
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "they have locked external portfolio tracking",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Moved SIPs in, now disappointed by paywall."
+}

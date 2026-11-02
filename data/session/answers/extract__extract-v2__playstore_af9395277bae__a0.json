@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_af9395277bae",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "for payments everytime have to go through the entire bank sign in process even if mandate is active",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Must log in to bank each time despite active mandate."
+}

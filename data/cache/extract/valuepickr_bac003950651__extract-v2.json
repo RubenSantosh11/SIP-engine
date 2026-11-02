@@ -1,0 +1,19 @@
+{
+ "record_id": "valuepickr_bac003950651",
+ "source": "valuepickr",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I’ve started SIP’s in the following AMC’S",
+ "first_time_investor": "yes",
+ "first_time_evidence": "I’m a new investor",
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I’ve started SIP’s",
+ "themes": [],
+ "one_line_reason": "New investor started SIPs after self-education.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

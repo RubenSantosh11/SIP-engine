@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_98377bef9d3d",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have been investing in Mutual funds SIPs for months through this app",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "i can't even login my account for days",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot log in for days."
+}

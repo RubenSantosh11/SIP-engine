@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_4868f9547fc7",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I missed my payment this month",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I am not getting option to pay next installment of SIP",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Pay option missing, so they missed this month's instalment.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

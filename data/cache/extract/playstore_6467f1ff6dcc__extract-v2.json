@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_6467f1ff6dcc",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "In the last one year, I have been using this app and doing SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "6-12m",
+ "time_since_start_evidence": "In the last one year, I have been using this app and doing SIP",
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "my ordered which was not placed",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "SIP order placed late and incomplete.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

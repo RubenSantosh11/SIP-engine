@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_e2913276e230",
+ "source": "tradingqna",
+ "sip_status": "paused",
+ "sip_status_evidence": "keep going to deactivate the SIP weekly",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "minimum 3 SIPs are executing on same day and same time",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Deactivates SIPs weekly to avoid holiday executions."
+}

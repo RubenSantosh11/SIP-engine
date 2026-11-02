@@ -1,0 +1,27 @@
+{
+ "record_id": "tradingqna_a6b91692c576",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "Since 2 years ago I have started SIP",
+ "themes": [
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "why do I unnecessarily give the commission from my profit to the broker",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Learned of regular-plan commission after 2 years; considering redeeming.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_dbc8b771f8fa",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I would like move different app my sips",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "Since ilm using 2018",
+ "themes": [
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I would like move different app my sips",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Moving SIPs to another app."
+}

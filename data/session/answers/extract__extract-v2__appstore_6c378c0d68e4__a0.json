@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_6c378c0d68e4",
+ "source": "appstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I am not able to pay my SIP instalment since the update",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "I am not able to pay my SIP instalment since the update",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "Your customer care is not reachable",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot pay since update."
+}

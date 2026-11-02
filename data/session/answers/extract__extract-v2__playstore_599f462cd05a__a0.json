@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_599f462cd05a",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "3 of them are still processing",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "My SIPs are being shown as processing since last 5 days",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Autopay has failed I don't know why, there is enough balance",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIPs stuck processing and autopay failed despite balance."
+}

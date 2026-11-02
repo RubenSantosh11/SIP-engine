@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_2026a9f7a866",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Main v kar rha hu",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "Kya woh apni 20 years ka complete Huwa SIP proof dikha sakte hai",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Doubts long-term claims without proof."
+}

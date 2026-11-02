@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_63e72915de94",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "6-12m",
+ "time_since_start_evidence": "Sir 1 year huaa hai",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "1 sal ho gya koi benefit nhi mel ra",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "One year with no benefit; asks whether to stop.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

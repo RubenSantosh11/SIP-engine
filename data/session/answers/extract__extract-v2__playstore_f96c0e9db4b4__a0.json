@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_f96c0e9db4b4",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "You can start a sip and forget for any recommendation after",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No follow-up support once SIP starts."
+}

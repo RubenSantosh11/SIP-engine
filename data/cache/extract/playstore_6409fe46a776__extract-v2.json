@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_6409fe46a776",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I had withdrawn a SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Till now I have not received even a single penny",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Withdrawn SIP money never received.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

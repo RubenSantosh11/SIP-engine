@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_d8b003bb2be3",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "I am not able to invest even through an AMC SIP",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Fund restriction blocks investing."
+}

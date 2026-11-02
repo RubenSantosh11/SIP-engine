@@ -1,0 +1,41 @@
+{
+ "record_id": "playstore_ce723ce7e654",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "now I have to move again on the older platform",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "I have created 2 sip with proper mandates but no sip is invested on daily basis",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "customer support is also pathetic",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "now I have to move again on the older platform",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Daily SIPs never deducted despite mandates; moving back to old platform.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

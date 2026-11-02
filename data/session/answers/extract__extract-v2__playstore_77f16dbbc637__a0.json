@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_77f16dbbc637",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "If our monthly SIP Failed due to any technical issue",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "the only way is to email them which very irritating as no associate is reaching us",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Failed SIPs can only be reported by email."
+}

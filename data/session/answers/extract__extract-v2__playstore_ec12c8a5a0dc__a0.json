@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_ec12c8a5a0dc",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "It will all go in loss day by day you money will reduce",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "if you want to cancel your SIP they'll tell you that 6 months is mandate",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Losing money and cannot cancel within 6 months."
+}

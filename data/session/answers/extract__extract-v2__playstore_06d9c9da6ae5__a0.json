@@ -1,0 +1,31 @@
+{
+ "record_id": "playstore_06d9c9da6ae5",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "मेने आज sip 1000 रुपये की शुरू की थी",
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "अभी तक ना तो यूनिट मिले",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "customer care no bhi नहीं है",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "मेने आज sip 1000 रुपये की शुरू की थी",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "First SIP started; no units and no support."
+}

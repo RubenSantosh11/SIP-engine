@@ -1,0 +1,31 @@
+{
+ "record_id": "appstore_282b7ea5ec6b",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I’m switching my broker to G",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "I can’t reliably modify or change an existing SIP",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "updating the bank account for SIP auto-debit usually force you to cancel the existing SIP and create a new one",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I’m switching my broker to G",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot modify SIP or bank; switching brokers."
+}

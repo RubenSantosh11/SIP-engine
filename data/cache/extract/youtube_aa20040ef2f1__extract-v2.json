@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_aa20040ef2f1",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "S I P continue hai aour rahegi",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [],
+ "one_line_reason": "SIP continues.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

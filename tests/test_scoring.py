@@ -51,7 +51,7 @@ def test_scoring_counts_and_groups():
 
 def test_eligibility_and_guard():
     rows = {r["theme_id"]: r for r in score_themes(fixture(), CB, {"stopped"}, {"continuing"}, 5, 2)}
-    assert not rows["switch"]["eligible"] and "records" in rows["switch"]["excluded_reason"]
+    assert not rows["switch"]["eligible"] and "outcome" in rows["switch"]["excluded_reason"]
     assert not rows["goal"]["eligible"]                               # 10 records but one source
     assert "source" in rows["goal"]["excluded_reason"]
     small = score_themes(fixture()[:5] + fixture()[12:15], CB, {"stopped"}, {"continuing"}, 1, 1)

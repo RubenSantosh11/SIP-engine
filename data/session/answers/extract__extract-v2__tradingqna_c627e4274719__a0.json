@@ -1,0 +1,25 @@
+{
+ "record_id": "tradingqna_c627e4274719",
+ "source": "tradingqna",
+ "sip_status": "paused",
+ "sip_status_evidence": "for next 4 months there will be no fund in my equity wallet",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "cash_need_affordability",
+   "evidence_span": "due some reason for next 4 months there will be no fund in my equity wallet",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "some sip such as mirae does not offer to pause sip",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No funds for 4 months; fund has no pause."
+}

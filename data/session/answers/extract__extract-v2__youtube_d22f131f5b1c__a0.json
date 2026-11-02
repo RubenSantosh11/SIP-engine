@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_d22f131f5b1c",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "2 साल से अभी भी वही वैल्यू है",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "मेरे को 25 हजार का फटका लग गया है 2 साल से अभी भी वही वैल्यू है",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Lost 25k; flat for two years; warns others off."
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_93104179b8f1",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "Sip payment failing in one or more fund in every 2 to 3 months",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Sip payment failing in one or more fund in every 2 to 3 months despite having money",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Payments fail every few months despite funds."
+}

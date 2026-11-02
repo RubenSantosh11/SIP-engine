@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_97d0e8eb0d75",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "why you not understand guys below 5000 monthly sip holder why pay you 299 monthly",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Subscription too costly for small SIP holders."
+}

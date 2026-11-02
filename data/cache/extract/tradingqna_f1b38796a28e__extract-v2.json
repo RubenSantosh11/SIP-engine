@@ -1,0 +1,27 @@
+{
+ "record_id": "tradingqna_f1b38796a28e",
+ "source": "tradingqna",
+ "sip_status": "stopped",
+ "sip_status_evidence": "today I cancel my buy order",
+ "first_time_investor": "yes",
+ "first_time_evidence": "I started my first sip on mutual fund",
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I started my first sip on mutual fund",
+ "themes": [
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "I am confused about next sip installment on which date my next instalment done",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "First SIP; confused about next instalment and cancelled.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_f02fb415a004",
+ "source": "tradingqna",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have started this year",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "1-6m",
+ "time_since_start_evidence": "I have started this year",
+ "themes": [
+  {
+   "theme_id": "return_expectations",
+   "evidence_span": "Is it possible to have 1 crore within 10 years",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Late starter targeting 1 crore in 10 years."
+}

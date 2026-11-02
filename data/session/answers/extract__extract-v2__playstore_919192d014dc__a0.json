@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_919192d014dc",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Uninstalling and cancelling my SIPs through this app",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "External MF fetching made paid",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "Cancelling SIP is a painful process with so many deviations",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Paywalls and painful cancellation; cancelling SIPs."
+}

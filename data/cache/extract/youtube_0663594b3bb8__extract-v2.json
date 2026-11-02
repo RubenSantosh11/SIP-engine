@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_0663594b3bb8",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Cencelled the sip my cams app",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [],
+ "one_line_reason": "Cancelled SIP; unsure of next step.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

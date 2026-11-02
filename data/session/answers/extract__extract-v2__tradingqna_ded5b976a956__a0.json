@@ -1,0 +1,25 @@
+{
+ "record_id": "tradingqna_ded5b976a956",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "there is another better alternative",
+   "severity": 1,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "charges_lockin_surprise",
+   "evidence_span": "the exit load term is another 6 months away",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Waiting out exit load before cancelling."
+}

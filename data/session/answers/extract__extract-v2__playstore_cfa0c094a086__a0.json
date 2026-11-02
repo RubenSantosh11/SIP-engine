@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_cfa0c094a086",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I'm trying to find ways to cancel one of my sips",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "despite spending one hour and google the same, I couldn't get it done myself",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot find how to cancel a SIP."
+}

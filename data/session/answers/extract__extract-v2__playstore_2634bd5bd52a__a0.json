@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_2634bd5bd52a",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I deactivate my account this platform soon",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Sip registration is not completed by coin app",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP registration never completes; plans to deactivate account."
+}

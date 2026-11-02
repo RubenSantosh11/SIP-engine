@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_27bfb7df7a1d",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "dedh sal se loss chal rahai",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "mera dedh sal se loss chal rahai",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Loss for 18 months."
+}

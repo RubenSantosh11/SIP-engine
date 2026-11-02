@@ -1,0 +1,25 @@
+{
+ "record_id": "youtube_a4f79b45fd99",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have not stopped investing",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "cash_need_affordability",
+   "evidence_span": "the financial and emotional burden feels overwhelming",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "Yet, I have not stopped investing",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Severe financial strain but keeps every SIP going."
+}

@@ -1,0 +1,41 @@
+{
+ "record_id": "playstore_7f84942e803d",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "6-12m",
+ "time_since_start_evidence": "1 year down the line",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "1 year down the line, the returns have been abysmal",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "they will charge 250 per month for \"premium\" services",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "Lured me in using dark patterns stating their strategies make for higher returns",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Lured by promised higher returns; abysmal after a year plus fees.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

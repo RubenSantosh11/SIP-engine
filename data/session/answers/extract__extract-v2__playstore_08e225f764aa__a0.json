@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_08e225f764aa",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "charges_lockin_surprise",
+   "evidence_span": "one has to keep investing for 6 months then only you can withdraw",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "They just lure you into investing blindly",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Surprised by 6-month minimum before withdrawal."
+}

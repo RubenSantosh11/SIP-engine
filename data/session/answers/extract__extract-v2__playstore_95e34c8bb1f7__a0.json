@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_95e34c8bb1f7",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I have added an sip 3days back",
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I have added an sip 3days back but it is still showing processing",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "New SIP still processing after 3 days."
+}

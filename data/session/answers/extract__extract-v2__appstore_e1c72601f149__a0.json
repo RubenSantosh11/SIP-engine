@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_e1c72601f149",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "I was unable to set up autopay",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "THEWORST CUSTOMER SERVICE TEAM I EVER CAME ACROSS",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Could not set up autopay; money dispute with support."
+}

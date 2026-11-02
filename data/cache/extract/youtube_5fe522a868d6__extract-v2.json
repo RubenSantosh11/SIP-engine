@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_5fe522a868d6",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "i invest in mutual fund sip",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "return_expectations",
+   "evidence_span": "target 10 sal me 1 cr",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "21-year-old targets 1 crore in 10 years.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

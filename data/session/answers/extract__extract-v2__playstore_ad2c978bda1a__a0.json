@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_ad2c978bda1a",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "now my SIP is not getting deducted as before",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "it just shows technical error from our side",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "trying to switch the bank account but it is not allowing me",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP not deducted; cannot switch bank."
+}

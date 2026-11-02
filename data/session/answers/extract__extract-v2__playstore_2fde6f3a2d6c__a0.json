@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_2fde6f3a2d6c",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "now I will switch all my investment from this platform to another",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Earlier version best but now I am not able to view my portfolio sip",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "now I will switch all my investment from this platform to another",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "After update cannot view SIPs; switching."
+}

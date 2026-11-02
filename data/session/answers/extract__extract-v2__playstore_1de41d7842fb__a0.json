@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_1de41d7842fb",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "With the change in the recent update made it is very hard to find the payment due AMC SIPs",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Update made due SIP payments hard to find."
+}

@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_c96890da39c1",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I have stopped all my SIP coz of this issue",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "too many recomendations for Genius membership",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Membership pushing made them stop all SIPs.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

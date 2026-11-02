@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_b549f1385714",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Mei last Feb se 20000 per month kar raha hu",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "6-12m",
+ "time_since_start_evidence": "Mei last Feb se 20000 per month kar raha hu",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "abhi 14000negative hai",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Profit turned into loss within months; unsure what to do."
+}

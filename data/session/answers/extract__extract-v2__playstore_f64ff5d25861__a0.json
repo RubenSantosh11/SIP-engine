@@ -1,0 +1,31 @@
+{
+ "record_id": "playstore_f64ff5d25861",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "After the recent updates, it has become very difficult to keep a track of the upcoming sip payments",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "There's no alert either for pending payments",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "Please let us know the ETA or we could switch",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "After update, hard to track payments and no alerts."
+}

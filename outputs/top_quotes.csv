@@ -1,0 +1,49 @@
+theme_id,quote,source,app,record_id
+app_reliability_errors,"their app did not show the transaction, i did not receive mutual fund unit neither my money was returned ever",Google Play,coin,playstore_701f04215b5e
+app_reliability_errors,The manage SIP segment is mostly not showing which caused missing multiple SIPs,Apple App Store,paytmmoney,appstore_95eaf38a80a1
+app_reliability_errors,jisko mene cancel kiya dikha nhi yani mere paise chale gaye,YouTube comments,,youtube_3ce9d9173c72
+payment_autopay_failure,I have been trying to make AMP SIPs for last 3months but it never executes. I have to do it manual each time,Google Play,coin,playstore_027c863e386b
+payment_autopay_failure,updating the bank account for SIP auto-debit usually force you to cancel the existing SIP and create a new one,Apple App Store,upstox,appstore_282b7ea5ec6b
+payment_autopay_failure,"ek bhi kist miss hui, 150 se750 tk account se cut jayega bank panelty ke naam se",YouTube comments,,youtube_49bc99717cc1
+support_trust_breakdown,they gave tentative deadline of refund every time but it has never been refunded,Google Play,coin,playstore_701f04215b5e
+support_trust_breakdown,raised the issue with customer support and they have refused to help,Apple App Store,paytmmoney,appstore_0a07e4592563
+support_trust_breakdown,vo abhi phone nahi uthata,YouTube comments,,youtube_2b74c07559e1
+fees_paywall,u are continuously forcing us to subscribe for ur paid service by disabling one by one features,Google Play,etmoney,playstore_daf5b414e17d
+fees_paywall,each time I have to pay Zerodha/payment gateway Rs 9,TradingQ&A forum,,tradingqna_e71c496b52a1
+fees_paywall,they are forcing people to Genius then only will allow to use basic functionalities,Google Play,etmoney,playstore_932fafd3d2d8
+disruptive_app_updates,with the update they seemed to have removed the functions where one could easily stop or pause his SIP's,Google Play,fundsindia,playstore_e2fecb5df3fa
+disruptive_app_updates,I am not able to pay my SIP instalment since the update,Apple App Store,paytmmoney,appstore_6c378c0d68e4
+disruptive_app_updates,in the latest update i am not able to see manual payment option for monthly SIPs,Google Play,upstox,playstore_7139ff8203dd
+missing_sip_controls,the App still doesn't offer an option to cancel or discontinue the SIP despite the lock-in period having expired,Google Play,fundsindia,playstore_dc4983f8652f
+missing_sip_controls,The cancellation process goes through and their is confirmation on the app but the cancellation doesn’t happen,Apple App Store,paytmmoney,appstore_6c6a70d10273
+missing_sip_controls,having to send a physical request letter to the AMC and having to wait for a month to stop,TradingQ&A forum,,tradingqna_ea0a1a2577f1
+returns_disappointment,Some investors who monitor their portfolio panic in such continuous market fall & stop SIPs,TradingQ&A forum,,tradingqna_df429ff00b23
+returns_disappointment,मेरे को 25 हजार का फटका लग गया है 2 साल से अभी भी वही वैल्यू है,YouTube comments,,youtube_d22f131f5b1c
+returns_disappointment,ET money has given me a return of negative 3 percent returns,Google Play,etmoney,playstore_fa2e029e3bc4
+switching_plan_or_platform,"Migrated all SIPs (except one that's no longer accepting new investments, waiting and watching) to another platform",Google Play,etmoney,playstore_a1ed4a6f2d19
+switching_plan_or_platform,I want to stop my existing sips so that I can start new sips for the same mutual funds under direct plan,YouTube comments,,youtube_dcc6b60698dd
+switching_plan_or_platform,i will be shifting my entire portfolio to some new application,Apple App Store,paytmmoney,appstore_21c1dd505c2a
+early_confusion_first_months,I am confused about next sip installment on which date my next instalment done,TradingQ&A forum,,tradingqna_f1b38796a28e
+early_confusion_first_months,paise withdrawal nahi huaa mere 50hajar gaye kya,YouTube comments,,youtube_f145382b0b03
+early_confusion_first_months,I started an sip and paid the first amount it was debited from my account but it failed saying kyc is not valid,Google Play,indmoney,playstore_533a3d9d13cd
+platform_or_fund_initiated,ETmoney has started cancelling the SIPs if there is no transaction for 3 months,Google Play,etmoney,playstore_e38294113d96
+platform_or_fund_initiated,one of the fund which had fresh investment restrictions didn’t allow sip,Apple App Store,kuvera,appstore_503bbec78e72
+platform_or_fund_initiated,"I had a weekly SIP in the PPFAS Flexi Cap fund, which is deleted now",TradingQ&A forum,,tradingqna_c8e45f60f190
+missed_reminders_forgetting,Coin is not sending mobile notification when an SIP order is ready for payment,Google Play,coin,playstore_b4d304907d1d
+missed_reminders_forgetting,Adding funds every month manually is cumbersome and we will tend to forget,TradingQ&A forum,,tradingqna_5d47bce7d5d2
+missed_reminders_forgetting,forget which stock to buy every month and end up skipping investing,YouTube comments,,youtube_a1f4bf50732d
+charges_lockin_surprise,I was told you will have lock in period of three years for sip and now I am being told it will have lock in period of three y ars for every transaction,Google Play,fundsindia,playstore_20d2bf4e4fb7
+charges_lockin_surprise,I have completed 3 years in ELSS but the units still show locked,TradingQ&A forum,,tradingqna_f588185f7314
+charges_lockin_surprise,lekin iska last instalment 2027 me withdraw hoga,YouTube comments,,youtube_d5752636c848
+cash_need_affordability,khud ke paise khud ki saving khud hi jarurat k time withdrawal nhi kar pa rh h,Google Play,paytmmoney,playstore_0f5219599cbb
+cash_need_affordability,I cancelled my sip as i was in need of urgent money,Apple App Store,etmoney,appstore_f6a0573047c4
+cash_need_affordability,10% step up will lead to 10k then 15k then 20k then 25k to 30k per month sip which is difficult to continue for average person,YouTube comments,,youtube_b10cac1015f9
+conflicting_advice,Koi bolata hay sip karo Koi bolta hay na karo,YouTube comments,,youtube_1026478616b9
+conflicting_advice,the mutual funds you pick from their platform are regular funds instead of direct funds,Google Play,fundsindia,playstore_87de58f77759
+conflicting_advice,why do I unnecessarily give the commission from my profit to the broker,TradingQ&A forum,,tradingqna_a6b91692c576
+return_expectations,I thought in 3-5 yrs i will definitely get minimum 10-12 percent,YouTube comments,,youtube_408c4c24a4c0
+return_expectations,Is it possible to have 1 crore within 10 years,TradingQ&A forum,,tradingqna_f02fb415a004
+return_expectations,1 saal ka agar 12 % v returns milta to 3 saal me 36% hota,YouTube comments,,youtube_f093509e808c
+long_term_discipline,"Yet, I have not stopped investing",YouTube comments,,youtube_a4f79b45fd99
+long_term_discipline,Core idea behind SIP’ is its gives you the discipline and eliminates all the biases about market movements,ValuePickr forum,,valuepickr_cc1546de5a40
+long_term_discipline,I just want my funds to continue for a period of 25 - 30 years,TradingQ&A forum,,tradingqna_949d8194095c

@@ -1,8 +1,8 @@
 {
- "records_extracted": 41,
+ "records_extracted": 626,
  "malformed_after_retry": 0,
  "needed_retry": 0,
- "coded_values_with_span": 65,
+ "coded_values_with_span": 1182,
  "span_failures_after_retry": 0,
  "span_pass_rate": 1.0,
  "pending": 0

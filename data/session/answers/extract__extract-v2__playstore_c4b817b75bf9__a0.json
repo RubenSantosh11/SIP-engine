@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_c4b817b75bf9",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "My money was deducted from my bank for my sip but it was not reflected",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "today after 2 months also my money are not yet refunded",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Debited but not invested; refund pending for two months."
+}

@@ -1,0 +1,27 @@
+{
+ "record_id": "appstore_514c08a39c91",
+ "source": "appstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I’m using this application from last 3 years for sip management",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I’m using this application from last 3 years for sip management",
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "when I click on sip activate autopay - with my phonepe or googlepay upi it shows something went wrong",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Autopay activation fails for new SIP.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

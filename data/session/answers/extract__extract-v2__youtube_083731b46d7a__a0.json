@@ -1,0 +1,25 @@
+{
+ "record_id": "youtube_083731b46d7a",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "continue invest right now",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "2 yr completed",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "3000 k loss pr hu apne current value se",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "Wrong information",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Two years in and at a loss; warns others."
+}

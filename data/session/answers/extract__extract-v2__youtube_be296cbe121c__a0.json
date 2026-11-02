@@ -1,0 +1,25 @@
+{
+ "record_id": "youtube_be296cbe121c",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I started sip in small cap fund in jan 2024 and continue till now",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I started sip in small cap fund in jan 2024",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "Till May 2026 returns are 0",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "continue till now",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Zero returns for over two years but continued."
+}

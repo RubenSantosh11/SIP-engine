@@ -1,0 +1,25 @@
+{
+ "record_id": "youtube_9cc8d608a3b6",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "return_expectations",
+   "evidence_span": "20yr = ∼4.95L at assumed 12%",
+   "severity": 1,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "The 5th date auto-debit tip really helps salaried beginners stick to it",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Auto-debit on salary date helps beginners stick."
+}

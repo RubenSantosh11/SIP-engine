@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_360d77bf0c0b",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "before purchasing any mutual fund sip it ask to also pay for initial investment",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Initial investment requirement confuses."
+}

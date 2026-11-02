@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_d9e1f78f6a1b",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "3 sallo se",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "3 sallo se 2-4 percent grow hue h bs",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Was about to exit after 3 years of 2-4% growth."
+}

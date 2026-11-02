@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_7a378fe7e615",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "you cannot add new mandate from the 2 nd bank account",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Old one was better",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot add mandate from second bank."
+}

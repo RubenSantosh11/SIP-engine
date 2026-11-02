@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_99bfa3ddee0a",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "My SIPs scheduled for 1st March, are still not alloted",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP units not allotted after 4 days."
+}

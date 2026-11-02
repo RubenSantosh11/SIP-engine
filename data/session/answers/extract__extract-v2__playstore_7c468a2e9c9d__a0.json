@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_7c468a2e9c9d",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "Please do send notification when we have pending SIP payment",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No pending-payment notifications."
+}

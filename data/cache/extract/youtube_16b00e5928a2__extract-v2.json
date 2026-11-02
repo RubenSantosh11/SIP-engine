@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_16b00e5928a2",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "can I still invest in the same sip with some higher amount",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "Initially I have taken a sip for 3 years now time period over",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "didn't withdraw it as not needed now",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "3-year SIP matured; wants to continue higher.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

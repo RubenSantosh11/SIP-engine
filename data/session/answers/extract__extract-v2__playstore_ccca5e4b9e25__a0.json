@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_ccca5e4b9e25",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "My SIPs keep getting missed",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "Please add notifications to pay for the SIP",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIPs keep getting missed for lack of payment reminders."
+}

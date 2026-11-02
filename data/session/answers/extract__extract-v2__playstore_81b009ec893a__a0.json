@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_81b009ec893a",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "i am stopping my SIPs in this app",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "They are asking payment to Download p&l statement",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Charged for P&L statement, so stopping SIPs."
+}

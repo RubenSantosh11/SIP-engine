@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_bd0f57aca58c",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "So I am deleting my SIPs",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I have started 3 SIPs simultaneously when I installed this app",
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "they are not updated even after a week",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "I have started 3 SIPs simultaneously when I installed this app",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "New SIPs not updated after a week, so deleting them and redeeming."
+}

@@ -1,0 +1,31 @@
+{
+ "record_id": "appstore_21c1dd505c2a",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "i will be shifting my entire portfolio to some new application",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Very poor new UI",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "my sip got deducted but i can’t see them in my orders",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "i will be shifting my entire portfolio to some new application",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Deducted SIPs not shown after redesign; moving."
+}

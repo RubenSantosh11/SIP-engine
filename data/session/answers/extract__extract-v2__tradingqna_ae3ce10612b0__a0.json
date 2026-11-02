@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_ae3ce10612b0",
+ "source": "tradingqna",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Why SIP also cancelled",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "Why SIP also cancelled for the above mutual funds",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP cancelled by fund suspension."
+}

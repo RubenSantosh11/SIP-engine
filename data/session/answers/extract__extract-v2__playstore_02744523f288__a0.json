@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_02744523f288",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I missed two SIPs",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I paid both the SIP one day before the due date from your pending amount column. But didn't get the NAVs",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Paid on time but missed two SIPs due to processing failure."
+}

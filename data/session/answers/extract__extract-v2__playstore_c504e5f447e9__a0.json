@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_c504e5f447e9",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "they skipped this sip today",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "they skipped this sip today even though I had set up everything and funds are there",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "you can't trust their buggy system",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "App skipped an instalment despite funds; lost trust."
+}

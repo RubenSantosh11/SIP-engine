@@ -1,0 +1,25 @@
+{
+ "record_id": "tradingqna_949d8194095c",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "there is no guarantee that my current AMC provides with lumpsum or not",
+   "severity": 1,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "I just want my funds to continue for a period of 25 - 30 years",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Wants uninterrupted 25-30 year SIP."
+}

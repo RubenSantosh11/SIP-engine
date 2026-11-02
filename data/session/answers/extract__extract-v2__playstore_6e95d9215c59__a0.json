@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_6e95d9215c59",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "It miss most of the time",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Manually do a payment every time for SIP",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "Notification is also not coming",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Manual payments and no notifications mean most instalments are missed."
+}

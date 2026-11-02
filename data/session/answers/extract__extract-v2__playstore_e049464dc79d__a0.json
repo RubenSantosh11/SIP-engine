@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_e049464dc79d",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "mene mera sara SIP cancel kar diya hu",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "bahut hi lagg karta hai",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "App lag made them cancel all SIPs."
+}

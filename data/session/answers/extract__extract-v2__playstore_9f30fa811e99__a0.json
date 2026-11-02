@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_9f30fa811e99",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "How can i stop sip through this app",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "How can i stop sip through this app",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot find how to stop SIP."
+}

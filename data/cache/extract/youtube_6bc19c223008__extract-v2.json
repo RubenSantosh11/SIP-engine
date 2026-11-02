@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_6bc19c223008",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Main pichle 9 saal se SIP kar raha hu",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "Main pichle 9 saal se SIP kar raha hu",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "bhagwan se mannat mangta hu ki market kum se kum aur 3 saal aisa gira rahay",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "9-year investor welcomes falls.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

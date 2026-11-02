@@ -1,0 +1,31 @@
+{
+ "record_id": "playstore_86b3c230fe49",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I decided to shift from Groww to Zerodha Coin",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "Zerodha Coin provides features like quarterly SIPs and AMC SIPs, which I couldn't find on Groww",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I decided to shift from Groww to Zerodha Coin",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "Customer support also needs significant improvement",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Moved SIPs to another app for more flexible SIP options."
+}

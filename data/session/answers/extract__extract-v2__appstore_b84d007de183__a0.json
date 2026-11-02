@@ -1,0 +1,19 @@
+{
+ "record_id": "appstore_b84d007de183",
+ "source": "appstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I AM not able to pay my monthly sip",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "This new update is very difficult to use",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot pay monthly SIP after update."
+}

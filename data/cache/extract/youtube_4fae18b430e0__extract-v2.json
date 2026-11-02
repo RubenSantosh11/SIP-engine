@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_4fae18b430e0",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have already started investing in SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "It's been one and a half year",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "small and small makes it big",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Young investor 1.5 years in, continuing.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_d5e067ce5106",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "it doesn't send reminders on alert sip",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "the app doesn't show that the funds are being processed",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No reminders for alert SIPs; status unclear after paying."
+}

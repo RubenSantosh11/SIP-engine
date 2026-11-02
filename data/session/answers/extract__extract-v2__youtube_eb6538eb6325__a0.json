@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_eb6538eb6325",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "build wealth over time by investing a fixed amount regularly and benefiting from compounding",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Compounding motive."
+}

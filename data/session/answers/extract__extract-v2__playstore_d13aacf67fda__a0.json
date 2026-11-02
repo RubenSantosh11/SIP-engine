@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_d13aacf67fda",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "the app still shows sip missed",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "I had sufficient balance in my account yet the amount was not deducted and this has happened twice",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP not deducted twice despite balance."
+}

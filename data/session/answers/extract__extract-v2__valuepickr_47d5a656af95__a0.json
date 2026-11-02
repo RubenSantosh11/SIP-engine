@@ -1,0 +1,19 @@
+{
+ "record_id": "valuepickr_47d5a656af95",
+ "source": "valuepickr",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have today, started a SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "I have today, started a SIP",
+ "themes": [
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "Just heard an interview of Kalpen Parekh",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Started SIP after an interview."
+}

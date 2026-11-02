@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_fee72fdb52cc",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I was stopped my all SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Due to charges deducted my bank I was stopped my all SIP",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Bank charges on SIP debits made them stop all SIPs."
+}

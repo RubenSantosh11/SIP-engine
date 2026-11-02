@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_393872080834",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "my sip amount is 4.5k every month",
+ "first_time_investor": "yes",
+ "first_time_evidence": "I started my 1st sip of 2k",
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "I just wanted to be deciplined in investings",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Started without a goal for discipline; grew SIP with salary.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_e863e91d0d32",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "maine 3no sip band kar diya ab",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "abhi tak paise aaye nahi hai",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "21 wali 2 aur 25 wali 1 sip start kiye the",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Withdrawal never arrived, so stopped all three small SIPs."
+}

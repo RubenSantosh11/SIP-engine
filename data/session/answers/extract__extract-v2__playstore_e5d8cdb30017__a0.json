@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_e5d8cdb30017",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "money is not deducting from an account for an existing sip",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I have been a user of paytm money for 6 years",
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Not able to set autopay in a new sip",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Money is deducted but not able to buy mutual funds",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Existing SIP not debited, autopay fails for two months."
+}

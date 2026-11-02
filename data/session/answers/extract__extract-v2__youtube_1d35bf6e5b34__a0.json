@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_1d35bf6e5b34",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "मैं अभी भी कंटिन्यू करूंगा",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "2017 से कंटिन्यू sip कर रहा है",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "2017 से कंटिन्यू sip कर रहा है",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Continuing since 2017."
+}

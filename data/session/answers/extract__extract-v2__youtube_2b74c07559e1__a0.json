@@ -1,0 +1,25 @@
+{
+ "record_id": "youtube_2b74c07559e1",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "mai sip बंद करना चाहता हू",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "अभी 2 साल हो गये हैं",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "sip accha perform नही कर रही है",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "vo abhi phone nahi uthata",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Underperforming SIP and unresponsive agent."
+}

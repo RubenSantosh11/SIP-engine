@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_f0917eb523ba",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Have started a SIP, but have to make payment of SIP instalment every time",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "have to make payment of SIP instalment every time",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Has to pay each instalment manually."
+}

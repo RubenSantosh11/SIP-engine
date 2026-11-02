@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_fae7ae40ad23",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "for two months sips are not taking place",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "for two months sips are not taking place",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "SIPs stopped executing for two months.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

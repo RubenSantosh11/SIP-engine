@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_0a07e4592563",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I will not be investing another dime with these frauds",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "My three SIP transactions have been in pending state since 16th april",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "raised the issue with customer support and they have refused to help",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Pending SIPs and refused help; quitting."
+}

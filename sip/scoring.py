@@ -41,7 +41,8 @@ def score_themes(records: list[dict], codebook: dict, droppers: set, continuers:
     - Dropper / continuer groups come from sip_status. Records whose only stop-theme is marked
       exclude_from_droppers (e.g. switching to a direct plan) are left out of the dropper group.
     - reach = share of records with a dropper or continuer status that mention the theme.
-    - Themes marked contrast_only (protective factors) are scored for the contrast table but never ranked.
+    - Themes marked contrast_only (protective factors) or exclude_from_droppers (switching, an outcome)
+      are scored for the contrast table but never ranked.
     - Small-sample guard for stop-lift: if either group has < min_group records or the theme has
       < min_mentions mentions across the two groups, lift is set to 1.0 (neutral) and flagged.
     """
@@ -82,9 +83,12 @@ def score_themes(records: list[dict], codebook: dict, droppers: set, continuers:
         addr = addr_map[t["addressability"]]
         sources = sorted({r["source"] for r in mentioning})
         contrast_only = bool(t.get("contrast_only"))
-        eligible = not contrast_only and len(mentioning) >= min_records and len(sources) >= min_sources
+        is_outcome = bool(t.get("exclude_from_droppers"))
+        eligible = not contrast_only and not is_outcome and len(mentioning) >= min_records and len(sources) >= min_sources
         if contrast_only:
             reason = "contrast only (protective factor, not an opportunity)"
+        elif is_outcome:
+            reason = "switching is an outcome, not a cause (its causes are coded in other themes)"
         elif len(mentioning) < min_records:
             reason = f"only {len(mentioning)} records (< {min_records})"
         elif len(sources) < min_sources:

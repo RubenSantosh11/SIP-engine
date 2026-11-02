@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_e2fecb5df3fa",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "with the update they seemed to have removed the functions where one could easily stop or pause his SIP's",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "removed the functions where one could easily stop or pause his SIP's",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Update removed stop and pause."
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_04f960ce2d64",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "return_expectations",
+   "evidence_span": "Total sip 24k 15yr 1cr",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP for daughter targeting 1 crore in 15 years."
+}
