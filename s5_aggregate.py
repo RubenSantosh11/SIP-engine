@@ -24,7 +24,7 @@ def main() -> None:
                         config.MIN_THEME_RECORDS, config.MIN_THEME_SOURCES)
     config.OUTPUT_DIR.mkdir(exist_ok=True)
 
-    cols = ["theme_id", "name", "question", "eligible", "excluded_reason", "n_records", "sources",
+    cols = ["theme_id", "name", "question", "eligible", "excluded_reason", "contrast_only", "n_records", "sources",
             "reach", "reach_low", "reach_high", "severity", "stop_lift", "stop_lift_low", "stop_lift_high",
             "lift_guarded", "addressability", "addressability_score", "priority", "priority_low"]
     with open(config.OUTPUT_DIR / "themes_ranked.csv", "w", newline="", encoding="utf-8") as f:

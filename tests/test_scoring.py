@@ -62,3 +62,12 @@ def test_ranked_by_lower_bound():
     rows = score_themes(fixture(), CB, {"stopped"}, {"continuing"}, 1, 1)
     elig = [r for r in rows if r["eligible"]]
     assert elig == sorted(elig, key=lambda r: -r["priority_low"])
+
+
+def test_contrast_only_never_ranked():
+    cb = {**CB, "themes": CB["themes"] + [{"id": "disc", "name": "Discipline", "question": "behaviour",
+                                             "addressability": "medium", "contrast_only": True}]}
+    rs = fixture() + [rec(100 + i, "continuing", [("disc", True)], "youtube" if i % 2 else "playstore") for i in range(10)]
+    row = {r["theme_id"]: r for r in score_themes(rs, cb, {"stopped"}, {"continuing"}, 1, 1)}["disc"]
+    assert not row["eligible"] and row["contrast_only"] and "contrast" in row["excluded_reason"]
+    assert row["continuer_mentions"] == 10

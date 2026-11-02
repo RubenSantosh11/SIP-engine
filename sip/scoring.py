@@ -41,6 +41,7 @@ def score_themes(records: list[dict], codebook: dict, droppers: set, continuers:
     - Dropper / continuer groups come from sip_status. Records whose only stop-theme is marked
       exclude_from_droppers (e.g. switching to a direct plan) are left out of the dropper group.
     - reach = share of records with a dropper or continuer status that mention the theme.
+    - Themes marked contrast_only (protective factors) are scored for the contrast table but never ranked.
     - Small-sample guard for stop-lift: if either group has < min_group records or the theme has
       < min_mentions mentions across the two groups, lift is set to 1.0 (neutral) and flagged.
     """
@@ -80,9 +81,16 @@ def score_themes(records: list[dict], codebook: dict, droppers: set, continuers:
         severity = sum(sev) / len(sev) if sev else 0.0
         addr = addr_map[t["addressability"]]
         sources = sorted({r["source"] for r in mentioning})
-        eligible = len(mentioning) >= min_records and len(sources) >= min_sources
-        reason = None if eligible else (f"only {len(mentioning)} records (< {min_records})" if len(mentioning) < min_records
-                                        else f"only {len(sources)} source(s) (< {min_sources})")
+        contrast_only = bool(t.get("contrast_only"))
+        eligible = not contrast_only and len(mentioning) >= min_records and len(sources) >= min_sources
+        if contrast_only:
+            reason = "contrast only (protective factor, not an opportunity)"
+        elif len(mentioning) < min_records:
+            reason = f"only {len(mentioning)} records (< {min_records})"
+        elif len(sources) < min_sources:
+            reason = f"only {len(sources)} source(s) (< {min_sources})"
+        else:
+            reason = None
         rows.append({
             "theme_id": tid, "name": t["name"], "question": t.get("question"),
             "n_records": len(mentioning), "sources": sources,
@@ -93,7 +101,7 @@ def score_themes(records: list[dict], codebook: dict, droppers: set, continuers:
             "addressability": t["addressability"], "addressability_score": addr,
             "priority": reach * severity * lift * addr,
             "priority_low": reach_lo * severity * lift_lo * addr,
-            "eligible": eligible, "excluded_reason": reason,
+            "eligible": eligible, "excluded_reason": reason, "contrast_only": contrast_only,
         })
     rows.sort(key=lambda r: (not r["eligible"], -r["priority_low"], -r["n_records"]))
     return rows

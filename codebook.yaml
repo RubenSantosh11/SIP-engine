@@ -2,8 +2,9 @@
 # plus themes seen while filtering the expanded data (other apps' reviews, ValuePickr).
 # Focus: why first-time SIP investors who HAVE STARTED pause, reduce or stop, mainly within ~12 months of starting.
 # Barriers to starting at all (KYC, minimum/initial amounts, account opening) are out of scope.
-# YOUR TURN: edit freely (merge / rename / delete), then set status: final and log changes in corrections_log.md.
-status: proposed
+# Reviewed by the PM on 2026-11-02 (see corrections_log.md). Four drop-off themes added afterwards at the PM's request
+# (missed_reminders_forgetting, disruptive_app_updates, charges_lockin_surprise, conflicting_advice).
+status: final
 addressability_scores:   # mapping used in scoring (documented in README)
   high: 1.0     # the platform can change it directly in product, copy or flows
   medium: 0.6   # the platform can influence it (education, reminders, defaults)
@@ -14,6 +15,7 @@ themes:
     name: Autopay / mandate / payment failures
     definition: Instalments are missed, fail or are debited wrongly because of autopay, mandate, bank or payment problems, or because there is no auto-debit and the investor must pay manually each month.
     include: Autopay or mandate not working, mandate setup failing, manual monthly payment burden, missed instalments despite balance, double debits, bounce or ACH charges.
+      (Missing reminders or forgetting to pay go to missed_reminders_forgetting.)
     exclude: App crashes unrelated to payments (app_reliability_errors); deliberate cancellation.
     example: "Auto payment is not working and that's why SIP is getting missed"
     addressability: high
@@ -31,7 +33,8 @@ themes:
     question: stop
     name: App bugs, slow processing and confusing status
     definition: SIP orders stay in processing, units are allotted late, the app crashes or an update breaks flows, or the investor cannot tell whether a SIP is active or where money went after cancelling.
-    include: Orders stuck processing, late allotment, app down, update hid the pay button, SIP vanished, money not returned after cancel, autopay still showing after cancel.
+    include: Orders stuck processing, late allotment, app down or crashing, SIP vanished, money not returned after cancel, autopay still showing after cancel.
+      (Problems caused specifically by a redesign or update go to disruptive_app_updates.)
     exclude: Payment-rail failures (payment_autopay_failure).
     example: "it is still showing processing"
     addressability: high
@@ -109,6 +112,42 @@ themes:
     example: "I thought in 3-5 yrs i will definitely get minimum 10-12 percent"
     addressability: medium
     merged_from: [start_return_expectation]
+  - id: missed_reminders_forgetting
+    question: stop
+    name: No reminders, so instalments are forgotten
+    definition: Instalments are missed because the app sends no reminder or due-date notification, and the investor forgets to pay or place the order.
+    include: No SIP reminders or notifications, forgetting manual payments, missing several dates in a row.
+    exclude: Autopay failing when it was set up (payment_autopay_failure).
+    example: "When sips are distributed across dates its sometimes easy to forget to place order"
+    addressability: high
+    merged_from: [new - seen in other apps' reviews]
+  - id: disruptive_app_updates
+    question: stop
+    name: App updates that break or hide SIP flows
+    definition: A redesign or update removes or hides SIP features (pay button, SIP list, modify, tracking), so the investor misses payments, cannot manage SIPs or decides to leave.
+    include: Complaints that start with 'after the latest update' about SIP payment, visibility or management; old version was better.
+    exclude: Bugs not tied to an update (app_reliability_errors); paywalls introduced with an update (code fees_paywall too).
+    example: "in the latest update i am not able to see manual payment option for monthly SIPs"
+    addressability: high
+    merged_from: [new - split from app_reliability_errors]
+  - id: charges_lockin_surprise
+    question: stop
+    name: Surprise charges, lock-ins or tax at exit
+    definition: The investor is surprised by exit loads, lock-in periods, tax or other charges when stopping or redeeming, and feels misled.
+    include: Exit loads not explained, ELSS lock-in surprises, unexpected tax or fees at redemption.
+    exclude: Platform subscription fees (fees_paywall).
+    example: "After 1 year when you redeem the units you will get to see different fees and charges which were not clearly mentioned"
+    addressability: medium
+    merged_from: [new - seen in other apps' reviews and forums]
+  - id: conflicting_advice
+    question: behaviour
+    name: Conflicting or misleading advice
+    definition: The investor is confused or loses confidence because creators, agents or ads give conflicting or misleading messages about SIPs, or they were mis-sold (e.g. a regular plan without understanding it).
+    include: Some sources say do SIP and others say don't; feeling misled by creators or agents; discovering commissions later.
+    exclude: Their own disappointment with returns (returns_disappointment).
+    example: "Koi bolata hay sip karo Koi bolta hay na karo"
+    addressability: medium
+    merged_from: [start_advised_by_intermediary (part), beh_monitoring_returns (feeling misled)]
   - id: long_term_discipline
     question: behaviour
     name: Long-term discipline (protective)
@@ -117,4 +156,5 @@ themes:
     exclude: Statements of intent from people who have not started.
     example: "2017 से कंटिन्यू sip कर रहा है"
     addressability: medium
+    contrast_only: true   # protective factor: shown in the dropper-vs-continuer table, NOT ranked as an opportunity
     merged_from: [start_long_horizon_compounding, start_family_security, beh_holding_through_falls, beh_set_and_forget, beh_steady_continuing, beh_increase_stepup]
