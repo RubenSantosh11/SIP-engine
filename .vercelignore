@@ -1,7 +1,7 @@
-data/
-outputs/
-tests/
-research/
+/data/
+/outputs/
+/tests/
+/research/
 collect_*.py
 s2_*.py
 s3_*.py
