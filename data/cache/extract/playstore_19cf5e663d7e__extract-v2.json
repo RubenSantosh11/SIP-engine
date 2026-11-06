@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_19cf5e663d7e",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "all sips minimum investment amount is 5k",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Minimum investment too high.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

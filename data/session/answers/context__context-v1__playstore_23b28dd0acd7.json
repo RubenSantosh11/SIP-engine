@@ -1,0 +1,35 @@
+{
+ "record_id": "playstore_23b28dd0acd7",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "mera amt uske bad jitna show kr rha tha"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "losing_money",
+   "evidence_span": "bina kisi loss ke holding me 3k se kam ho gya"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

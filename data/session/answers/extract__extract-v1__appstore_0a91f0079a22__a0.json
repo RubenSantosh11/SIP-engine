@@ -1,0 +1,17 @@
+{
+ "record_id": "appstore_0a91f0079a22",
+ "source": "appstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "trying to skip sip",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "there is a critical bug while trying to skip sip on iPhone device",
+   "severity": 2,
+   "confidence": 0.9
+  }
+ ],
+ "one_line_reason": "Wants to skip an instalment but a bug logs them out."
+}

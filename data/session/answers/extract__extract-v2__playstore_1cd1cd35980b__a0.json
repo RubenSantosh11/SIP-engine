@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_1cd1cd35980b",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I too have been doing this for many years",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I too have been doing this for many years",
+ "themes": [
+  {
+   "theme_id": "cash_need_affordability",
+   "evidence_span": "Sometimes out of compulsion, I have to withdraw the amount of SIP",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Long-time investor who sometimes withdraws SIP money out of need."
+}

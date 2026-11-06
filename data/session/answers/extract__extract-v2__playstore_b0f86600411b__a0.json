@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_b0f86600411b",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "after cancelled SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "after cancelled SIP still money is deducted",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "still no feedback from team members",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Money deducted after cancelling SIP."
+}

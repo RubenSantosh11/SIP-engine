@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_0fa556d0511d",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I was trying to pay my sip but unable to see option to do that",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "uts majorly filled with ads of genius",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot find SIP payment option amid ads."
+}

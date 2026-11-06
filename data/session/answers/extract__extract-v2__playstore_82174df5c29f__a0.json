@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_82174df5c29f",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "it was due on 14th, but it is not coming under Orders",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Due SIP not appearing under orders."
+}

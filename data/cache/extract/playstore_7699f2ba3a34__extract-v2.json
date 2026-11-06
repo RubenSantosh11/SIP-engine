@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_7699f2ba3a34",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Managing SIPs, mutual funds, stocks, and IPOs is very easy",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I have been using Groww since 2020",
+ "themes": [],
+ "one_line_reason": "Happy long-term user; SIP management is easy.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,27 @@
+{
+ "record_id": "tradingqna_ea0a1a2577f1",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "having to send a physical request letter to the AMC and having to wait for a month to stop",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Pausing via AMC needs a physical letter.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

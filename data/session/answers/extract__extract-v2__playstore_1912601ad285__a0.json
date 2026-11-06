@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_1912601ad285",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "weekly SIP are getting missed",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "from past 10 days, weekly SIP are getting missed",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Weekly SIPs missed for 10 days."
+}

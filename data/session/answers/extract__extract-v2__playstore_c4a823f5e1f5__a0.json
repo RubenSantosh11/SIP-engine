@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_c4a823f5e1f5",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "recent update (31st May 2025) has broken the SIP payment methods",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Update broke SIP payments."
+}

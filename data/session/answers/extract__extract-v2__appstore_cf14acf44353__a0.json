@@ -1,0 +1,19 @@
+{
+ "record_id": "appstore_cf14acf44353",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "IF I want to stop SIP or pause it always fails",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Stop and pause failed until update."
+}

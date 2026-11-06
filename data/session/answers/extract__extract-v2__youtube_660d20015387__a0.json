@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_660d20015387",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "SIP make a good habit of save money",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Saving-habit motive."
+}

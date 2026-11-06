@@ -1,0 +1,18 @@
+{
+ "record_id": "playstore_75c4f90a6ef5",
+ "source": "playstore",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "instalment missing from holdings",
+   "quote": "My September investment in one of my mutual funds has disappeared",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "support not resolving SIP issue",
+   "quote": "I’ve contacted Groww support multiple times, but the issue is still not resolved",
+   "verified": true
+  }
+ ]
+}

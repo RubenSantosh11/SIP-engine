@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_f588185f7314",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I have completed 3 years in ELSS",
+ "themes": [
+  {
+   "theme_id": "charges_lockin_surprise",
+   "evidence_span": "I have completed 3 years in ELSS but the units still show locked",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Lock-in confusion after 3 years."
+}

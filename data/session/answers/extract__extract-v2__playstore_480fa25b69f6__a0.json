@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_480fa25b69f6",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Not able to update the SIP amount after recent update",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot change amount after update."
+}

@@ -1,0 +1,34 @@
+{
+ "record_id": "playstore_701f04215b5e",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "where_is_my_money",
+   "evidence_span": "i did not receive mutual fund unit neither my money was returned ever"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "other",
+   "evidence_span": "I have raised complaint with SEBI today"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

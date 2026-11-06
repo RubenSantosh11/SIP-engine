@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_e2f7dfe2e9db",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "Not able to gey notification when sip is due",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No due-date notification."
+}

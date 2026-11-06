@@ -1,0 +1,34 @@
+{
+ "record_id": "youtube_d80d87910a1e",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "whether_to_continue",
+   "evidence_span": "Sip band karna sahi rahega kya"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "youtube_creator",
+   "evidence_span": "advoice de"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

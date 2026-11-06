@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_585787428d87",
+ "source": "youtube",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Non stop sip till my retirement",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I started my sip from 2021",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "Non stop sip till my retirement that is in 2054",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Grew SIP from 10k to 40k; will continue to retirement.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

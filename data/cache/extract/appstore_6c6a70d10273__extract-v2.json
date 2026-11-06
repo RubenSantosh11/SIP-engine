@@ -1,0 +1,27 @@
+{
+ "record_id": "appstore_6c6a70d10273",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "unable to cancel my mutual fund SIP for last 2 weeks",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "The cancellation process goes through and their is confirmation on the app but the cancellation doesn’t happen",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Cancellation confirmed but not executed.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

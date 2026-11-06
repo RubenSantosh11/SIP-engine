@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_6d3013dc9305",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "i closed the sip last year",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I started in 2018",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "value is decreasing",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Closed SIP; value falling."
+}

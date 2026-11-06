@@ -1,0 +1,27 @@
+{
+ "record_id": "tradingqna_4e72cc7b3d19",
+ "source": "tradingqna",
+ "sip_status": "continuing",
+ "sip_status_evidence": "Now i have started AMC sip in Reliance small cap fund",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "Reliance small cap fund stopped taking lump sum investment",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Fund restriction forced a new SIP mode.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

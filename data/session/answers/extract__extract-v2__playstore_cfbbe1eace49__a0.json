@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_cfbbe1eace49",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "PAUSING/ RESTARTING, STOPPING SIP",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No pause, restart or stop SIP options."
+}

@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_64c8db53dbb8",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "daily SIP mandate unreliable",
+   "quote": "Some days it debits money, some days it does not. Unreliable.",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "SIPs trigger on holidays",
+   "quote": "few of them got triggered yesterday - even though it was a holiday yesterday",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_7139ff8203dd",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "we are missing monthly SIP payments",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "in the latest update i am not able to see manual payment option for monthly SIPs",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Update hid manual payment; missing SIPs."
+}

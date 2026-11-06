@@ -1,0 +1,41 @@
+{
+ "record_id": "playstore_0f437cab3ce7",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "my SIP is not getting processed",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "I am getting charged for the same for MF as I set my SIP autopay through UPI",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "my SIP is not getting processed",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "they are hanging my phone up all the time",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "SIP not processed while being charged; support hangs up.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

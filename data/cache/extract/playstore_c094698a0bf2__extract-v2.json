@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_c094698a0bf2",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "SIP is not getting deducted",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "UPI mandates are not working",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "UPI mandates not working; SIP not deducted.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

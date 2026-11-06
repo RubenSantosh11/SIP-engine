@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_c52780f5bd6e",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Coin show your payment is failed but my money is debited",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Money debited but order failed; large amount stuck."
+}

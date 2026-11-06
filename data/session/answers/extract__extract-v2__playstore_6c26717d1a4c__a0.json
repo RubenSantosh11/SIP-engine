@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_6c26717d1a4c",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "for stopping a SIP - I had to click through 7 ad screens",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "The app is full of stupid ads for investements and loans",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Seven ad screens to stop a SIP."
+}

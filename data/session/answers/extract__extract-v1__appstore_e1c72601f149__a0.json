@@ -1,0 +1,17 @@
+{
+ "record_id": "appstore_e1c72601f149",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "mandate_payment_issue",
+   "evidence_span": "I was unable to set up autopay",
+   "severity": 2,
+   "confidence": 0.7
+  }
+ ],
+ "one_line_reason": "Could not set up autopay, then lost trust over a disputed wallet withdrawal."
+}

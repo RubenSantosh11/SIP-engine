@@ -1,0 +1,33 @@
+{
+ "record_id": "youtube_f44d8df21290",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "Lots of gain my portfolio"
+  }
+ ],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "<25",
+   "evidence_span": "I am BA student"
+  },
+  "income_stability": {
+   "value": "student_no_income",
+   "evidence_span": "I am BA student"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

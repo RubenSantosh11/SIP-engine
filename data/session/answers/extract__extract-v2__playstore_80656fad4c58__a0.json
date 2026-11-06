@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_80656fad4c58",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "Android app has no option to edit my sip",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No edit option on Android."
+}

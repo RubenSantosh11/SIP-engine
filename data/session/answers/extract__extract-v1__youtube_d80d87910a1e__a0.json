@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_d80d87910a1e",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "market_drop_losses",
+   "evidence_span": "mujhe to confidence lose hai",
+   "severity": 2,
+   "confidence": 0.5
+  }
+ ],
+ "one_line_reason": "Losing confidence about market levels and asking whether to stop."
+}

@@ -1,0 +1,35 @@
+{
+ "record_id": "tradingqna_741281173f8d",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "currently investment amount is 36000 and market value is 50000"
+  }
+ ],
+ "worries": [],
+ "outside_help": [
+  {
+   "channel": "social_or_forum",
+   "evidence_span": "should I redeem Nippon large cap"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

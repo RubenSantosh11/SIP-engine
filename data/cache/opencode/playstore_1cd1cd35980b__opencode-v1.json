@@ -1,0 +1,24 @@
+{
+ "record_id": "playstore_1cd1cd35980b",
+ "source": "playstore",
+ "codes": [
+  {
+   "question": "start",
+   "code": "wants to save money",
+   "quote": "If you want to save money, this is the right place",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "long-term continuing investor",
+   "quote": "I too have been doing this for many years",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "withdraws SIP money when forced by need",
+   "quote": "Sometimes out of compulsion, I have to withdraw the amount of SIP",
+   "verified": true
+  }
+ ]
+}

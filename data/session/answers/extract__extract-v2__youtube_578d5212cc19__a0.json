@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_578d5212cc19",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "charges_lockin_surprise",
+   "evidence_span": "end date se pehle bnd krne government ko fine dena hota h kya",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Worried about penalty for stopping before end date."
+}

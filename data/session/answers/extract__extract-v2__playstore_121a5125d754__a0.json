@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_121a5125d754",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I could not pay my sip amount",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "I could not pay my sip amount..even i do have amount in account",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Could not pay on SIP date despite balance."
+}

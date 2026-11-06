@@ -1,0 +1,15 @@
+# Secrets: never commit
+.env
+keys.txt
+.streamlit/secrets.toml
+
+# Raw collected data (stays local)
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Vercel
+.vercel/

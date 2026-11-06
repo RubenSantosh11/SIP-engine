@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_5e0f9471ae96",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "money is deducted via Mandate on 28th evening, so the NAV date of next day",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Mandate timing shifts NAV date."
+}

@@ -1,0 +1,17 @@
+{
+ "records_scored": 626,
+ "n_droppers": 175,
+ "n_continuers": 60,
+ "dropper_statuses": [
+  "stopped",
+  "paused",
+  "reduced"
+ ],
+ "continuer_statuses": [
+  "continuing"
+ ],
+ "min_theme_records": 30,
+ "min_theme_sources": 2,
+ "eligible_themes": 7,
+ "codebook_status": "final"
+}

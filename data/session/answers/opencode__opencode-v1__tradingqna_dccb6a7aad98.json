@@ -1,0 +1,15 @@
+{
+ "record_id": "tradingqna_dccb6a7aad98",
+ "codes": [
+  {
+   "question": "start",
+   "code": "just placed first order",
+   "quote": "I recently placed an SIP order"
+  },
+  {
+   "question": "stop",
+   "code": "needs to stop right after starting",
+   "quote": "But Now I need to stop this SIP"
+  }
+ ]
+}

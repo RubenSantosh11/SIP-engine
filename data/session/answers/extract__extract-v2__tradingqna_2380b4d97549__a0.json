@@ -1,0 +1,25 @@
+{
+ "record_id": "tradingqna_2380b4d97549",
+ "source": "tradingqna",
+ "sip_status": "continuing",
+ "sip_status_evidence": "all SIP are automated",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "MO S&P 500 was paused by the fund",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "it wasn’t resumed automatically",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Fund-paused SIP not auto-resumed."
+}

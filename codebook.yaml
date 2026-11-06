@@ -1,0 +1,160 @@
+# PROPOSED codebook: 12 themes merged from codebook_draft.yaml (28 themes from open coding of 100 records)
+# plus themes seen while filtering the expanded data (other apps' reviews, ValuePickr).
+# Focus: why first-time SIP investors who HAVE STARTED pause, reduce or stop, mainly within ~12 months of starting.
+# Barriers to starting at all (KYC, minimum/initial amounts, account opening) are out of scope.
+# Reviewed by the PM on 2026-11-02 (see corrections_log.md). Four drop-off themes added afterwards at the PM's request
+# (missed_reminders_forgetting, disruptive_app_updates, charges_lockin_surprise, conflicting_advice).
+status: final
+addressability_scores:   # mapping used in scoring (documented in README)
+  high: 1.0     # the platform can change it directly in product, copy or flows
+  medium: 0.6   # the platform can influence it (education, reminders, defaults)
+  low: 0.3      # mostly outside the platform's control (income shocks, markets)
+themes:
+  - id: payment_autopay_failure
+    question: stop
+    name: Autopay / mandate / payment failures
+    definition: Instalments are missed, fail or are debited wrongly because of autopay, mandate, bank or payment problems, or because there is no auto-debit and the investor must pay manually each month.
+    include: Autopay or mandate not working, mandate setup failing, manual monthly payment burden, missed instalments despite balance, double debits, bounce or ACH charges.
+      (Missing reminders or forgetting to pay go to missed_reminders_forgetting.)
+    exclude: App crashes unrelated to payments (app_reliability_errors); deliberate cancellation.
+    example: "Auto payment is not working and that's why SIP is getting missed"
+    addressability: high
+    merged_from: [stop_payment_autopay_failure, beh_manual_workarounds]
+  - id: missing_sip_controls
+    question: stop
+    name: Can't pause, skip, reduce or cancel easily
+    definition: The investor wants to pause, skip, change the amount or date, or cancel, but the option is missing, broken or deliberately hard, so they cancel outright or feel trapped.
+    include: No pause/skip/edit/step-up control, can't reduce amount, cancellation hidden or blocked, cancel flows full of upsell screens.
+    exclude: Payment failures (payment_autopay_failure).
+    example: "Cannot pause the sip in the App"
+    addressability: high
+    merged_from: [stop_missing_controls, beh_pause_skip_reduce_intent, beh_increase_stepup (when blocked)]
+  - id: app_reliability_errors
+    question: stop
+    name: App bugs, slow processing and confusing status
+    definition: SIP orders stay in processing, units are allotted late, the app crashes or an update breaks flows, or the investor cannot tell whether a SIP is active or where money went after cancelling.
+    include: Orders stuck processing, late allotment, app down or crashing, SIP vanished, money not returned after cancel, autopay still showing after cancel.
+      (Problems caused specifically by a redesign or update go to disruptive_app_updates.)
+    exclude: Payment-rail failures (payment_autopay_failure).
+    example: "it is still showing processing"
+    addressability: high
+    merged_from: [stop_app_reliability, stop_post_cancel_money_confusion]
+  - id: fees_paywall
+    question: stop
+    name: New fees, paywalls and upselling
+    definition: The platform starts charging for basics, locks features behind subscriptions or pushes paid plans, and the investor stops or moves SIPs.
+    include: Subscription or premium paywalls, charges for statements or tracking, aggressive upselling, hidden charges.
+    exclude: Fund expense ratios or commissions in regular plans (switching_plan_or_platform).
+    example: "I stopped my all sip and move on groww"
+    addressability: high
+    merged_from: [new - seen in other apps' reviews]
+  - id: support_trust_breakdown
+    question: stop
+    name: Unresponsive support and loss of trust
+    definition: Problems go unresolved because support or the agent does not respond, and the investor loses trust in the platform.
+    include: Tickets ignored, no customer care, agent unreachable, 'fraud' or 'scam' language after unresolved issues.
+    exclude: The underlying technical issue itself (code that theme too).
+    example: "No response or follow-up from support"
+    addressability: high
+    merged_from: [stop_trust_support_breakdown]
+  - id: returns_disappointment
+    question: stop
+    name: Disappointing returns or market fear
+    definition: Flat, negative or below-expectation returns over months or years, or fear during market falls, lead the investor to stop or consider stopping.
+    include: No returns after N years, losses, worse than FD, panic in falls, 'thinking of stopping'.
+    exclude: Expectations stated at the start without an outcome (return_expectations).
+    example: "I didnt even get return of 6%"
+    addressability: medium
+    merged_from: [stop_poor_returns, stop_market_fall_panic, beh_monitoring_returns]
+  - id: cash_need_affordability
+    question: stop
+    name: Cash need or amount too high
+    definition: The investor needs the money elsewhere, or the SIP amount (or step-up) becomes hard to sustain.
+    include: Urgent money need, job or income loss, house or EMI, step-up outpacing salary, saving everything into the SIP.
+    exclude: Planned goal completion; lock-in ending.
+    example: "I cancelled my sip as i was in need of urgent money"
+    addressability: low
+    merged_from: [stop_cash_need_affordability]
+  - id: platform_or_fund_initiated
+    question: stop
+    name: Stopped or changed by the platform or fund
+    definition: The SIP was paused, deleted or cancelled by the fund house or platform rather than by the investor.
+    include: Fund suspensions, SIPs deleted after rule changes, platform cancelling inactive SIPs.
+    exclude: Investor-chosen stops.
+    example: "my SIP in SBI Gold Fund was being paused"
+    addressability: medium
+    merged_from: [stop_platform_or_fund_initiated]
+  - id: switching_plan_or_platform
+    question: stop
+    name: Switching plan, fund or platform (not a real drop)
+    definition: The investor stops a SIP only to restart it elsewhere, e.g. regular to direct, a different fund or another app.
+    include: Regular to direct, moving SIPs to another app, changing funds.
+    exclude: Leaving SIP investing altogether.
+    example: "I want to stop my existing sips so that I can start new sips"
+    addressability: high
+    exclude_from_droppers: true
+    merged_from: [stop_switch_plan_or_platform, beh_switching_restructuring]
+  - id: early_confusion_first_months
+    question: behaviour
+    name: Early confusion after the first instalment
+    definition: In the first weeks or months after starting, the investor misunderstands how the SIP works (when instalments are taken, where the money is, what cancelling or redeeming does) and stops or cancels as a result.
+    include: Confusion about the next instalment date, cancelling within days or weeks of starting, accidental cancellation, not knowing whether the SIP is active, a first SIP that started but was not properly understood (e.g. via an agent).
+    exclude: Barriers before the first investment (minimum or initial amount, KYC, account opening) - out of scope because the focus is investors who have started. Long-running SIPs (other themes).
+    example: "I started my first sip on mutual fund after completing online payment but I am confused about next sip installment"
+    addressability: high
+    merged_from: [stop_early_cancel_confusion, start_advised_by_intermediary, start_beginner_first_sip]
+  - id: return_expectations
+    question: start
+    name: Specific return expectations at the start
+    definition: Starts with a concrete expectation of returns or a corpus (e.g. 12% a year, 1 crore in 10 years), often set by ads or creators.
+    include: Stated % returns, crore targets, 'become rich', expectations from videos.
+    exclude: Long-term motives without numbers (long_term_discipline).
+    example: "I thought in 3-5 yrs i will definitely get minimum 10-12 percent"
+    addressability: medium
+    merged_from: [start_return_expectation]
+  - id: missed_reminders_forgetting
+    question: stop
+    name: No reminders, so instalments are forgotten
+    definition: Instalments are missed because the app sends no reminder or due-date notification, and the investor forgets to pay or place the order.
+    include: No SIP reminders or notifications, forgetting manual payments, missing several dates in a row.
+    exclude: Autopay failing when it was set up (payment_autopay_failure).
+    example: "When sips are distributed across dates its sometimes easy to forget to place order"
+    addressability: high
+    merged_from: [new - seen in other apps' reviews]
+  - id: disruptive_app_updates
+    question: stop
+    name: App updates that break or hide SIP flows
+    definition: A redesign or update removes or hides SIP features (pay button, SIP list, modify, tracking), so the investor misses payments, cannot manage SIPs or decides to leave.
+    include: Complaints that start with 'after the latest update' about SIP payment, visibility or management; old version was better.
+    exclude: Bugs not tied to an update (app_reliability_errors); paywalls introduced with an update (code fees_paywall too).
+    example: "in the latest update i am not able to see manual payment option for monthly SIPs"
+    addressability: high
+    merged_from: [new - split from app_reliability_errors]
+  - id: charges_lockin_surprise
+    question: stop
+    name: Surprise charges, lock-ins or tax at exit
+    definition: The investor is surprised by exit loads, lock-in periods, tax or other charges when stopping or redeeming, and feels misled.
+    include: Exit loads not explained, ELSS lock-in surprises, unexpected tax or fees at redemption.
+    exclude: Platform subscription fees (fees_paywall).
+    example: "After 1 year when you redeem the units you will get to see different fees and charges which were not clearly mentioned"
+    addressability: medium
+    merged_from: [new - seen in other apps' reviews and forums]
+  - id: conflicting_advice
+    question: behaviour
+    name: Conflicting or misleading advice
+    definition: The investor is confused or loses confidence because creators, agents or ads give conflicting or misleading messages about SIPs, or they were mis-sold (e.g. a regular plan without understanding it).
+    include: Some sources say do SIP and others say don't; feeling misled by creators or agents; discovering commissions later.
+    exclude: Their own disappointment with returns (returns_disappointment).
+    example: "Koi bolata hay sip karo Koi bolta hay na karo"
+    addressability: medium
+    merged_from: [start_advised_by_intermediary (part), beh_monitoring_returns (feeling misled)]
+  - id: long_term_discipline
+    question: behaviour
+    name: Long-term discipline (protective)
+    definition: Investor keeps going because of a long horizon, a family goal, discipline or experience of holding through falls.
+    include: Multi-decade horizons, family or retirement goals, holding through losses, set-and-forget, increasing over time.
+    exclude: Statements of intent from people who have not started.
+    example: "2017 से कंटिन्यू sip कर रहा है"
+    addressability: medium
+    contrast_only: true   # protective factor: shown in the dropper-vs-continuer table, NOT ranked as an opportunity
+    merged_from: [start_long_horizon_compounding, start_family_security, beh_holding_through_falls, beh_set_and_forget, beh_steady_continuing, beh_increase_stepup]

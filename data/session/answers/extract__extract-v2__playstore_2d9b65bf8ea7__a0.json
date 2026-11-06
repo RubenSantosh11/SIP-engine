@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_2d9b65bf8ea7",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "Very Poor support",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "It takes 6 months for changing a bank account and after 6 months the SIP will still not get activated",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Bank change takes months; SIP not activated."
+}

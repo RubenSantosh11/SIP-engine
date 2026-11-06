@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_458ae7d734c1",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "the falling Mutual Fund flows do seem to be a reaction to the pain",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Investors stop as markets fall."
+}

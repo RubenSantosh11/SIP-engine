@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_d2ad3fca6bf7",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "the payment has been debited from my bank account but didn't replicate in my SIP",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "everytime the customer support agent gives a new date for refund",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Debited but not invested; refund repeatedly delayed."
+}

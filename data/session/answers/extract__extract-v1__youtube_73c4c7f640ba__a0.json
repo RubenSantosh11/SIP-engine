@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_73c4c7f640ba",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Atopay band ho gaya hai",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "mandate_payment_issue",
+   "evidence_span": "jo peise Kate hai wo refund keise milega",
+   "severity": 2,
+   "confidence": 0.7
+  }
+ ],
+ "one_line_reason": "Autopay stopped but money was deducted; wants a refund."
+}

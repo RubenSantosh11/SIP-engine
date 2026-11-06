@@ -1,0 +1,15 @@
+{
+ "record_id": "playstore_a64b668d0f93",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "SIPs cancelled despite autopay and balance",
+   "quote": "even after activating Autopay sips gets cancelled"
+  },
+  {
+   "question": "behaviour",
+   "code": "forced to invest manually",
+   "quote": "we have to do manual investing"
+  }
+ ]
+}

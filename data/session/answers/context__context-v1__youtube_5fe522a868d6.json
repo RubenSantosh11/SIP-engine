@@ -1,0 +1,30 @@
+{
+ "record_id": "youtube_5fe522a868d6",
+ "checks": [
+  {
+   "what": "portfolio_overall",
+   "frequency": "unclear",
+   "evidence_span": "abhi 1 lakh ka portfolio hai"
+  }
+ ],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "<25",
+   "evidence_span": "My age 21"
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

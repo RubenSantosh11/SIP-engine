@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_e2d1c1ff95d0",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I canceled my SIP by mistake",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "I canceled my SIP by mistake",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Accidentally cancelled the SIP and wants it back."
+}

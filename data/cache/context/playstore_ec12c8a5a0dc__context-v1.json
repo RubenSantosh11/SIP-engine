@@ -1,0 +1,37 @@
+{
+ "record_id": "playstore_ec12c8a5a0dc",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "losing_money",
+   "evidence_span": "It will all go in loss day by day you money will reduce"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "customer_support",
+   "evidence_span": "customer service tells it's due to election"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 2,
+ "n_dropped": 0
+}

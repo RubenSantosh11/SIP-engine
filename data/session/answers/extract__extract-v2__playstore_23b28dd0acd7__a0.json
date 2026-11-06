@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_23b28dd0acd7",
+ "source": "playstore",
+ "sip_status": "reduced",
+ "sip_status_evidence": "meri auto Sip kam ki bina permission",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "3 sal se sip kar rha tha",
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "meri auto Sip kam ki bina permission",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "jbse inkaa MF Prime aaya h vo meri sabse badi galti thi",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Platform's paid product reduced and switched their SIPs without permission."
+}

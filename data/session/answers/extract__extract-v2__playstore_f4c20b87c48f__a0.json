@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_f4c20b87c48f",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "you deduct the amount twice and i didn't even know that",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Double deduction when signing up for SIP."
+}

@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_dcd9f1aaca5f",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "the actual user interface is misleading",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "I accidentally activated their Genius subscription",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Accidentally activated a subscription and SIP via misleading UI."
+}

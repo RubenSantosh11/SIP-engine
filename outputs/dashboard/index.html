@@ -1,0 +1,390 @@
+<meta name="dash-one-writer">
+<style>
+  .sd { font-family: var(--font-anthropic-sans); display: flex; flex-direction: column; gap: var(--cds-gap-xl); max-width: 72rem; margin-inline: auto; }
+  .sd h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .sd h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .sd h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .sd p { margin: 0; max-width: 68ch; line-height: 1.5; }
+  .sd .muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .sd .lede { font-size: var(--cds-font-size-body); }
+  .sd .lede b { font-weight: var(--cds-font-weight-medium); }
+  .sd-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+  .sd-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); gap: var(--cds-gap-md); }
+  .sd-tile { display: flex; flex-direction: column; gap: var(--cds-gap-xs); padding: var(--cds-pad-md); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+  .sd-tile .v { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+  .sd-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+  .sd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); gap: var(--cds-gap-md); }
+  .sd-card { display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+  .sd-chart { position: relative; min-height: 18rem; }
+  .sd-scroll { overflow-x: auto; }
+  .sd table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .sd th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .sd td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .sd td.n, .sd th.n { text-align: right; }
+  .sd td.wrap { min-width: 14rem; }
+  .sd-legend { display: flex; gap: var(--cds-gap-md); flex-wrap: wrap; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sd-sw { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; margin-right: .35rem; vertical-align: middle; }
+  .sd-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 16rem; }
+  .sd-tip .k { color: var(--cds-text-secondary); }
+  .sd-quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+  .sd-q { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+  .sd-q blockquote { margin: 0; padding-left: var(--cds-pad-sm); border-left: 2px solid var(--color-border-line); line-height: 1.45; }
+  .sd-q cite { display: block; font-style: normal; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin-top: var(--cds-gap-xs); }
+  .sd ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); max-width: 70ch; line-height: 1.45; }
+  .sd dl { display: grid; grid-template-columns: minmax(7rem, max-content) 1fr; gap: var(--cds-gap-xs) var(--cds-gap-md); margin: 0; }
+  .sd dt { font-weight: var(--cds-font-weight-medium); }
+  .sd dd { margin: 0; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  [data-dash-source-state=empty] { color: transparent; }
+  @media (max-width: 40rem) { .sd .hide-narrow { display: none; } }
+</style>
+
+<div class="sd">
+  <header class="sd-head" id="top">
+    <h1>Why first-time SIP investors stop</h1>
+    <p class="lede">Across public reviews and comments, the strongest drop-off drivers are <b data-draw="top" data-source="themes" data-field="theme" data-where="rank=1">—</b> and <b data-draw="top" data-source="themes" data-field="theme" data-where="rank=2">—</b>. Both are product problems a platform can fix directly, and both appear far more often among people who stopped than among people who kept going.</p>
+    <p class="muted">Sources: Google Play and App Store reviews of Groww and seven other Indian investing apps, YouTube comments on SIP videos, TradingQ&amp;A and ValuePickr forum posts. Collected 30 Oct to 1 Nov 2026.</p>
+  </header>
+
+  <div class="sd-tiles">
+    <div class="sd-tile"><span class="muted">Records collected</span><span class="v" data-draw="sum" data-source="summary" data-field="value" data-where="metric=raw_records">—</span></div>
+    <div class="sd-tile"><span class="muted">About SIP behaviour</span><span class="v" data-draw="sum" data-source="summary" data-field="value" data-where="metric=relevant_records">—</span></div>
+    <div class="sd-tile"><span class="muted">Stopped, paused or reduced</span><span class="v" data-draw="sum" data-source="summary" data-field="value" data-where="metric=droppers">—</span></div>
+    <div class="sd-tile"><span class="muted">Still investing</span><span class="v" data-draw="sum" data-source="summary" data-field="value" data-where="metric=continuers">—</span></div>
+    <div class="sd-tile"><span class="muted">Quotes verified verbatim</span><span class="v" data-draw="sum" data-source="summary" data-field="value" data-where="metric=span_pass_rate">—</span></div>
+  </div>
+
+  <section class="sd-section" id="ranked">
+    <h2>Ranked opportunity areas</h2>
+    <p class="muted">Priority = reach × severity × stop-lift × addressability, ranked by its lower 95% bound so thin evidence cannot rank high. A theme is ranked only with at least <span data-draw="minrec">—</span> records from at least <span data-draw="minsrc">—</span> sources.</p>
+    <div class="sd-grid">
+      <div class="sd-card">
+        <h3>Reach of each ranked theme</h3>
+        <p class="muted">Share of records with a clear SIP status that mention the theme, with its 95% Wilson interval.</p>
+        <div class="sd-chart" id="reach-chart" data-draw="reachchart" data-source="themes"></div>
+      </div>
+      <div class="sd-card">
+        <h3>Mentioned by people who stopped vs people who kept going</h3>
+        <div class="sd-legend"><span><span class="sd-sw" data-draw="sw0"></span>Stopped, paused or reduced</span><span><span class="sd-sw" data-draw="sw1"></span>Still investing</span></div>
+        <div class="sd-chart" id="contrast-chart" data-draw="contrastchart" data-source="contrast"></div>
+      </div>
+    </div>
+    <div class="sd-card">
+      <h3>Scores</h3>
+      <div class="sd-scroll">
+        <table id="ranked-table" data-source="themes" data-row-key="theme_id">
+          <thead><tr>
+            <th class="n" data-field="rank">#</th><th data-field="theme">Theme</th><th class="n" data-field="records">Records</th>
+            <th class="n" data-field="reach">Reach</th><th class="n hide-narrow" data-field="reach_low">Reach low</th>
+            <th class="n" data-field="stop_lift">Stop-lift</th><th class="n hide-narrow" data-field="stop_lift_low">Stop-lift low</th>
+            <th class="n hide-narrow" data-field="severity">Severity</th><th class="hide-narrow" data-field="addressability">Addressability</th>
+            <th class="n" data-field="priority_low">Priority (low)</th>
+          </tr></thead>
+          <tbody data-draw="rankedrows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sd-card">
+      <h3>Themes not ranked</h3>
+      <p class="muted">Too little evidence, or not a cause of drop-off. Their dropper and continuer counts are still in the chart above.</p>
+      <div class="sd-scroll">
+        <table id="excluded-table" data-source="themes" data-row-key="theme_id">
+          <thead><tr><th data-field="theme">Theme</th><th class="n" data-field="records">Records</th><th data-field="reason">Why not ranked</th></tr></thead>
+          <tbody data-draw="excludedrows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sd-section" id="voices">
+    <h2>In investors' own words</h2>
+    <p class="muted">Up to three verbatim quotes per ranked theme, from different sources where possible. Quotes are exact text from public posts; the writers are not identified.</p>
+    <div class="sd-quotes" data-draw="quotes" data-source="quotes"></div>
+  </section>
+
+  <section class="sd-section" id="first-year">
+    <h2>Within the first 12 months</h2>
+    <div class="sd-card">
+      <p><span data-draw="sum" data-source="summary" data-field="value" data-where="metric=started_within_12m">—</span> records say the writer started less than 12 months ago, and <span data-draw="sum" data-source="summary" data-field="value" data-where="metric=first_time_stated">—</span> say they are first-time investors. That is too few to score, so this is a count of themes among them.</p>
+      <div class="sd-scroll">
+        <table id="early-table" data-source="early" data-row-key="theme_id">
+          <thead><tr><th data-field="theme">Theme</th><th class="n" data-field="records">Records</th></tr></thead>
+          <tbody data-draw="earlyrows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sd-section" id="context">
+    <h2>What investors check, worry about and where they turn</h2>
+    <p class="muted">A second pass over the same records. Only posts containing a cue word were coded, so these counts are a floor. Age, income, source of money and influences are rarely stated in public posts; those answers have to come from interviews.</p>
+    <div class="sd-card">
+      <div class="sd-scroll">
+        <table id="context-table" data-source="context" data-row-key="row_id">
+          <thead><tr><th data-field="question">Question</th><th data-field="value">Answer</th><th class="n" data-field="records">Records</th><th class="n" data-field="dropper_records">Stopped or paused</th><th class="n" data-field="continuer_records">Still investing</th></tr></thead>
+          <tbody data-draw="contextrows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sd-section" id="method">
+    <h2>How the scores work</h2>
+    <div class="sd-card">
+      <dl>
+        <dt>Reach</dt><dd>Share of records with a stated or clear SIP status that mention the theme through a verified quote.</dd>
+        <dt>Severity</dt><dd>Mean severity of mentions: 1 minor, 2 clear reason or friction, 3 decisive or strong distress.</dd>
+        <dt>Stop-lift</dt><dd>How much more often people who stopped, paused or reduced mention the theme than people still investing (a risk ratio, Katz 95% interval). People who only moved their SIP to another app are not counted as stopping.</dd>
+        <dt>Addressability</dt><dd>From the codebook: high <span data-draw="addr" data-level="high">—</span>, medium <span data-draw="addr" data-level="medium">—</span>, low <span data-draw="addr" data-level="low">—</span>.</dd>
+        <dt>Coding</dt><dd>Each record is coded on its own against a fixed codebook, with a verbatim quote for every coded value; code checks each quote against the source and drops any that do not match. All counting and scoring is plain Python.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sd-section" id="evidence-log">
+    <h2>AI Evidence Log</h2>
+    <div class="sd-card">
+      <h3>1. Sources and volume analysed</h3>
+      <div class="sd-scroll">
+        <table id="volume-table" data-source="volume" data-row-key="source">
+          <thead><tr><th data-field="source">Source</th><th class="n" data-field="raw">Collected</th><th class="n" data-field="pass_keyword_filter">Mention SIPs</th><th class="n" data-field="relevant">Relevant</th><th class="n" data-field="extracted">Coded</th></tr></thead>
+          <tbody data-draw="volrows"></tbody>
+        </table>
+      </div>
+      <p class="muted">Usernames were stored only as one-way hashes. Reddit was excluded because its API needs approval and scraping is barred.</p>
+    </div>
+    <div class="sd-card">
+      <h3>2. Golden set: engine vs hand labels</h3>
+      <p>Twenty records were drawn at random before the engine coded them, spread across sources and apps, and labelled by hand without seeing the engine's output.</p>
+      <p data-val="pending" class="muted">Agreement will appear here once the hand labels are in.</p>
+      <div data-val="done" class="sd-scroll" hidden>
+        <table id="validation-table" data-source="validation" data-row-key="field">
+          <thead><tr><th data-field="field">Field</th><th class="n" data-field="agree">Agree</th><th class="n" data-field="n">Compared</th><th class="n" data-field="pct">Agreement</th></tr></thead>
+          <tbody data-draw="valrows"></tbody>
+        </table>
+      </div>
+      <span data-draw="valstate" data-source="validation"></span>
+      <div data-val="done" class="sd-scroll" hidden>
+        <h3>Where the engine disagreed</h3>
+        <table id="failures-table" data-source="failures" data-row-key="failure_id">
+          <thead><tr><th data-field="record_id">Record</th><th data-field="field">Field</th><th data-field="pm_label">Hand label</th><th data-field="engine_output">Engine</th><th data-field="likely_cause">Likely cause</th></tr></thead>
+          <tbody data-draw="failrows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sd-card">
+      <h3>3. Where AI output was rejected or corrected</h3>
+      <div class="sd-scroll">
+        <table id="corrections-table" data-source="corrections" data-row-key="entry">
+          <thead><tr><th data-field="date">Date</th><th data-field="ai_said">What the AI proposed</th><th data-field="changed_to">What changed</th><th data-field="why">Why</th></tr></thead>
+          <tbody data-draw="corrrows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sd-card">
+      <h3>4. Limitations</h3>
+      <ul>
+        <li>Reddit, X, Instagram and Quora were not used: no permitted access.</li>
+        <li>Reviews and forum posts are not a random sample. App-store reviews lean towards complaints, so product friction is over-represented next to reasons such as returns or cash needs.</li>
+        <li>People who stopped come mostly from app-store reviews and people still investing mostly from YouTube, so stop-lift partly reflects where a theme is discussed. Read it as directional.</li>
+        <li>SIP status, first-time status and time since starting are self-reported and rarely stated, so the first-year view is descriptive only.</li>
+        <li>Most reviews are about apps other than Groww. The findings describe first-time SIP investing in India in general.</li>
+        <li>Coding was done by Claude inside a Claude Code session, not through an API; the same model wrote the prompts. The hand-labelled golden set is the independent check, and it is small.</li>
+        <li>Quotes were checked against their sources before submission as well as by the pipeline, so the verbatim pass rate reflects that self-check.</li>
+        <li>The second pass only coded posts with a cue word, so signals phrased differently are missed.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script>
+  const MIN_RECORDS = 30, MIN_SOURCES = 2;
+  const ADDR = {high: 1.0, medium: 0.6, low: 0.3};
+  const num = (v) => (v === '' || v == null ? NaN : Number(v));
+  const rowsOf = (id) => { const g = dash.data(id); return g.status === 'ok' ? g.data : null; };
+  const pct = d3.format('.1%'), int = d3.format(','), f1 = d3.format('.1f'), f2 = d3.format('.2f'), f3 = d3.format('.3f');
+  const td = (tr, text, cls) => { const c = tr.insertCell(); c.textContent = text; if (cls) c.className = cls; return c; };
+  const whereOf = (el) => Object.fromEntries((el.getAttribute('data-where') || '').split('&').map((p) => p.split('=').map(decodeURIComponent)));
+  const tipFor = (box) => { let t = box.querySelector('.sd-tip'); if (!t) { t = document.createElement('div'); t.className = 'sd-tip'; t.hidden = true; box.appendChild(t); } return t; };
+  const showTip = (box, tip, lines, x, y) => {
+    tip.replaceChildren(...lines.map(([k, v], i) => { const d = document.createElement('div'); if (i === 0) { d.className = 'k'; d.textContent = k; } else { d.textContent = `${k}: ${v}`; } return d; }));
+    tip.hidden = false;
+    const bw = box.clientWidth, tw = tip.offsetWidth;
+    tip.style.left = `${Math.max(0, Math.min(x + 12, bw - tw))}px`; tip.style.top = `${Math.max(0, y - 10)}px`;
+  };
+
+  dash.draw('minrec', (el) => { el.textContent = MIN_RECORDS; });
+  dash.draw('minsrc', (el) => { el.textContent = MIN_SOURCES; });
+  dash.draw('addr', (el) => { el.textContent = f1(ADDR[el.getAttribute('data-level')]); });
+  dash.draw('sw0', (el) => { el.style.background = dash.colors[0]; });
+  dash.draw('sw1', (el) => { el.style.background = dash.colors[1]; });
+
+  dash.draw('sum', (el) => {
+    const rows = rowsOf('summary'); const w = whereOf(el);
+    const r = rows && rows.find((x) => x.metric === w.metric);
+    if (!r) { el.textContent = '—'; return; }
+    el.textContent = w.metric === 'span_pass_rate' ? d3.format('.0%')(num(r.value)) : int(num(r.value));
+  });
+
+  dash.draw('top', (el) => {
+    const rows = rowsOf('themes'); const w = whereOf(el);
+    const r = rows && rows.find((x) => x.rank === w.rank);
+    el.textContent = r ? r.theme.toLowerCase() : '—';
+  });
+
+  const ranked = () => (rowsOf('themes') || []).filter((r) => r.status === 'ranked').sort((a, b) => num(a.rank) - num(b.rank));
+
+  dash.draw('reachchart', (el) => {
+    el.replaceChildren();
+    const data = ranked();
+    if (!data.length) { el.textContent = '—'; return; }
+    const W = el.clientWidth || 400, rowH = 34, top = 8, bottom = 28;
+    const H = top + bottom + rowH * data.length;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const meas = svg.append('text').attr('font-size', 12).text('');
+    let labW = 0;
+    data.forEach((d) => { meas.text(d.theme); labW = Math.max(labW, meas.node().getComputedTextLength()); });
+    meas.remove();
+    const left = Math.min(labW + 12, W * 0.45), right = 16;
+    const xmax = d3.max(data, (d) => num(d.reach_high)) * 1.08;
+    const x = d3.scaleLinear([0, xmax], [left, W - right]);
+    const y = (i) => top + rowH * i + rowH / 2;
+    svg.append('g').selectAll('line').data(x.ticks(4)).join('line')
+      .attr('x1', (t) => x(t)).attr('x2', (t) => x(t)).attr('y1', top).attr('y2', H - bottom).attr('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(x.ticks(4)).join('text').attr('x', (t) => x(t)).attr('y', H - 8).attr('text-anchor', 'middle')
+      .attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text(d3.format('.0%'));
+    const g = svg.append('g').selectAll('g').data(data).join('g');
+    g.append('text').attr('x', left - 10).attr('y', (d, i) => y(i) + 4).attr('text-anchor', 'end').attr('font-size', 12)
+      .attr('fill', 'var(--color-fg)').text((d) => (labW + 12 > left ? d.theme.slice(0, Math.floor(left / 7)) + '…' : d.theme));
+    g.append('line').attr('x1', (d) => x(num(d.reach_low))).attr('x2', (d) => x(num(d.reach_high)))
+      .attr('y1', (d, i) => y(i)).attr('y2', (d, i) => y(i)).attr('stroke', dash.colors[0]).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('opacity', 0.45);
+    g.append('circle').attr('cx', (d) => x(num(d.reach))).attr('cy', (d, i) => y(i)).attr('r', 5).attr('fill', dash.colors[0]);
+    const tip = tipFor(el);
+    g.append('rect').attr('x', 0).attr('width', W).attr('y', (d, i) => y(i) - rowH / 2).attr('height', rowH).attr('fill', 'transparent')
+      .on('pointermove', (ev, d) => { const [px, py] = d3.pointer(ev, el); showTip(el, tip, [[d.theme], ['Reach', pct(num(d.reach))], ['95% interval', `${pct(num(d.reach_low))} to ${pct(num(d.reach_high))}`], ['Records', int(num(d.records))]], px, py); })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+
+  dash.draw('contrastchart', (el) => {
+    el.replaceChildren();
+    const rows = rowsOf('contrast');
+    if (!rows) { el.textContent = '—'; return; }
+    const data = rows.slice().sort((a, b) => (num(b.pct_droppers) - num(b.pct_continuers)) - (num(a.pct_droppers) - num(a.pct_continuers)));
+    const W = el.clientWidth || 400, rowH = 26, top = 8, bottom = 28;
+    const H = top + bottom + rowH * data.length;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const meas = svg.append('text').attr('font-size', 12);
+    let labW = 0;
+    data.forEach((d) => { meas.text(d.theme); labW = Math.max(labW, meas.node().getComputedTextLength()); });
+    meas.remove();
+    const left = Math.min(labW + 12, W * 0.48), right = 16;
+    const xmax = d3.max(data, (d) => Math.max(num(d.pct_droppers), num(d.pct_continuers))) * 1.1;
+    const x = d3.scaleLinear([0, xmax], [left, W - right]);
+    const y = (i) => top + rowH * i + rowH / 2;
+    svg.append('g').selectAll('line').data(x.ticks(4)).join('line')
+      .attr('x1', (t) => x(t)).attr('x2', (t) => x(t)).attr('y1', top).attr('y2', H - bottom).attr('stroke', 'var(--cds-chart-grid)');
+    svg.append('g').selectAll('text').data(x.ticks(4)).join('text').attr('x', (t) => x(t)).attr('y', H - 8).attr('text-anchor', 'middle')
+      .attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text(d3.format('.0%'));
+    const g = svg.append('g').selectAll('g').data(data).join('g');
+    const maxChars = Math.floor(left / 6.6);
+    g.append('text').attr('x', left - 10).attr('y', (d, i) => y(i) + 4).attr('text-anchor', 'end').attr('font-size', 12).attr('fill', 'var(--color-fg)')
+      .text((d) => (d.theme.length > maxChars ? d.theme.slice(0, maxChars - 1) + '…' : d.theme));
+    g.append('line').attr('x1', (d) => x(num(d.pct_continuers))).attr('x2', (d) => x(num(d.pct_droppers)))
+      .attr('y1', (d, i) => y(i)).attr('y2', (d, i) => y(i)).attr('stroke', 'var(--cds-chart-muted)').attr('stroke-width', 2);
+    g.append('circle').attr('cx', (d) => x(num(d.pct_continuers))).attr('cy', (d, i) => y(i)).attr('r', 4.5).attr('fill', dash.colors[1]);
+    g.append('circle').attr('cx', (d) => x(num(d.pct_droppers))).attr('cy', (d, i) => y(i)).attr('r', 4.5).attr('fill', dash.colors[0]);
+    const tip = tipFor(el);
+    g.append('rect').attr('x', 0).attr('width', W).attr('y', (d, i) => y(i) - rowH / 2).attr('height', rowH).attr('fill', 'transparent')
+      .on('pointermove', (ev, d) => { const [px, py] = d3.pointer(ev, el); showTip(el, tip, [[d.theme],
+        ['Stopped, paused or reduced', `${d.droppers_mentioning} of ${d.n_droppers} (${pct(num(d.pct_droppers))})`],
+        ['Still investing', `${d.continuers_mentioning} of ${d.n_continuers} (${pct(num(d.pct_continuers))})`]], px, py); })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+
+  dash.draw('rankedrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of ranked()) {
+      const tr = tb.insertRow(); tr.dataset.key = r.theme_id;
+      td(tr, r.rank, 'n'); td(tr, r.theme, 'wrap'); td(tr, int(num(r.records)), 'n');
+      td(tr, pct(num(r.reach)), 'n'); td(tr, pct(num(r.reach_low)), 'n hide-narrow');
+      td(tr, Number.isNaN(num(r.stop_lift)) ? '—' : f2(num(r.stop_lift)), 'n'); td(tr, Number.isNaN(num(r.stop_lift_low)) ? '—' : f2(num(r.stop_lift_low)), 'n hide-narrow');
+      td(tr, f2(num(r.severity)), 'n hide-narrow'); td(tr, r.addressability, 'hide-narrow'); td(tr, f3(num(r.priority_low)), 'n');
+    }
+  });
+
+  dash.draw('excludedrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of (rowsOf('themes') || []).filter((x) => x.status !== 'ranked')) {
+      const tr = tb.insertRow(); tr.dataset.key = r.theme_id;
+      td(tr, r.theme, 'wrap'); td(tr, int(num(r.records)), 'n'); td(tr, r.reason, 'wrap');
+    }
+  });
+
+  dash.draw('quotes', (el) => {
+    el.replaceChildren();
+    const rows = rowsOf('quotes');
+    if (!rows) { el.textContent = '—'; return; }
+    const order = ranked().map((r) => r.theme_id);
+    const groups = d3.group(rows, (r) => r.theme_id);
+    for (const tid of order) {
+      const qs = groups.get(tid); if (!qs) continue;
+      const card = document.createElement('div'); card.className = 'sd-card sd-q';
+      const h = document.createElement('h3'); h.textContent = qs[0].theme; card.appendChild(h);
+      for (const q of qs) {
+        const bq = document.createElement('blockquote'); bq.textContent = `“${q.quote}”`;
+        const c = document.createElement('cite'); c.textContent = q.app ? `${q.source}, ${q.app}` : q.source; bq.appendChild(c);
+        card.appendChild(bq);
+      }
+      el.appendChild(card);
+    }
+  });
+
+  dash.draw('earlyrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('early') || []) { const tr = tb.insertRow(); tr.dataset.key = r.theme_id; td(tr, r.theme, 'wrap'); td(tr, int(num(r.records)), 'n'); }
+  });
+
+  dash.draw('contextrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('context') || []) {
+      const tr = tb.insertRow(); tr.dataset.key = r.row_id;
+      td(tr, r.question); td(tr, r.value); td(tr, int(num(r.records)), 'n'); td(tr, int(num(r.dropper_records)), 'n'); td(tr, int(num(r.continuer_records)), 'n');
+    }
+  });
+
+  dash.draw('volrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('volume') || []) {
+      const tr = tb.insertRow(); td(tr, r.source);
+      for (const k of ['raw', 'pass_keyword_filter', 'relevant', 'extracted']) td(tr, int(num(r[k])), 'n');
+    }
+  });
+
+  const LABELS = {sip_status: 'SIP status', first_time_investor: 'First-time investor', time_since_start: 'Time since starting', severity_within_1: 'Severity within ±1', theme_present_absent: 'Each theme present or absent'};
+  dash.draw('valstate', () => {
+    const v = rowsOf('validation'); const done = !!(v && v.length);
+    document.querySelectorAll('[data-val="pending"]').forEach((e) => { e.hidden = done; });
+    document.querySelectorAll('[data-val="done"]').forEach((e) => { e.hidden = !done; });
+  });
+  dash.draw('valrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('validation') || []) {
+      const tr = tb.insertRow(); tr.dataset.key = r.field;
+      td(tr, LABELS[r.field] || r.field); td(tr, int(num(r.agree)), 'n'); td(tr, int(num(r.n)), 'n'); td(tr, d3.format('.0%')(num(r.pct)), 'n');
+    }
+  });
+  dash.draw('failrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('failures') || []) {
+      const tr = tb.insertRow(); tr.dataset.key = r.failure_id;
+      td(tr, r.record_id); td(tr, r.field); td(tr, r.pm_label); td(tr, r.engine_output); td(tr, r.likely_cause, 'wrap');
+    }
+  });
+  dash.draw('corrrows', (tb) => {
+    tb.replaceChildren();
+    for (const r of rowsOf('corrections') || []) {
+      const tr = tb.insertRow(); tr.dataset.key = r.entry;
+      td(tr, r.date); td(tr, r.ai_said, 'wrap'); td(tr, r.changed_to, 'wrap'); td(tr, r.why, 'wrap');
+    }
+  });
+</script>

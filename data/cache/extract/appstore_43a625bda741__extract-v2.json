@@ -1,0 +1,27 @@
+{
+ "record_id": "appstore_43a625bda741",
+ "source": "appstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have been able to accumulate funds consistently",
+ "first_time_investor": "yes",
+ "first_time_evidence": "As a beginner",
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I began my stock market investment journey and SIPs with the Groww trading app in 2023",
+ "themes": [
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "Over time, I have been able to accumulate funds consistently",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Beginner since 2023 continuing happily.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

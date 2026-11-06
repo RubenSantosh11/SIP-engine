@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_f3d6690a582f",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I shifted from Groww to Zerodha Coin",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I shifted from Groww to Zerodha Coin",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "build long-term wealth through disciplined investing",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Switched platform for quarterly and AMC SIP options."
+}

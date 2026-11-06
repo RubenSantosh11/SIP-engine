@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_ce023a7089d8",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "finally stopped my SIPs from this app",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "using this app since 2017",
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "their obsession with selling Genius and other subscriptions",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Constant subscription selling made them stop SIPs.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

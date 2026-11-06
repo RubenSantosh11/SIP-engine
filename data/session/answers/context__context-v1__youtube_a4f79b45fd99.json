@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_a4f79b45fd99",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "salaried",
+   "evidence_span": "My salary is Rs. 75,000 a month"
+  },
+  "money_source": {
+   "value": "salary_savings",
+   "evidence_span": "After receiving my salary"
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

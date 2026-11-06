@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_f72e0895fa2d",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "cancel it on the same day",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "<1m",
+ "time_since_start_evidence": "cancel it on the same day",
+ "themes": [
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "I open sip today on grow and cancel it on the same day",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cancelled on the first day."
+}

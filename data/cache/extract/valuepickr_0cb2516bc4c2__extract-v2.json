@@ -1,0 +1,34 @@
+{
+ "record_id": "valuepickr_0cb2516bc4c2",
+ "source": "valuepickr",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have done SIP every month till last year",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "In these 24 years",
+ "themes": [
+  {
+   "theme_id": "cash_need_affordability",
+   "evidence_span": "I did pause SIP for 4 years in between, when I purchased a house and started EMIs",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "evidence_span": "In these 24 years, I have done SIP every month",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "24-year investor paused 4 years for home EMIs.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

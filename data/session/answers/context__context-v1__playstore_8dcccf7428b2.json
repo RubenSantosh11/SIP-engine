@@ -1,0 +1,30 @@
+{
+ "record_id": "playstore_8dcccf7428b2",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "monitoring SIP's which were not performing well"
+  }
+ ],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

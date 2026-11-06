@@ -1,0 +1,2120 @@
+{
+ "volume": [
+  {
+   "source": "playstore",
+   "label": "Google Play",
+   "raw": 22004,
+   "pass_keyword": 900,
+   "relevant": 411,
+   "extracted": 411,
+   "apps": {
+    "groww": 3974,
+    "coin": 2942,
+    "etmoney": 3235,
+    "paytmmoney": 1970,
+    "indmoney": 2300,
+    "upstox": 2519,
+    "angelone": 1823,
+    "fundsindia": 3241
+   },
+   "dates": [
+    "2014-11-25",
+    "2026-10-31"
+   ]
+  },
+  {
+   "source": "appstore",
+   "label": "Apple App Store",
+   "raw": 3165,
+   "pass_keyword": 106,
+   "relevant": 48,
+   "extracted": 48,
+   "apps": {
+    "groww": 469,
+    "etmoney": 250,
+    "paytmmoney": 499,
+    "kuvera": 500,
+    "indmoney": 482,
+    "upstox": 476,
+    "angelone": 489
+   },
+   "dates": [
+    "2018-05-02",
+    "2026-10-31"
+   ]
+  },
+  {
+   "source": "youtube",
+   "label": "YouTube comments",
+   "raw": 1873,
+   "pass_keyword": 593,
+   "relevant": 120,
+   "extracted": 120,
+   "apps": {},
+   "dates": [
+    "2019-09-28",
+    "2026-11-01"
+   ]
+  },
+  {
+   "source": "tradingqna",
+   "label": "TradingQ&A forum",
+   "raw": 465,
+   "pass_keyword": 211,
+   "relevant": 40,
+   "extracted": 40,
+   "apps": {},
+   "dates": [
+    "2017-03-03",
+    "2026-10-26"
+   ]
+  },
+  {
+   "source": "valuepickr",
+   "label": "ValuePickr forum",
+   "raw": 238,
+   "pass_keyword": 50,
+   "relevant": 7,
+   "extracted": 7,
+   "apps": {},
+   "dates": [
+    "2015-09-07",
+    "2026-10-30"
+   ]
+  }
+ ],
+ "totals": {
+  "raw": 27745,
+  "pass_keyword": 1860,
+  "relevant": 626,
+  "extracted": 626
+ },
+ "status": {
+  "stopped": 122,
+  "paused": 61,
+  "reduced": 1,
+  "unclear": 382,
+  "continuing": 60
+ },
+ "scoring": {
+  "records_scored": 626,
+  "n_droppers": 175,
+  "n_continuers": 60,
+  "dropper_statuses": [
+   "stopped",
+   "paused",
+   "reduced"
+  ],
+  "continuer_statuses": [
+   "continuing"
+  ],
+  "min_theme_records": 30,
+  "min_theme_sources": 2,
+  "eligible_themes": 7,
+  "codebook_status": "final"
+ },
+ "span_check": {
+  "records_extracted": 626,
+  "malformed_after_retry": 0,
+  "needed_retry": 0,
+  "coded_values_with_span": 1182,
+  "span_failures_after_retry": 0,
+  "span_pass_rate": 1.0,
+  "pending": 0
+ },
+ "ranked": [
+  {
+   "theme_id": "app_reliability_errors",
+   "name": "App bugs, slow processing and confusing status",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "154",
+   "sources": "appstore;playstore;tradingqna;youtube",
+   "reach": "0.2213",
+   "reach_low": "0.1729",
+   "reach_high": "0.2786",
+   "severity": "2.0584",
+   "stop_lift": "5.6",
+   "stop_lift_low": "1.8121",
+   "stop_lift_high": "17.3054",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "2.5507",
+   "priority_low": "0.645"
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "name": "Autopay / mandate / payment failures",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "134",
+   "sources": "appstore;playstore;tradingqna;youtube",
+   "reach": "0.1872",
+   "reach_low": "0.1425",
+   "reach_high": "0.242",
+   "severity": "2.1045",
+   "stop_lift": "3.4286",
+   "stop_lift_low": "1.2802",
+   "stop_lift_high": "9.1822",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "1.351",
+   "priority_low": "0.384"
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "name": "Unresponsive support and loss of trust",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "76",
+   "sources": "appstore;playstore;youtube",
+   "reach": "0.1191",
+   "reach_low": "0.0837",
+   "reach_high": "0.1668",
+   "severity": "2.0",
+   "stop_lift": "19.7557",
+   "stop_lift_low": "1.2246",
+   "stop_lift_high": "318.7166",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "4.7077",
+   "priority_low": "0.2051"
+  },
+  {
+   "theme_id": "fees_paywall",
+   "name": "New fees, paywalls and upselling",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "48",
+   "sources": "playstore;tradingqna",
+   "reach": "0.1149",
+   "reach_low": "0.0802",
+   "reach_high": "0.162",
+   "severity": "2.5",
+   "stop_lift": "2.7429",
+   "stop_lift_low": "0.8565",
+   "stop_lift_high": "8.7836",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "0.7878",
+   "priority_low": "0.1717"
+  },
+  {
+   "theme_id": "disruptive_app_updates",
+   "name": "App updates that break or hide SIP flows",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "51",
+   "sources": "appstore;playstore",
+   "reach": "0.0809",
+   "reach_low": "0.0524",
+   "reach_high": "0.1228",
+   "severity": "2.0",
+   "stop_lift": "2.9143",
+   "stop_lift_low": "0.6936",
+   "stop_lift_high": "12.2457",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "0.4712",
+   "priority_low": "0.0726"
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "name": "Can't pause, skip, reduce or cancel easily",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "109",
+   "sources": "appstore;playstore;tradingqna;youtube",
+   "reach": "0.0851",
+   "reach_low": "0.0558",
+   "reach_high": "0.1278",
+   "severity": "2.1376",
+   "stop_lift": "1.9429",
+   "stop_lift_low": "0.59",
+   "stop_lift_high": "6.3982",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "0.3535",
+   "priority_low": "0.0703"
+  },
+  {
+   "theme_id": "returns_disappointment",
+   "name": "Disappointing returns or market fear",
+   "question": "stop",
+   "eligible": "True",
+   "excluded_reason": "",
+   "contrast_only": "False",
+   "n_records": "38",
+   "sources": "playstore;tradingqna;youtube",
+   "reach": "0.0511",
+   "reach_low": "0.0294",
+   "reach_high": "0.0871",
+   "severity": "2.2895",
+   "stop_lift": "0.3429",
+   "stop_lift_low": "0.1149",
+   "stop_lift_high": "1.0228",
+   "lift_guarded": "False",
+   "addressability": "medium",
+   "addressability_score": "0.6",
+   "priority": "0.024",
+   "priority_low": "0.0046"
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "name": "Switching plan, fund or platform (not a real drop)",
+   "question": "stop",
+   "eligible": "False",
+   "excluded_reason": "switching is an outcome, not a cause (its causes are coded in other themes)",
+   "contrast_only": "False",
+   "n_records": "62",
+   "sources": "appstore;playstore;tradingqna;valuepickr;youtube",
+   "reach": "0.1191",
+   "reach_low": "0.0837",
+   "reach_high": "0.1668",
+   "severity": "1.5323",
+   "stop_lift": "19.7557",
+   "stop_lift_low": "1.2246",
+   "stop_lift_high": "318.7166",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "3.6067",
+   "priority_low": "0.1571"
+  },
+  {
+   "theme_id": "early_confusion_first_months",
+   "name": "Early confusion after the first instalment",
+   "question": "behaviour",
+   "eligible": "False",
+   "excluded_reason": "only 26 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "26",
+   "sources": "playstore;tradingqna;youtube",
+   "reach": "0.0681",
+   "reach_low": "0.0423",
+   "reach_high": "0.1077",
+   "severity": "1.6538",
+   "stop_lift": "11.4375",
+   "stop_lift_low": "0.6966",
+   "stop_lift_high": "187.7909",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "1.2879",
+   "priority_low": "0.0488"
+  },
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "name": "Stopped or changed by the platform or fund",
+   "question": "stop",
+   "eligible": "False",
+   "excluded_reason": "only 15 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "15",
+   "sources": "appstore;playstore;tradingqna",
+   "reach": "0.0553",
+   "reach_low": "0.0326",
+   "reach_high": "0.0923",
+   "severity": "2.1333",
+   "stop_lift": "1.8857",
+   "stop_lift_low": "0.4302",
+   "stop_lift_high": "8.2661",
+   "lift_guarded": "False",
+   "addressability": "medium",
+   "addressability_score": "0.6",
+   "priority": "0.1335",
+   "priority_low": "0.018"
+  },
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "name": "No reminders, so instalments are forgotten",
+   "question": "stop",
+   "eligible": "False",
+   "excluded_reason": "only 20 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "20",
+   "sources": "appstore;playstore;tradingqna;youtube",
+   "reach": "0.0255",
+   "reach_low": "0.0118",
+   "reach_high": "0.0546",
+   "severity": "2.0",
+   "stop_lift": "4.5057",
+   "stop_lift_low": "0.2576",
+   "stop_lift_high": "78.8111",
+   "lift_guarded": "False",
+   "addressability": "high",
+   "addressability_score": "1.0",
+   "priority": "0.2301",
+   "priority_low": "0.0061"
+  },
+  {
+   "theme_id": "charges_lockin_surprise",
+   "name": "Surprise charges, lock-ins or tax at exit",
+   "question": "stop",
+   "eligible": "False",
+   "excluded_reason": "only 8 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "8",
+   "sources": "playstore;tradingqna;youtube",
+   "reach": "0.0085",
+   "reach_low": "0.0023",
+   "reach_high": "0.0305",
+   "severity": "2.125",
+   "stop_lift": "1.0",
+   "stop_lift_low": "1.0",
+   "stop_lift_high": "1.0",
+   "lift_guarded": "True",
+   "addressability": "medium",
+   "addressability_score": "0.6",
+   "priority": "0.0109",
+   "priority_low": "0.003"
+  },
+  {
+   "theme_id": "cash_need_affordability",
+   "name": "Cash need or amount too high",
+   "question": "stop",
+   "eligible": "False",
+   "excluded_reason": "only 14 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "14",
+   "sources": "appstore;playstore;tradingqna;valuepickr;youtube",
+   "reach": "0.0298",
+   "reach_low": "0.0145",
+   "reach_high": "0.0602",
+   "severity": "2.0714",
+   "stop_lift": "0.2571",
+   "stop_lift_low": "0.0592",
+   "stop_lift_high": "1.1161",
+   "lift_guarded": "False",
+   "addressability": "low",
+   "addressability_score": "0.3",
+   "priority": "0.0048",
+   "priority_low": "0.0005"
+  },
+  {
+   "theme_id": "conflicting_advice",
+   "name": "Conflicting or misleading advice",
+   "question": "behaviour",
+   "eligible": "False",
+   "excluded_reason": "only 22 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "22",
+   "sources": "playstore;tradingqna;valuepickr;youtube",
+   "reach": "0.0255",
+   "reach_low": "0.0118",
+   "reach_high": "0.0546",
+   "severity": "1.9091",
+   "stop_lift": "0.1714",
+   "stop_lift_low": "0.0322",
+   "stop_lift_high": "0.9124",
+   "lift_guarded": "False",
+   "addressability": "medium",
+   "addressability_score": "0.6",
+   "priority": "0.005",
+   "priority_low": "0.0004"
+  },
+  {
+   "theme_id": "return_expectations",
+   "name": "Specific return expectations at the start",
+   "question": "start",
+   "eligible": "False",
+   "excluded_reason": "only 13 records (< 30)",
+   "contrast_only": "False",
+   "n_records": "13",
+   "sources": "tradingqna;youtube",
+   "reach": "0.0213",
+   "reach_low": "0.0091",
+   "reach_high": "0.0488",
+   "severity": "1.8462",
+   "stop_lift": "0.0857",
+   "stop_lift_low": "0.0098",
+   "stop_lift_high": "0.7519",
+   "lift_guarded": "False",
+   "addressability": "medium",
+   "addressability_score": "0.6",
+   "priority": "0.002",
+   "priority_low": "0.0001"
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "name": "Long-term discipline (protective)",
+   "question": "behaviour",
+   "eligible": "False",
+   "excluded_reason": "contrast only (protective factor, not an opportunity)",
+   "contrast_only": "True",
+   "n_records": "39",
+   "sources": "appstore;playstore;tradingqna;valuepickr;youtube",
+   "reach": "0.1021",
+   "reach_low": "0.0696",
+   "reach_high": "0.1475",
+   "severity": "1.5385",
+   "stop_lift": "0.0071",
+   "stop_lift_low": "0.0004",
+   "stop_lift_high": "0.1146",
+   "lift_guarded": "False",
+   "addressability": "medium",
+   "addressability_score": "0.6",
+   "priority": "0.0007",
+   "priority_low": "0.0"
+  }
+ ],
+ "contrast": [
+  {
+   "theme_id": "app_reliability_errors",
+   "name": "App bugs, slow processing and confusing status",
+   "question": "stop",
+   "droppers_mentioning": "49",
+   "n_droppers": "175",
+   "pct_droppers": "0.28",
+   "continuers_mentioning": "3",
+   "n_continuers": "60",
+   "pct_continuers": "0.05",
+   "stop_lift": "5.6"
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "name": "Autopay / mandate / payment failures",
+   "question": "stop",
+   "droppers_mentioning": "40",
+   "n_droppers": "175",
+   "pct_droppers": "0.229",
+   "continuers_mentioning": "4",
+   "n_continuers": "60",
+   "pct_continuers": "0.067",
+   "stop_lift": "3.43"
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "name": "Unresponsive support and loss of trust",
+   "question": "stop",
+   "droppers_mentioning": "28",
+   "n_droppers": "175",
+   "pct_droppers": "0.16",
+   "continuers_mentioning": "0",
+   "n_continuers": "60",
+   "pct_continuers": "0.0",
+   "stop_lift": "19.76"
+  },
+  {
+   "theme_id": "fees_paywall",
+   "name": "New fees, paywalls and upselling",
+   "question": "stop",
+   "droppers_mentioning": "24",
+   "n_droppers": "175",
+   "pct_droppers": "0.137",
+   "continuers_mentioning": "3",
+   "n_continuers": "60",
+   "pct_continuers": "0.05",
+   "stop_lift": "2.74"
+  },
+  {
+   "theme_id": "disruptive_app_updates",
+   "name": "App updates that break or hide SIP flows",
+   "question": "stop",
+   "droppers_mentioning": "17",
+   "n_droppers": "175",
+   "pct_droppers": "0.097",
+   "continuers_mentioning": "2",
+   "n_continuers": "60",
+   "pct_continuers": "0.033",
+   "stop_lift": "2.91"
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "name": "Can't pause, skip, reduce or cancel easily",
+   "question": "stop",
+   "droppers_mentioning": "17",
+   "n_droppers": "175",
+   "pct_droppers": "0.097",
+   "continuers_mentioning": "3",
+   "n_continuers": "60",
+   "pct_continuers": "0.05",
+   "stop_lift": "1.94"
+  },
+  {
+   "theme_id": "returns_disappointment",
+   "name": "Disappointing returns or market fear",
+   "question": "stop",
+   "droppers_mentioning": "6",
+   "n_droppers": "175",
+   "pct_droppers": "0.034",
+   "continuers_mentioning": "6",
+   "n_continuers": "60",
+   "pct_continuers": "0.1",
+   "stop_lift": "0.34"
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "name": "Switching plan, fund or platform (not a real drop)",
+   "question": "stop",
+   "droppers_mentioning": "28",
+   "n_droppers": "175",
+   "pct_droppers": "0.16",
+   "continuers_mentioning": "0",
+   "n_continuers": "60",
+   "pct_continuers": "0.0",
+   "stop_lift": "19.76"
+  },
+  {
+   "theme_id": "early_confusion_first_months",
+   "name": "Early confusion after the first instalment",
+   "question": "behaviour",
+   "droppers_mentioning": "16",
+   "n_droppers": "175",
+   "pct_droppers": "0.091",
+   "continuers_mentioning": "0",
+   "n_continuers": "60",
+   "pct_continuers": "0.0",
+   "stop_lift": "11.44"
+  },
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "name": "Stopped or changed by the platform or fund",
+   "question": "stop",
+   "droppers_mentioning": "11",
+   "n_droppers": "175",
+   "pct_droppers": "0.063",
+   "continuers_mentioning": "2",
+   "n_continuers": "60",
+   "pct_continuers": "0.033",
+   "stop_lift": "1.89"
+  },
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "name": "No reminders, so instalments are forgotten",
+   "question": "stop",
+   "droppers_mentioning": "6",
+   "n_droppers": "175",
+   "pct_droppers": "0.034",
+   "continuers_mentioning": "0",
+   "n_continuers": "60",
+   "pct_continuers": "0.0",
+   "stop_lift": "4.51"
+  },
+  {
+   "theme_id": "charges_lockin_surprise",
+   "name": "Surprise charges, lock-ins or tax at exit",
+   "question": "stop",
+   "droppers_mentioning": "2",
+   "n_droppers": "175",
+   "pct_droppers": "0.011",
+   "continuers_mentioning": "0",
+   "n_continuers": "60",
+   "pct_continuers": "0.0",
+   "stop_lift": "guarded"
+  },
+  {
+   "theme_id": "cash_need_affordability",
+   "name": "Cash need or amount too high",
+   "question": "stop",
+   "droppers_mentioning": "3",
+   "n_droppers": "175",
+   "pct_droppers": "0.017",
+   "continuers_mentioning": "4",
+   "n_continuers": "60",
+   "pct_continuers": "0.067",
+   "stop_lift": "0.26"
+  },
+  {
+   "theme_id": "conflicting_advice",
+   "name": "Conflicting or misleading advice",
+   "question": "behaviour",
+   "droppers_mentioning": "2",
+   "n_droppers": "175",
+   "pct_droppers": "0.011",
+   "continuers_mentioning": "4",
+   "n_continuers": "60",
+   "pct_continuers": "0.067",
+   "stop_lift": "0.17"
+  },
+  {
+   "theme_id": "return_expectations",
+   "name": "Specific return expectations at the start",
+   "question": "start",
+   "droppers_mentioning": "1",
+   "n_droppers": "175",
+   "pct_droppers": "0.006",
+   "continuers_mentioning": "4",
+   "n_continuers": "60",
+   "pct_continuers": "0.067",
+   "stop_lift": "0.09"
+  },
+  {
+   "theme_id": "long_term_discipline",
+   "name": "Long-term discipline (protective)",
+   "question": "behaviour",
+   "droppers_mentioning": "0",
+   "n_droppers": "175",
+   "pct_droppers": "0.0",
+   "continuers_mentioning": "24",
+   "n_continuers": "60",
+   "pct_continuers": "0.4",
+   "stop_lift": "0.01"
+  }
+ ],
+ "quotes": {
+  "missing_sip_controls": [
+   {
+    "quote": "the App still doesn't offer an option to cancel or discontinue the SIP despite the lock-in period having expired",
+    "source": "Google Play",
+    "app": "fundsindia",
+    "url": "https://play.google.com/store/apps/details?id=com.fundsindia",
+    "record_id": "playstore_dc4983f8652f",
+    "severity": 3
+   },
+   {
+    "quote": "The cancellation process goes through and their is confirmation on the app but the cancellation doesn’t happen",
+    "source": "Apple App Store",
+    "app": "paytmmoney",
+    "url": "https://apps.apple.com/in/app/id1344431352",
+    "record_id": "appstore_6c6a70d10273",
+    "severity": 3
+   },
+   {
+    "quote": "having to send a physical request letter to the AMC and having to wait for a month to stop",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/how-do-i-pause-and-resume-a-sip-on-coin/41314/1",
+    "record_id": "tradingqna_ea0a1a2577f1",
+    "severity": 2
+   }
+  ],
+  "switching_plan_or_platform": [
+   {
+    "quote": "Migrated all SIPs (except one that's no longer accepting new investments, waiting and watching) to another platform",
+    "source": "Google Play",
+    "app": "etmoney",
+    "url": "https://play.google.com/store/apps/details?id=com.smartspends",
+    "record_id": "playstore_a1ed4a6f2d19",
+    "severity": 2
+   },
+   {
+    "quote": "I want to stop my existing sips so that I can start new sips for the same mutual funds under direct plan",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=qxu7CBYR864",
+    "record_id": "youtube_dcc6b60698dd",
+    "severity": 2
+   },
+   {
+    "quote": "i will be shifting my entire portfolio to some new application",
+    "source": "Apple App Store",
+    "app": "paytmmoney",
+    "url": "https://apps.apple.com/in/app/id1344431352",
+    "record_id": "appstore_21c1dd505c2a",
+    "severity": 2
+   }
+  ],
+  "support_trust_breakdown": [
+   {
+    "quote": "they gave tentative deadline of refund every time but it has never been refunded",
+    "source": "Google Play",
+    "app": "coin",
+    "url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+    "record_id": "playstore_701f04215b5e",
+    "severity": 3
+   },
+   {
+    "quote": "raised the issue with customer support and they have refused to help",
+    "source": "Apple App Store",
+    "app": "paytmmoney",
+    "url": "https://apps.apple.com/in/app/id1344431352",
+    "record_id": "appstore_0a07e4592563",
+    "severity": 3
+   },
+   {
+    "quote": "vo abhi phone nahi uthata",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=qxu7CBYR864",
+    "record_id": "youtube_2b74c07559e1",
+    "severity": 2
+   }
+  ],
+  "payment_autopay_failure": [
+   {
+    "quote": "I have been trying to make AMP SIPs for last 3months but it never executes. I have to do it manual each time",
+    "source": "Google Play",
+    "app": "coin",
+    "url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+    "record_id": "playstore_027c863e386b",
+    "severity": 3
+   },
+   {
+    "quote": "updating the bank account for SIP auto-debit usually force you to cancel the existing SIP and create a new one",
+    "source": "Apple App Store",
+    "app": "upstox",
+    "url": "https://apps.apple.com/in/app/id1584953620",
+    "record_id": "appstore_282b7ea5ec6b",
+    "severity": 2
+   },
+   {
+    "quote": "ek bhi kist miss hui, 150 se750 tk account se cut jayega bank panelty ke naam se",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=MeWUii2VkpA",
+    "record_id": "youtube_49bc99717cc1",
+    "severity": 2
+   }
+  ],
+  "platform_or_fund_initiated": [
+   {
+    "quote": "ETmoney has started cancelling the SIPs if there is no transaction for 3 months",
+    "source": "Google Play",
+    "app": "etmoney",
+    "url": "https://play.google.com/store/apps/details?id=com.smartspends",
+    "record_id": "playstore_e38294113d96",
+    "severity": 3
+   },
+   {
+    "quote": "one of the fund which had fresh investment restrictions didn’t allow sip",
+    "source": "Apple App Store",
+    "app": "kuvera",
+    "url": "https://apps.apple.com/in/app/id1329701793",
+    "record_id": "appstore_503bbec78e72",
+    "severity": 2
+   },
+   {
+    "quote": "I had a weekly SIP in the PPFAS Flexi Cap fund, which is deleted now",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/everything-you-need-to-know-about-restrictions-on-new-investments-in-international-mutual-funds-and-etfs/126326/13",
+    "record_id": "tradingqna_c8e45f60f190",
+    "severity": 2
+   }
+  ],
+  "fees_paywall": [
+   {
+    "quote": "u are continuously forcing us to subscribe for ur paid service by disabling one by one features",
+    "source": "Google Play",
+    "app": "etmoney",
+    "url": "https://play.google.com/store/apps/details?id=com.smartspends",
+    "record_id": "playstore_daf5b414e17d",
+    "severity": 3
+   },
+   {
+    "quote": "each time I have to pay Zerodha/payment gateway Rs 9",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/deducting-sip-amount-directly-from-bank/12675/5",
+    "record_id": "tradingqna_e71c496b52a1",
+    "severity": 2
+   },
+   {
+    "quote": "they are forcing people to Genius then only will allow to use basic functionalities",
+    "source": "Google Play",
+    "app": "etmoney",
+    "url": "https://play.google.com/store/apps/details?id=com.smartspends",
+    "record_id": "playstore_932fafd3d2d8",
+    "severity": 3
+   }
+  ],
+  "app_reliability_errors": [
+   {
+    "quote": "their app did not show the transaction, i did not receive mutual fund unit neither my money was returned ever",
+    "source": "Google Play",
+    "app": "coin",
+    "url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+    "record_id": "playstore_701f04215b5e",
+    "severity": 3
+   },
+   {
+    "quote": "The manage SIP segment is mostly not showing which caused missing multiple SIPs",
+    "source": "Apple App Store",
+    "app": "paytmmoney",
+    "url": "https://apps.apple.com/in/app/id1344431352",
+    "record_id": "appstore_95eaf38a80a1",
+    "severity": 3
+   },
+   {
+    "quote": "jisko mene cancel kiya dikha nhi yani mere paise chale gaye",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=H60n7TAI6GM",
+    "record_id": "youtube_3ce9d9173c72",
+    "severity": 2
+   }
+  ],
+  "cash_need_affordability": [
+   {
+    "quote": "khud ke paise khud ki saving khud hi jarurat k time withdrawal nhi kar pa rh h",
+    "source": "Google Play",
+    "app": "paytmmoney",
+    "url": "https://play.google.com/store/apps/details?id=com.paytmmoney",
+    "record_id": "playstore_0f5219599cbb",
+    "severity": 3
+   },
+   {
+    "quote": "I cancelled my sip as i was in need of urgent money",
+    "source": "Apple App Store",
+    "app": "etmoney",
+    "url": "https://apps.apple.com/in/app/id1212752482",
+    "record_id": "appstore_f6a0573047c4",
+    "severity": 3
+   },
+   {
+    "quote": "10% step up will lead to 10k then 15k then 20k then 25k to 30k per month sip which is difficult to continue for average person",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=TmC_mgrDWRI",
+    "record_id": "youtube_b10cac1015f9",
+    "severity": 2
+   }
+  ],
+  "long_term_discipline": [
+   {
+    "quote": "Yet, I have not stopped investing",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=Mr5hz8IpNxI",
+    "record_id": "youtube_a4f79b45fd99",
+    "severity": 3
+   },
+   {
+    "quote": "Core idea behind SIP’ is its gives you the discipline and eliminates all the biases about market movements",
+    "source": "ValuePickr forum",
+    "app": null,
+    "url": "https://forum.valuepickr.com/t/mutual-fund-portfolio-review-suggestions/147110/17",
+    "record_id": "valuepickr_cc1546de5a40",
+    "severity": 2
+   },
+   {
+    "quote": "I just want my funds to continue for a period of 25 - 30 years",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/how-to-convert-coin-sip-to-coin-amc-sip/43784/11",
+    "record_id": "tradingqna_949d8194095c",
+    "severity": 2
+   }
+  ],
+  "missed_reminders_forgetting": [
+   {
+    "quote": "Coin is not sending mobile notification when an SIP order is ready for payment",
+    "source": "Google Play",
+    "app": "coin",
+    "url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+    "record_id": "playstore_b4d304907d1d",
+    "severity": 2
+   },
+   {
+    "quote": "Adding funds every month manually is cumbersome and we will tend to forget",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/deducting-sip-amount-directly-from-bank/12675/3",
+    "record_id": "tradingqna_5d47bce7d5d2",
+    "severity": 2
+   },
+   {
+    "quote": "forget which stock to buy every month and end up skipping investing",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=ZZ-e9ZLaWIw",
+    "record_id": "youtube_a1f4bf50732d",
+    "severity": 2
+   }
+  ],
+  "charges_lockin_surprise": [
+   {
+    "quote": "I was told you will have lock in period of three years for sip and now I am being told it will have lock in period of three y ars for every transaction",
+    "source": "Google Play",
+    "app": "fundsindia",
+    "url": "https://play.google.com/store/apps/details?id=com.fundsindia",
+    "record_id": "playstore_20d2bf4e4fb7",
+    "severity": 3
+   },
+   {
+    "quote": "I have completed 3 years in ELSS but the units still show locked",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/elss-redemption-clarification/133758/1",
+    "record_id": "tradingqna_f588185f7314",
+    "severity": 2
+   },
+   {
+    "quote": "lekin iska last instalment 2027 me withdraw hoga",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs",
+    "record_id": "youtube_d5752636c848",
+    "severity": 2
+   }
+  ],
+  "disruptive_app_updates": [
+   {
+    "quote": "with the update they seemed to have removed the functions where one could easily stop or pause his SIP's",
+    "source": "Google Play",
+    "app": "fundsindia",
+    "url": "https://play.google.com/store/apps/details?id=com.fundsindia",
+    "record_id": "playstore_e2fecb5df3fa",
+    "severity": 3
+   },
+   {
+    "quote": "I am not able to pay my SIP instalment since the update",
+    "source": "Apple App Store",
+    "app": "paytmmoney",
+    "url": "https://apps.apple.com/in/app/id1344431352",
+    "record_id": "appstore_6c378c0d68e4",
+    "severity": 3
+   },
+   {
+    "quote": "in the latest update i am not able to see manual payment option for monthly SIPs",
+    "source": "Google Play",
+    "app": "upstox",
+    "url": "https://play.google.com/store/apps/details?id=in.upstox.app",
+    "record_id": "playstore_7139ff8203dd",
+    "severity": 3
+   }
+  ],
+  "other": [
+   {
+    "quote": "before purchasing any mutual fund sip it ask to also pay for initial investment",
+    "source": "Google Play",
+    "app": "coin",
+    "url": "https://play.google.com/store/apps/details?id=com.zerodha.coin",
+    "record_id": "playstore_360d77bf0c0b",
+    "severity": 1
+   },
+   {
+    "quote": "SIP se pehle ye log 15000rs kyu maang rahe hai",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=-cQzwIwNPmA",
+    "record_id": "youtube_c89a7b10a12e",
+    "severity": 1
+   },
+   {
+    "quote": "I just only want to open an account for Sip but they not give any option",
+    "source": "Google Play",
+    "app": "fundsindia",
+    "url": "https://play.google.com/store/apps/details?id=com.fundsindia",
+    "record_id": "playstore_7ed55ffe99c2",
+    "severity": 1
+   }
+  ],
+  "early_confusion_first_months": [
+   {
+    "quote": "I am confused about next sip installment on which date my next instalment done",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/sip-cancel-on-mf/190338/1",
+    "record_id": "tradingqna_f1b38796a28e",
+    "severity": 3
+   },
+   {
+    "quote": "paise withdrawal nahi huaa mere 50hajar gaye kya",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=H60n7TAI6GM",
+    "record_id": "youtube_f145382b0b03",
+    "severity": 3
+   },
+   {
+    "quote": "I started an sip and paid the first amount it was debited from my account but it failed saying kyc is not valid",
+    "source": "Google Play",
+    "app": "indmoney",
+    "url": "https://play.google.com/store/apps/details?id=in.indwealth",
+    "record_id": "playstore_533a3d9d13cd",
+    "severity": 2
+   }
+  ],
+  "returns_disappointment": [
+   {
+    "quote": "Some investors who monitor their portfolio panic in such continuous market fall & stop SIPs",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/new-sips-are-down-to-march-2017-levels-while-old-sip-cancellations-are-making-new-highs-what-does-this-mean-for-the-markets/54949/4",
+    "record_id": "tradingqna_df429ff00b23",
+    "severity": 3
+   },
+   {
+    "quote": "मेरे को 25 हजार का फटका लग गया है 2 साल से अभी भी वही वैल्यू है",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=va_xLp76GkA",
+    "record_id": "youtube_d22f131f5b1c",
+    "severity": 3
+   },
+   {
+    "quote": "ET money has given me a return of negative 3 percent returns",
+    "source": "Google Play",
+    "app": "etmoney",
+    "url": "https://play.google.com/store/apps/details?id=com.smartspends",
+    "record_id": "playstore_fa2e029e3bc4",
+    "severity": 3
+   }
+  ],
+  "conflicting_advice": [
+   {
+    "quote": "Koi bolata hay sip karo Koi bolta hay na karo",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=b6K3fST07bk",
+    "record_id": "youtube_1026478616b9",
+    "severity": 3
+   },
+   {
+    "quote": "the mutual funds you pick from their platform are regular funds instead of direct funds",
+    "source": "Google Play",
+    "app": "fundsindia",
+    "url": "https://play.google.com/store/apps/details?id=com.fundsindia",
+    "record_id": "playstore_87de58f77759",
+    "severity": 2
+   },
+   {
+    "quote": "why do I unnecessarily give the commission from my profit to the broker",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/about-mf-regular-plan/111699/1",
+    "record_id": "tradingqna_a6b91692c576",
+    "severity": 2
+   }
+  ],
+  "return_expectations": [
+   {
+    "quote": "I thought in 3-5 yrs i will definitely get minimum 10-12 percent",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=-xEBImSRAaw",
+    "record_id": "youtube_408c4c24a4c0",
+    "severity": 3
+   },
+   {
+    "quote": "Is it possible to have 1 crore within 10 years",
+    "source": "TradingQ&A forum",
+    "app": null,
+    "url": "https://tradingqna.com/t/mutual-funds-need-suggestions/186965/1",
+    "record_id": "tradingqna_f02fb415a004",
+    "severity": 2
+   },
+   {
+    "quote": "1 saal ka agar 12 % v returns milta to 3 saal me 36% hota",
+    "source": "YouTube comments",
+    "app": null,
+    "url": "https://www.youtube.com/watch?v=l-5gx7CUCSk",
+    "record_id": "youtube_f093509e808c",
+    "severity": 2
+   }
+  ]
+ },
+ "themes": {
+  "payment_autopay_failure": {
+   "name": "Autopay / mandate / payment failures",
+   "definition": "Instalments are missed, fail or are debited wrongly because of autopay, mandate, bank or payment problems, or because there is no auto-debit and the investor must pay manually each month.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "missing_sip_controls": {
+   "name": "Can't pause, skip, reduce or cancel easily",
+   "definition": "The investor wants to pause, skip, change the amount or date, or cancel, but the option is missing, broken or deliberately hard, so they cancel outright or feel trapped.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "app_reliability_errors": {
+   "name": "App bugs, slow processing and confusing status",
+   "definition": "SIP orders stay in processing, units are allotted late, the app crashes or an update breaks flows, or the investor cannot tell whether a SIP is active or where money went after cancelling.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "fees_paywall": {
+   "name": "New fees, paywalls and upselling",
+   "definition": "The platform starts charging for basics, locks features behind subscriptions or pushes paid plans, and the investor stops or moves SIPs.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "support_trust_breakdown": {
+   "name": "Unresponsive support and loss of trust",
+   "definition": "Problems go unresolved because support or the agent does not respond, and the investor loses trust in the platform.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "returns_disappointment": {
+   "name": "Disappointing returns or market fear",
+   "definition": "Flat, negative or below-expectation returns over months or years, or fear during market falls, lead the investor to stop or consider stopping.",
+   "question": "stop",
+   "addressability": "medium"
+  },
+  "cash_need_affordability": {
+   "name": "Cash need or amount too high",
+   "definition": "The investor needs the money elsewhere, or the SIP amount (or step-up) becomes hard to sustain.",
+   "question": "stop",
+   "addressability": "low"
+  },
+  "platform_or_fund_initiated": {
+   "name": "Stopped or changed by the platform or fund",
+   "definition": "The SIP was paused, deleted or cancelled by the fund house or platform rather than by the investor.",
+   "question": "stop",
+   "addressability": "medium"
+  },
+  "switching_plan_or_platform": {
+   "name": "Switching plan, fund or platform (not a real drop)",
+   "definition": "The investor stops a SIP only to restart it elsewhere, e.g. regular to direct, a different fund or another app.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "early_confusion_first_months": {
+   "name": "Early confusion after the first instalment",
+   "definition": "In the first weeks or months after starting, the investor misunderstands how the SIP works (when instalments are taken, where the money is, what cancelling or redeeming does) and stops or cancels as a result.",
+   "question": "behaviour",
+   "addressability": "high"
+  },
+  "return_expectations": {
+   "name": "Specific return expectations at the start",
+   "definition": "Starts with a concrete expectation of returns or a corpus (e.g. 12% a year, 1 crore in 10 years), often set by ads or creators.",
+   "question": "start",
+   "addressability": "medium"
+  },
+  "missed_reminders_forgetting": {
+   "name": "No reminders, so instalments are forgotten",
+   "definition": "Instalments are missed because the app sends no reminder or due-date notification, and the investor forgets to pay or place the order.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "disruptive_app_updates": {
+   "name": "App updates that break or hide SIP flows",
+   "definition": "A redesign or update removes or hides SIP features (pay button, SIP list, modify, tracking), so the investor misses payments, cannot manage SIPs or decides to leave.",
+   "question": "stop",
+   "addressability": "high"
+  },
+  "charges_lockin_surprise": {
+   "name": "Surprise charges, lock-ins or tax at exit",
+   "definition": "The investor is surprised by exit loads, lock-in periods, tax or other charges when stopping or redeeming, and feels misled.",
+   "question": "stop",
+   "addressability": "medium"
+  },
+  "conflicting_advice": {
+   "name": "Conflicting or misleading advice",
+   "definition": "The investor is confused or loses confidence because creators, agents or ads give conflicting or misleading messages about SIPs, or they were mis-sold (e.g. a regular plan without understanding it).",
+   "question": "behaviour",
+   "addressability": "medium"
+  },
+  "long_term_discipline": {
+   "name": "Long-term discipline (protective)",
+   "definition": "Investor keeps going because of a long horizon, a family goal, discipline or experience of holding through falls.",
+   "question": "behaviour",
+   "addressability": "medium"
+  }
+ },
+ "early": {
+  "n": 31,
+  "themes": [
+   [
+    "app_reliability_errors",
+    10
+   ],
+   [
+    "early_confusion_first_months",
+    8
+   ],
+   [
+    "returns_disappointment",
+    4
+   ],
+   [
+    "support_trust_breakdown",
+    3
+   ],
+   [
+    "conflicting_advice",
+    2
+   ],
+   [
+    "payment_autopay_failure",
+    2
+   ],
+   [
+    "long_term_discipline",
+    2
+   ],
+   [
+    "return_expectations",
+    2
+   ],
+   [
+    "missed_reminders_forgetting",
+    1
+   ],
+   [
+    "disruptive_app_updates",
+    1
+   ],
+   [
+    "fees_paywall",
+    1
+   ],
+   [
+    "missing_sip_controls",
+    1
+   ]
+  ]
+ },
+ "first_time_n": 7,
+ "validation": {
+  "n_labelled": 20,
+  "agreement": {
+   "first_time_investor": {
+    "agree": 11,
+    "n": 20,
+    "pct": 55.0
+   },
+   "severity_within_1": {
+    "agree": 12,
+    "n": 12,
+    "pct": 100.0
+   },
+   "sip_status": {
+    "agree": 11,
+    "n": 20,
+    "pct": 55.0
+   },
+   "theme:app_reliability_errors": {
+    "agree": 15,
+    "n": 20,
+    "pct": 75.0
+   },
+   "theme:cash_need_affordability": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:charges_lockin_surprise": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:conflicting_advice": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:disruptive_app_updates": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:early_confusion_first_months": {
+    "agree": 16,
+    "n": 20,
+    "pct": 80.0
+   },
+   "theme:fees_paywall": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:long_term_discipline": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:missed_reminders_forgetting": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:missing_sip_controls": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:payment_autopay_failure": {
+    "agree": 17,
+    "n": 20,
+    "pct": 85.0
+   },
+   "theme:platform_or_fund_initiated": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:return_expectations": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:returns_disappointment": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:support_trust_breakdown": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:switching_plan_or_platform": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "time_since_start": {
+    "agree": 2,
+    "n": 7,
+    "pct": 28.6
+   }
+  },
+  "theme_presence_overall_pct": 93.8,
+  "theme_precision": 0.545,
+  "theme_recall": 0.522,
+  "records_theme_overlap": 11,
+  "span_check": {
+   "records_extracted": 626,
+   "malformed_after_retry": 0,
+   "needed_retry": 0,
+   "coded_values_with_span": 1182,
+   "span_failures_after_retry": 0,
+   "span_pass_rate": 1.0,
+   "pending": 0
+  }
+ },
+ "validation_gemini": {
+  "n_labelled": 20,
+  "agreement": {
+   "first_time_investor": {
+    "agree": 11,
+    "n": 20,
+    "pct": 55.0
+   },
+   "severity_within_1": {
+    "agree": 12,
+    "n": 14,
+    "pct": 85.7
+   },
+   "sip_status": {
+    "agree": 12,
+    "n": 20,
+    "pct": 60.0
+   },
+   "theme:app_reliability_errors": {
+    "agree": 16,
+    "n": 20,
+    "pct": 80.0
+   },
+   "theme:cash_need_affordability": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:charges_lockin_surprise": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:conflicting_advice": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:disruptive_app_updates": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:early_confusion_first_months": {
+    "agree": 16,
+    "n": 20,
+    "pct": 80.0
+   },
+   "theme:fees_paywall": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:long_term_discipline": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:missed_reminders_forgetting": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:missing_sip_controls": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:payment_autopay_failure": {
+    "agree": 17,
+    "n": 20,
+    "pct": 85.0
+   },
+   "theme:platform_or_fund_initiated": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:return_expectations": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:returns_disappointment": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:support_trust_breakdown": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:switching_plan_or_platform": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "time_since_start": {
+    "agree": 2,
+    "n": 7,
+    "pct": 28.6
+   }
+  },
+  "theme_presence_overall_pct": 93.8,
+  "theme_precision": 0.56,
+  "theme_recall": 0.609,
+  "records_theme_overlap": 12,
+  "span_check": {
+   "records_extracted": 626,
+   "malformed_after_retry": 0,
+   "needed_retry": 0,
+   "coded_values_with_span": 1182,
+   "span_failures_after_retry": 0,
+   "span_pass_rate": 1.0,
+   "pending": 0
+  }
+ },
+ "validation_failures": [
+  {
+   "record_id": "playstore_dac9d146993c",
+   "field": "sip_status",
+   "my_label": "stopped",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_dac9d146993c",
+   "field": "theme:app_reliability_errors",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "engine missed it"
+  },
+  {
+   "record_id": "playstore_3fa49f13b810",
+   "field": "sip_status",
+   "my_label": "stopped",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_3fa49f13b810",
+   "field": "theme:payment_autopay_failure",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "playstore_3fa49f13b810",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "playstore_521ffa4138b8",
+   "field": "sip_status",
+   "my_label": "stopped",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_3018feafae4f",
+   "field": "sip_status",
+   "my_label": "continuing",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_3018feafae4f",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "playstore_3018feafae4f",
+   "field": "time_since_start",
+   "my_label": ">12m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "time_since_start",
+   "my_label": "1-6m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: support vs app error"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "theme:support_trust_breakdown",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: support vs app error"
+  },
+  {
+   "record_id": "playstore_45ddb6e83981",
+   "field": "theme:payment_autopay_failure",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "playstore_45ddb6e83981",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "time_since_start",
+   "my_label": "<1m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "theme:payment_autopay_failure",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "appstore_5c863a2d7879",
+   "field": "sip_status",
+   "my_label": "paused",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "youtube_ea59eafe4316",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_ea59eafe4316",
+   "field": "theme:conflicting_advice",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_dda8c52fbbc4",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "youtube_dda8c52fbbc4",
+   "field": "time_since_start",
+   "my_label": ">12m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "youtube_dda8c52fbbc4",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "engine missed it"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "sip_status",
+   "my_label": "starting",
+   "engine_output": "unclear",
+   "likely_cause": "label outside the scheme"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "first_time_investor",
+   "my_label": "yes",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "theme:return_expectations",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_2de4d2bdeab0",
+   "field": "sip_status",
+   "my_label": "paused",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "youtube_2de4d2bdeab0",
+   "field": "first_time_investor",
+   "my_label": "yes",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "youtube_2de4d2bdeab0",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_843555b54ba8",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "tradingqna_4e72cc7b3d19",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "tradingqna_4e72cc7b3d19",
+   "field": "theme:platform_or_fund_initiated",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: switching vs platform-initiated"
+  },
+  {
+   "record_id": "tradingqna_4e72cc7b3d19",
+   "field": "theme:switching_plan_or_platform",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: switching vs platform-initiated"
+  },
+  {
+   "record_id": "tradingqna_ae3ce10612b0",
+   "field": "sip_status",
+   "my_label": "unclear",
+   "engine_output": "stopped",
+   "likely_cause": "different reading of status"
+  },
+  {
+   "record_id": "tradingqna_ae3ce10612b0",
+   "field": "theme:platform_or_fund_initiated",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "engine over-coded"
+  },
+  {
+   "record_id": "tradingqna_a6b91692c576",
+   "field": "sip_status",
+   "my_label": "continuing",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "tradingqna_a6b91692c576",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "valuepickr_ab8c8ea6814d",
+   "field": "time_since_start",
+   "my_label": "1-6m",
+   "engine_output": "6-12m",
+   "likely_cause": "different period from the same text"
+  },
+  {
+   "record_id": "valuepickr_ab8c8ea6814d",
+   "field": "theme:conflicting_advice",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "engine missed it"
+  },
+  {
+   "record_id": "valuepickr_ab8c8ea6814d",
+   "field": "theme:long_term_discipline",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "engine over-coded"
+  }
+ ],
+ "corrections": [
+  [
+   "2026-11-02",
+   "3 (codebook)",
+   "Example quote for `missing_sip_controls` was \"no option to stop a sip without redeeming\"",
+   "Replaced with \"Cannot pause the sip in the App\" (FundsIndia, Play Store)",
+   "The original quote was cut out of context. Without explaining that 'stopping' means ending future instalments while 'redeeming' means selling units, it read as nonsensical. An example has to be clear without the full review."
+  ],
+  [
+   "2026-11-02",
+   "3 (codebook)",
+   "Theme `setup_onboarding_friction` mixed barriers to starting (initial investment, KYC, minimum amounts) with early confusion after starting; example was \"Concept of initial investment is totally unacceptable\"",
+   "Renamed to `early_confusion_first_months`; pre-start barriers moved out of scope; example replaced with a first-time investor confused about the next instalment who then cancelled (TradingQ&A)",
+   "The study is about first-time investors who have already started and then stop within ~12 months. An initial-investment complaint is about starting, not stopping."
+  ],
+  [
+   "2026-11-02",
+   "3 (codebook)",
+   "`long_term_discipline` was proposed as a theme to be scored and ranked with the drop-off themes",
+   "Kept only as a contrast (protective) theme: shown in the dropper-vs-continuer table, excluded from the ranked opportunity list",
+   "The goal is to find what causes drop-off; a protective factor ranked as a \"priority\" would be misleading."
+  ]
+ ],
+ "context": [
+  {
+   "field": "check",
+   "value": "instalment_status",
+   "records_all": "14",
+   "records_dropper": "7",
+   "records_continuer": "0",
+   "records_unclear_status": "7"
+  },
+  {
+   "field": "check",
+   "value": "nav_or_units",
+   "records_all": "5",
+   "records_dropper": "0",
+   "records_continuer": "0",
+   "records_unclear_status": "5"
+  },
+  {
+   "field": "check",
+   "value": "portfolio_overall",
+   "records_all": "16",
+   "records_dropper": "3",
+   "records_continuer": "8",
+   "records_unclear_status": "5"
+  },
+  {
+   "field": "check",
+   "value": "returns_or_value",
+   "records_all": "27",
+   "records_dropper": "4",
+   "records_continuer": "9",
+   "records_unclear_status": "14"
+  },
+  {
+   "field": "check_frequency",
+   "value": "daily",
+   "records_all": "3",
+   "records_dropper": "0",
+   "records_continuer": "0",
+   "records_unclear_status": "3"
+  },
+  {
+   "field": "check_frequency",
+   "value": "monthly",
+   "records_all": "1",
+   "records_dropper": "1",
+   "records_continuer": "0",
+   "records_unclear_status": "0"
+  },
+  {
+   "field": "check_frequency",
+   "value": "rarely",
+   "records_all": "3",
+   "records_dropper": "0",
+   "records_continuer": "1",
+   "records_unclear_status": "2"
+  },
+  {
+   "field": "check_frequency",
+   "value": "unclear",
+   "records_all": "55",
+   "records_dropper": "13",
+   "records_continuer": "16",
+   "records_unclear_status": "26"
+  },
+  {
+   "field": "outside_help",
+   "value": "advisor_agent_bank",
+   "records_all": "3",
+   "records_dropper": "1",
+   "records_continuer": "0",
+   "records_unclear_status": "2"
+  },
+  {
+   "field": "outside_help",
+   "value": "customer_support",
+   "records_all": "27",
+   "records_dropper": "8",
+   "records_continuer": "0",
+   "records_unclear_status": "19"
+  },
+  {
+   "field": "outside_help",
+   "value": "other",
+   "records_all": "3",
+   "records_dropper": "1",
+   "records_continuer": "1",
+   "records_unclear_status": "1"
+  },
+  {
+   "field": "outside_help",
+   "value": "search_web",
+   "records_all": "3",
+   "records_dropper": "1",
+   "records_continuer": "0",
+   "records_unclear_status": "2"
+  },
+  {
+   "field": "outside_help",
+   "value": "social_or_forum",
+   "records_all": "7",
+   "records_dropper": "2",
+   "records_continuer": "2",
+   "records_unclear_status": "3"
+  },
+  {
+   "field": "outside_help",
+   "value": "youtube_creator",
+   "records_all": "20",
+   "records_dropper": "4",
+   "records_continuer": "6",
+   "records_unclear_status": "10"
+  },
+  {
+   "field": "segment_age_band",
+   "value": "25-34",
+   "records_all": "1",
+   "records_dropper": "0",
+   "records_continuer": "0",
+   "records_unclear_status": "1"
+  },
+  {
+   "field": "segment_age_band",
+   "value": "35-44",
+   "records_all": "3",
+   "records_dropper": "0",
+   "records_continuer": "2",
+   "records_unclear_status": "1"
+  },
+  {
+   "field": "segment_age_band",
+   "value": "<25",
+   "records_all": "4",
+   "records_dropper": "0",
+   "records_continuer": "4",
+   "records_unclear_status": "0"
+  },
+  {
+   "field": "segment_income_stability",
+   "value": "homemaker",
+   "records_all": "2",
+   "records_dropper": "0",
+   "records_continuer": "0",
+   "records_unclear_status": "2"
+  },
+  {
+   "field": "segment_income_stability",
+   "value": "irregular_or_business",
+   "records_all": "1",
+   "records_dropper": "0",
+   "records_continuer": "1",
+   "records_unclear_status": "0"
+  },
+  {
+   "field": "segment_income_stability",
+   "value": "salaried",
+   "records_all": "9",
+   "records_dropper": "1",
+   "records_continuer": "2",
+   "records_unclear_status": "6"
+  },
+  {
+   "field": "segment_income_stability",
+   "value": "student_no_income",
+   "records_all": "1",
+   "records_dropper": "0",
+   "records_continuer": "1",
+   "records_unclear_status": "0"
+  },
+  {
+   "field": "segment_influencer",
+   "value": "ads_or_app",
+   "records_all": "2",
+   "records_dropper": "0",
+   "records_continuer": "0",
+   "records_unclear_status": "2"
+  },
+  {
+   "field": "segment_influencer",
+   "value": "advisor_agent_bank",
+   "records_all": "5",
+   "records_dropper": "0",
+   "records_continuer": "0",
+   "records_unclear_status": "5"
+  },
+  {
+   "field": "segment_influencer",
+   "value": "self",
+   "records_all": "5",
+   "records_dropper": "0",
+   "records_continuer": "4",
+   "records_unclear_status": "1"
+  },
+  {
+   "field": "segment_influencer",
+   "value": "youtube_creator",
+   "records_all": "3",
+   "records_dropper": "0",
+   "records_continuer": "1",
+   "records_unclear_status": "2"
+  },
+  {
+   "field": "segment_money_source",
+   "value": "salary_savings",
+   "records_all": "6",
+   "records_dropper": "1",
+   "records_continuer": "4",
+   "records_unclear_status": "1"
+  },
+  {
+   "field": "worry",
+   "value": "app_status_or_error",
+   "records_all": "12",
+   "records_dropper": "7",
+   "records_continuer": "1",
+   "records_unclear_status": "4"
+  },
+  {
+   "field": "worry",
+   "value": "charges_or_tax",
+   "records_all": "2",
+   "records_dropper": "2",
+   "records_continuer": "0",
+   "records_unclear_status": "0"
+  },
+  {
+   "field": "worry",
+   "value": "how_sip_works",
+   "records_all": "17",
+   "records_dropper": "5",
+   "records_continuer": "1",
+   "records_unclear_status": "11"
+  },
+  {
+   "field": "worry",
+   "value": "losing_money",
+   "records_all": "13",
+   "records_dropper": "2",
+   "records_continuer": "2",
+   "records_unclear_status": "9"
+  },
+  {
+   "field": "worry",
+   "value": "other",
+   "records_all": "11",
+   "records_dropper": "1",
+   "records_continuer": "1",
+   "records_unclear_status": "9"
+  },
+  {
+   "field": "worry",
+   "value": "where_is_my_money",
+   "records_all": "15",
+   "records_dropper": "4",
+   "records_continuer": "0",
+   "records_unclear_status": "11"
+  },
+  {
+   "field": "worry",
+   "value": "whether_to_continue",
+   "records_all": "8",
+   "records_dropper": "2",
+   "records_continuer": "1",
+   "records_unclear_status": "5"
+  }
+ ],
+ "context_stats": {
+  "records": 626,
+  "routed_to_llm": 246,
+  "values_coded": 245,
+  "values_dropped_span_fail": 0
+ },
+ "limitations": [
+  "Reddit was not used: its API needs approval and scraping is barred by its terms. X, Instagram and Quora were also not used (no permitted access).",
+  "Reviews and forum posts are not a random sample of investors. App-store reviews skew towards complaints, so product friction is over-represented relative to behavioural reasons such as returns or cash needs.",
+  "Droppers come mostly from app-store reviews and continuers mostly from YouTube, so stop-lift partly reflects which source a theme appears in, not only stopping behaviour. Read stop-lift as directional.",
+  "SIP status, first-time status and time since starting are self-reported. Only 7 records say the writer is a first-time investor and 84 state how long they have invested, so the 12-month view is descriptive only.",
+  "'Stopped' includes stopping SIPs on a platform; people who only moved to another app are excluded from the dropper group where switching was their only stop reason.",
+  "Coding was done by Claude (Opus) inside a Claude Code session, not via an API, because the Gemini key had no credits. The same model designed the prompts and did the coding; the golden set is the independent check.",
+  "Evidence-span checks were run by the coder before submitting answers, so the 100% span pass rate reflects that self-check; the pipeline still verifies every span in code.",
+  "The second pass (what people check, worries, help outside the app, segment) only coded records containing a cue word; signals phrased without one are missed. Segment signals (age, income stability, source of money, influencer) are rarely stated in public posts: at most 9 records per value, so segment differences must come from interviews.",
+  "The golden set is small (20 records), so per-field agreement has wide uncertainty.",
+  "Most store reviews come from apps other than Groww (Coin, ET Money, FundsIndia, Paytm Money and others). Findings describe first-time SIP investing in India generally, not Groww specifically."
+ ],
+ "addressability_scores": {
+  "high": 1.0,
+  "medium": 0.6,
+  "low": 0.3
+ }
+}

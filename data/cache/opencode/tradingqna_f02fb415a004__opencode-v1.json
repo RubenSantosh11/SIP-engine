@@ -1,0 +1,24 @@
+{
+ "record_id": "tradingqna_f02fb415a004",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "start",
+   "code": "late starter at 42",
+   "quote": "I am late into mutual funds. I have started this year.",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "target 1 crore in 10 years",
+   "quote": "Is it possible to have 1 crore within 10 years?",
+   "verified": true
+  },
+  {
+   "question": "behaviour",
+   "code": "spread over too many funds, wants to trim",
+   "quote": "I have started investing in 10 funds. I need suggestion which one I can skip.",
+   "verified": true
+  }
+ ]
+}

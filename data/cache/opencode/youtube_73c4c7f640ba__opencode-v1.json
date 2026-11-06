@@ -1,0 +1,12 @@
+{
+ "record_id": "youtube_73c4c7f640ba",
+ "source": "youtube",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "deduction after autopay stopped",
+   "quote": "jo peise Kate hai wo refund keise milega",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "appstore_8ba40a2fb398",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "you can skip upto 4 or 5 SIP in raw and customer care Is saying something",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Confusing skip rules."
+}

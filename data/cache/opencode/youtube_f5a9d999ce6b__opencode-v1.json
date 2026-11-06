@@ -1,0 +1,18 @@
+{
+ "record_id": "youtube_f5a9d999ce6b",
+ "source": "youtube",
+ "codes": [
+  {
+   "question": "start",
+   "code": "SIP for child with crore target",
+   "quote": "Total sip 50k",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "expects 2 crore in 15 years",
+   "quote": "15 years 2cr",
+   "verified": true
+  }
+ ]
+}

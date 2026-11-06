@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_f1205cd37fab",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I moved all my investments out",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "after having used FundsIndia for more than 7 years",
+ "themes": [
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "It no longer is the trustworthy friend that it used to be",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Lost trust after 7 years; moved everything out."
+}

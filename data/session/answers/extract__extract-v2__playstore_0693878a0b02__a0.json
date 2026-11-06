@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_0693878a0b02",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "my sip Cancalation but not refund money",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "my sip Cancalation but not refund money",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cancelled SIP; refund delayed."
+}

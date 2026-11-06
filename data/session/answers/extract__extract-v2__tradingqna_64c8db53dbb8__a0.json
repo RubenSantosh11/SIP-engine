@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_64c8db53dbb8",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "The eNACH mandate does not work properly with the daily SIPs",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Daily SIP mandates unreliable."
+}

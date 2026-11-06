@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_e38294113d96",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "ETmoney has started cancelling the SIPs if there is no transaction for 3 months",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I have been using this app for the past 4-5 years",
+ "themes": [
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "ETmoney has started cancelling the SIPs if there is no transaction for 3 months",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Platform cancels SIPs after 3 months without transactions."
+}

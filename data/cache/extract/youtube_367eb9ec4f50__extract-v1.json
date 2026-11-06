@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_367eb9ec4f50",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "low_returns",
+   "evidence_span": "not return showing last few years",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Considering stopping because returns have not shown for years.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "seed"
+}

@@ -1,0 +1,44 @@
+failure_id,record_id,field,pm_label,engine_output,likely_cause
+1,playstore_dac9d146993c,sip_status,stopped,unclear,"engine stricter: status implied, not stated"
+2,playstore_dac9d146993c,theme:app_reliability_errors,True,False,engine missed it
+3,playstore_3fa49f13b810,sip_status,stopped,unclear,"engine stricter: status implied, not stated"
+4,playstore_3fa49f13b810,theme:payment_autopay_failure,True,False,codebook boundary: payment failure vs app processing error
+5,playstore_3fa49f13b810,theme:app_reliability_errors,False,True,codebook boundary: payment failure vs app processing error
+6,playstore_521ffa4138b8,sip_status,stopped,unclear,"engine stricter: status implied, not stated"
+7,playstore_3018feafae4f,sip_status,continuing,unclear,"engine stricter: status implied, not stated"
+8,playstore_3018feafae4f,first_time_investor,no,unclear,engine stricter: only codes what the text states
+9,playstore_3018feafae4f,time_since_start,>12m,unclear,engine missed or did not infer a stated period
+10,playstore_98377bef9d3d,first_time_investor,no,unclear,engine stricter: only codes what the text states
+11,playstore_98377bef9d3d,time_since_start,1-6m,unclear,engine missed or did not infer a stated period
+12,playstore_98377bef9d3d,theme:app_reliability_errors,False,True,codebook boundary: support vs app error
+13,playstore_98377bef9d3d,theme:support_trust_breakdown,True,False,codebook boundary: support vs app error
+14,playstore_45ddb6e83981,theme:payment_autopay_failure,True,False,codebook boundary: payment failure vs app processing error
+15,playstore_45ddb6e83981,theme:app_reliability_errors,False,True,codebook boundary: payment failure vs app processing error
+16,appstore_b36952b0e8cd,first_time_investor,no,unclear,engine stricter: only codes what the text states
+17,appstore_b36952b0e8cd,time_since_start,<1m,unclear,engine missed or did not infer a stated period
+18,appstore_b36952b0e8cd,theme:payment_autopay_failure,True,False,codebook boundary: payment failure vs app processing error
+19,appstore_b36952b0e8cd,theme:app_reliability_errors,False,True,codebook boundary: payment failure vs app processing error
+20,appstore_5c863a2d7879,sip_status,paused,unclear,"engine stricter: status implied, not stated"
+21,youtube_ea59eafe4316,theme:early_confusion_first_months,True,False,codebook boundary: early confusion vs advice / expectations
+22,youtube_ea59eafe4316,theme:conflicting_advice,False,True,codebook boundary: early confusion vs advice / expectations
+23,youtube_dda8c52fbbc4,first_time_investor,no,unclear,engine stricter: only codes what the text states
+24,youtube_dda8c52fbbc4,time_since_start,>12m,unclear,engine missed or did not infer a stated period
+25,youtube_dda8c52fbbc4,theme:early_confusion_first_months,True,False,engine missed it
+26,youtube_3be707d4fe44,sip_status,starting,unclear,label outside the scheme
+27,youtube_3be707d4fe44,first_time_investor,yes,unclear,engine stricter: only codes what the text states
+28,youtube_3be707d4fe44,theme:early_confusion_first_months,True,False,codebook boundary: early confusion vs advice / expectations
+29,youtube_3be707d4fe44,theme:return_expectations,False,True,codebook boundary: early confusion vs advice / expectations
+30,youtube_2de4d2bdeab0,sip_status,paused,unclear,"engine stricter: status implied, not stated"
+31,youtube_2de4d2bdeab0,first_time_investor,yes,unclear,engine stricter: only codes what the text states
+32,youtube_2de4d2bdeab0,theme:early_confusion_first_months,True,False,codebook boundary: early confusion vs advice / expectations
+33,youtube_843555b54ba8,first_time_investor,no,unclear,engine stricter: only codes what the text states
+34,tradingqna_4e72cc7b3d19,first_time_investor,no,unclear,engine stricter: only codes what the text states
+35,tradingqna_4e72cc7b3d19,theme:platform_or_fund_initiated,False,True,codebook boundary: switching vs platform-initiated
+36,tradingqna_4e72cc7b3d19,theme:switching_plan_or_platform,True,False,codebook boundary: switching vs platform-initiated
+37,tradingqna_ae3ce10612b0,sip_status,unclear,stopped,different reading of status
+38,tradingqna_ae3ce10612b0,theme:platform_or_fund_initiated,False,True,engine over-coded
+39,tradingqna_a6b91692c576,sip_status,continuing,unclear,"engine stricter: status implied, not stated"
+40,tradingqna_a6b91692c576,first_time_investor,no,unclear,engine stricter: only codes what the text states
+41,valuepickr_ab8c8ea6814d,time_since_start,1-6m,6-12m,different period from the same text
+42,valuepickr_ab8c8ea6814d,theme:conflicting_advice,True,False,engine missed it
+43,valuepickr_ab8c8ea6814d,theme:long_term_discipline,False,True,engine over-coded

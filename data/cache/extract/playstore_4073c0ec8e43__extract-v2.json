@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_4073c0ec8e43",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "keeps telling me KYC not completed",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "KYC blocks starting SIP.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

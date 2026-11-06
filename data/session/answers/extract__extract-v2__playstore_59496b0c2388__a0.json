@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_59496b0c2388",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "They are just pushing their paid subscriptions to the users",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "I am unable to even manage basic features of my Mutual Funds like Pause SIP / Modify SIP",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Pause and modify locked behind subscriptions."
+}

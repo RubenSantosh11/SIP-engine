@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_a7f73290f436",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Have already stopped all SIPs",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "asking charges to download a basic capital gains report",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Charged for capital gains report; stopped all SIPs."
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_2de4d2bdeab0",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": "Mera sip Chalu nhi huaa",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [],
+ "one_line_reason": null,
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "gemini-3.8-flash",
+ "codebook_status": "final"
+}

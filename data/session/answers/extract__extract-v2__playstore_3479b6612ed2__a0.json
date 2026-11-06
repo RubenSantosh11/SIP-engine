@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_3479b6612ed2",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "charges_lockin_surprise",
+   "evidence_span": "After 1 year when you redeem the units you will get to see different fees and charges which were not clearly mentioned",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Hidden fees and exit loads discovered on redemption after a year."
+}

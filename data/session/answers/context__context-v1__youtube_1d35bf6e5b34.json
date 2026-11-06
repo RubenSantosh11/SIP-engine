@@ -1,0 +1,30 @@
+{
+ "record_id": "youtube_1d35bf6e5b34",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "मेरा पोर्टफोलियो बियर फेस में 13.68 xirr है"
+  }
+ ],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

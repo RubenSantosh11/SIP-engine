@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_37600a0324f4",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Uninstalled straight",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "You have to check and place orders manually every month",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Manual monthly orders defeat the purpose; uninstalled.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

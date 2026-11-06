@@ -1,0 +1,17 @@
+{
+ "record_id": "youtube_527e2cadc278",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "एक एक कॅन्सल किया",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "गलती से एक ही sip दो बार हुआ है",
+   "severity": 2,
+   "confidence": 0.7
+  }
+ ],
+ "one_line_reason": "Same SIP got created twice by mistake; cancelled one, wants refund."
+}

@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_503bbec78e72",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I had to stop investing in that fund",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "they first cancel the current sip and then create a new sip instead of just amending",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "platform_or_fund_initiated",
+   "evidence_span": "one of the fund which had fresh investment restrictions didn’t allow sip",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Modifying SIP recreated it and a restricted fund blocked the new one."
+}

@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_183bee30614c",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Never using this app beyond tracking net worth",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "SIPs sometimes deduct more money than agreed upon",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "Cannot be trusted",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Over-deductions; no longer invests via app."
+}

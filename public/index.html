@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIP Drop-off Discovery Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one centred column, tabs under a compact header; reading width ~70ch */
+  :root {
+    --bg: #f6f7f4; --panel: #ffffff; --fg: #1d2420; --muted: #5d6862; --line: #dde2dc;
+    --accent: #1f6f5c; --accent-soft: #e2f0eb; --mark: #fbe7a8; --mark-fg: #1d2420;
+    --ok: #1f6f5c; --warn: #a15c07; --bad: #b3261e;
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    --r: 10px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121614; --panel: #1a201d; --fg: #e6ebe7; --muted: #9aa69f; --line: #2c3530;
+      --accent: #6cc3a8; --accent-soft: #1f322b; --mark: #6b5a1c; --mark-fg: #fff6d6;
+      --ok: #6cc3a8; --warn: #f0b35c; --bad: #ff8a80; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); }
+  .wrap { max-width: 64rem; margin: 0 auto; padding-block: 28px 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+  h2 { font-family: var(--display); font-weight: 600; font-size: 1.35rem; margin: 0 0 8px; }
+  h3 { font-size: 1rem; font-weight: 600; margin: 0 0 6px; }
+  p { margin: 0; max-width: 70ch; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .notice { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 8px 12px; border-radius: 6px; font-size: .9rem; max-width: 70ch; }
+  nav { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+  nav button { font: 500 .95rem var(--body); color: var(--muted); background: none; border: 0; padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent; }
+  nav button[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
+  nav button:focus-visible, button:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  section[role="tabpanel"] { display: flex; flex-direction: column; gap: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 14px; }
+  textarea { width: 100%; min-height: 9rem; resize: vertical; font: 15px/1.5 var(--body); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  select { font: 15px var(--body); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .btn { font: 600 .95rem var(--body); background: var(--accent); color: var(--panel); border: 0; border-radius: 8px; padding: 9px 16px; cursor: pointer; }
+  .btn[disabled] { opacity: .55; cursor: progress; }
+  .chip { font: 500 .85rem var(--body); background: none; color: var(--accent); border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+  .count { font: .8rem var(--mono); color: var(--muted); margin-left: auto; }
+  .kv { display: grid; grid-template-columns: minmax(9rem, max-content) 1fr; gap: 6px 14px; }
+  .kv dt { color: var(--muted); font-size: .9rem; }
+  .kv dd { margin: 0; }
+  .pill { display: inline-block; font: 500 .8rem var(--mono); padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .pill.warn { background: transparent; border: 1px solid var(--warn); color: var(--warn); }
+  .source-text { white-space: pre-wrap; line-height: 1.6; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+  mark { background: var(--mark); color: var(--mark-fg); border-radius: 3px; padding: 0 2px; }
+  .theme { border-top: 1px solid var(--line); padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+  .theme q { font-style: italic; }
+  .sev { font: .8rem var(--mono); color: var(--muted); }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; font-variant-numeric: tabular-nums; }
+  th { text-align: left; font-weight: 600; color: var(--muted); padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td { padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.n, th.n { text-align: right; }
+  .bar { height: 8px; border-radius: 4px; background: var(--accent); min-width: 2px; }
+  .quote { border-left: 2px solid var(--line); padding-left: 10px; }
+  .quote cite { display: block; font-style: normal; color: var(--muted); font-size: .85rem; }
+  ol, ul { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 6px; max-width: 72ch; }
+  .status-line { font-size: .9rem; color: var(--muted); }
+  .err { color: var(--bad); }
+  footer { margin-top: 40px; color: var(--muted); font-size: .85rem; }
+  @media (prefers-reduced-motion: no-preference) { .fade { animation: fade .25s ease-out; } @keyframes fade { from { opacity: .4; } to { opacity: 1; } } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Why first-time SIP investors stop</h1>
+    <p class="muted">An AI discovery engine over 27,745 public reviews and comments about SIPs in India (Play Store, App Store, YouTube, TradingQ&amp;A, ValuePickr). Built for a Groww growth case study.</p>
+    <p class="notice">Research tool only. Nothing here is investment advice, and it never recommends a fund or stock.</p>
+  </header>
+
+  <nav role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-try" aria-controls="p-try" aria-selected="true">Try it</button>
+    <button role="tab" id="tab-results" aria-controls="p-results" aria-selected="false">Results</button>
+    <button role="tab" id="tab-evidence" aria-controls="p-evidence" aria-selected="false">Evidence log</button>
+    <button role="tab" id="tab-how" aria-controls="p-how" aria-selected="false">How it works</button>
+  </nav>
+
+  <section role="tabpanel" id="p-try" aria-labelledby="tab-try">
+    <div class="card">
+      <h2>Run the engine on any review or comment</h2>
+      <p class="muted">Paste feedback about a SIP. The engine codes it the same way it coded the 626 records behind the results: SIP status, how long they have invested, and the drop-off themes, each backed by an exact quote that is checked against your text.</p>
+      <label for="input" class="muted">Review or comment</label>
+      <textarea id="input" maxlength="2000" placeholder="e.g. My SIP got cancelled even though autopay was set up and I had balance. Support has not replied for two weeks."></textarea>
+      <div class="row">
+        <label for="source" class="muted">Where it's from</label>
+        <select id="source"><option value="playstore">Play Store review</option><option value="appstore">App Store review</option><option value="youtube">YouTube comment</option><option value="forum">Forum post</option></select>
+        <span class="count" id="count">0 / 2000</span>
+      </div>
+      <div class="row">
+        <button class="btn" id="run">Code this text</button>
+        <span class="muted">Examples:</span>
+        <button class="chip" data-ex="0">Payment failure</button>
+        <button class="chip" data-ex="1">Can't pause</button>
+        <button class="chip" data-ex="2">Returns worry</button>
+        <button class="chip" data-ex="3">Not about SIPs</button>
+      </div>
+      <p class="status-line" id="status" aria-live="polite"></p>
+    </div>
+    <div class="card fade" id="out" hidden></div>
+  </section>
+
+  <section role="tabpanel" id="p-results" aria-labelledby="tab-results" hidden>
+    <div class="card">
+      <h2>Ranked opportunity areas</h2>
+      <p class="muted" id="rank-note"></p>
+      <div class="scroll"><table id="ranked"><thead><tr><th class="n">#</th><th>Theme</th><th class="n">Records</th><th>Reach</th><th class="n">Stop-lift</th><th class="n">Priority (low bound)</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card">
+      <h3>Mentioned by people who stopped vs people still investing</h3>
+      <div class="scroll"><table id="contrast"><thead><tr><th>Theme</th><th class="n">Stopped / paused</th><th class="n">Still investing</th><th class="n">Stop-lift</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card">
+      <h3>Not ranked</h3>
+      <div class="scroll"><table id="excluded"><thead><tr><th>Theme</th><th class="n">Records</th><th>Why</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card"><h3>In investors' own words</h3><div class="grid" id="quotes"></div></div>
+    <div class="card">
+      <h3>What investors check, worry about and where they turn</h3>
+      <p class="muted">Second coding pass; counts are a floor. Segment signals (age, income, source of money, influences) are rarely stated in public posts.</p>
+      <div class="scroll"><table id="context"><thead><tr><th>Question</th><th>Answer</th><th class="n">Records</th><th class="n">Stopped / paused</th><th class="n">Still investing</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section role="tabpanel" id="p-evidence" aria-labelledby="tab-evidence" hidden>
+    <div class="card">
+      <h2>1. Sources and volume analysed</h2>
+      <div class="scroll"><table id="volume"><thead><tr><th>Source</th><th class="n">Collected</th><th class="n">Mention SIPs</th><th class="n">Relevant</th><th class="n">Coded</th></tr></thead><tbody></tbody></table></div>
+      <p class="muted">Usernames stored only as one-way hashes. Reddit excluded (API needs approval; scraping barred).</p>
+    </div>
+    <div class="card">
+      <h2>2. Golden set: engine vs hand labels</h2>
+      <p>20 records drawn at random before the engine coded them, across sources and apps, labelled by hand without seeing engine output. Both the pipeline model and the model behind "Try it" are scored.</p>
+      <div class="scroll"><table id="validation"><thead><tr><th>Field</th><th class="n">Pipeline (Claude)</th><th class="n">Live app (Gemini Flash)</th></tr></thead><tbody></tbody></table></div>
+      <h3>Why they disagreed</h3>
+      <div class="scroll"><table id="causes"><thead><tr><th>Likely cause</th><th class="n">Disagreements</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card">
+      <h2>3. Where AI output was rejected or corrected</h2>
+      <div class="scroll"><table id="corrections"><thead><tr><th>Date</th><th>What the AI proposed</th><th>What changed</th><th>Why</th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card"><h2>4. Limitations</h2><ul id="limits"></ul></div>
+  </section>
+
+  <section role="tabpanel" id="p-how" aria-labelledby="tab-how" hidden>
+    <div class="card">
+      <h2>How the engine works</h2>
+      <ol>
+        <li><b>Collect</b> public reviews and comments: Groww and seven other Indian investing apps (Play Store and App Store), YouTube comments on SIP videos, TradingQ&amp;A and ValuePickr forums. Usernames are hashed.</li>
+        <li><b>Filter</b>: a free keyword check keeps text mentioning SIPs; a model then judges relevance in batches of 10.</li>
+        <li><b>Discover themes</b>: the model open-codes 100 records in its own words; codes are clustered into a draft codebook, which the PM curated (merges, renames, scope changes are logged).</li>
+        <li><b>Extract</b>: every relevant record is coded one at a time against the codebook. Every value must carry an exact quote; code checks each quote against the source and drops any that don't match.</li>
+        <li><b>Score in plain Python</b>: reach (Wilson interval), severity, stop-lift (risk ratio of people who stopped vs people still investing, Katz interval), addressability; ranked by the lower confidence bound, and only with 30+ records from 2+ sources.</li>
+        <li><b>Validate</b> against a hand-labelled golden set, and log every place the PM corrected the AI.</li>
+      </ol>
+      <p class="muted">The model never counts, ranks or summarises. It fills a typed schema for one record at a time.</p>
+    </div>
+  </section>
+
+  <footer>Data collected 30 Oct to 1 Nov 2026 from public sources. Not affiliated with Groww or any app named.</footer>
+</div>
+
+<script>
+(() => {
+  const EXAMPLES = [
+    "Auto payment is not working and that's why my SIP is getting missed every month. I have balance in my account but the instalment fails and support has not replied for two weeks.",
+    "There is no option to pause my SIP in the app. I only need to skip two months because of some expenses, but the only option is to cancel it completely.",
+    "Started my first SIP 5 months ago and it is still showing loss. I thought I would see some returns by now. Should I stop it?",
+    "The app is slow when I try to buy stocks during market hours and charts take forever to load.",
+  ];
+  const $ = (s, el = document) => el.querySelector(s);
+  const el = (tag, props = {}, ...kids) => { const e = document.createElement(tag); Object.assign(e, props); e.append(...kids); return e; };
+  const pct = (x) => `${Math.round(100 * x)}%`;
+
+  // Tabs
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const show = (id) => tabs.forEach((t) => { const on = t.id === id; t.setAttribute('aria-selected', on); $('#' + t.getAttribute('aria-controls')).hidden = !on; });
+  tabs.forEach((t) => t.addEventListener('click', () => { show(t.id); history.replaceState(null, '', '#' + t.id.slice(4)); }));
+  const start = location.hash.slice(1); if (start && $('#tab-' + start)) show('tab-' + start);
+
+  // Try it
+  const input = $('#input'), count = $('#count'), status = $('#status'), out = $('#out'), btn = $('#run');
+  const upd = () => { count.textContent = `${input.value.length} / 2000`; };
+  input.addEventListener('input', upd);
+  document.querySelectorAll('[data-ex]').forEach((b) => b.addEventListener('click', () => { input.value = EXAMPLES[+b.dataset.ex]; upd(); input.focus(); }));
+
+  const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+  function highlight(text, spans) {
+    const ranges = [];
+    for (const s of spans) {
+      if (!s) continue;
+      const m = new RegExp(escRe(s.trim()), 'i').exec(text);
+      if (m) ranges.push([m.index, m.index + m[0].length]);
+    }
+    ranges.sort((a, b) => a[0] - b[0]);
+    const frag = document.createDocumentFragment(); let i = 0;
+    for (const [a, b] of ranges) { if (a < i) continue; frag.append(text.slice(i, a), el('mark', { textContent: text.slice(a, b) })); i = b; }
+    frag.append(text.slice(i));
+    return frag;
+  }
+
+  const STATUS = { stopped: 'Stopped', paused: 'Paused, skipped or missed', reduced: 'Reduced', continuing: 'Still investing', unclear: 'Not stated' };
+  const TSS = { '<1m': 'Under a month', '1-6m': '1 to 6 months', '6-12m': '6 to 12 months', '>12m': 'Over a year', unclear: 'Not stated' };
+
+  function render(text, r) {
+    out.replaceChildren(); out.hidden = false;
+    if (r.outcome !== 'coded' && r.outcome !== 'nothing_found') {
+      out.append(el('h3', { textContent: r.outcome === 'declined' ? 'Not coded' : 'Unavailable right now' }), el('p', { textContent: r.message }));
+      return;
+    }
+    const verified = r.themes.filter((t) => t.verified), unverified = r.themes.filter((t) => !t.verified);
+    out.append(el('h3', { textContent: 'What the engine found' }));
+    const kv = el('dl', { className: 'kv' });
+    const add = (k, v) => kv.append(el('dt', { textContent: k }), el('dd', {}, v));
+    add('SIP status', el('span', { className: 'pill', textContent: STATUS[r.sip_status] || r.sip_status }));
+    add('Time since starting', el('span', { className: 'pill', textContent: TSS[r.time_since_start] || r.time_since_start }));
+    add('First-time investor', el('span', { className: 'pill', textContent: r.first_time_investor === 'unclear' ? 'Not stated' : r.first_time_investor }));
+    if (r.one_line_reason) add('In one line', document.createTextNode(r.one_line_reason));
+    add('Quality check', el('span', { textContent: r.quality.unverified ? `${r.quality.unverified} value(s) failed the quote check and are excluded below` : 'Every quote was found word for word in your text' + (r.quality.retried ? ' (after one retry)' : '') }));
+    out.append(kv);
+    const spans = [r.sip_status_verified ? r.sip_status_evidence : null, r.time_since_start_evidence, ...verified.map((t) => t.evidence_span)];
+    out.append(el('h3', { textContent: 'Your text, with the evidence highlighted' }), el('div', { className: 'source-text' }, highlight(text, spans)));
+    if (!verified.length) out.append(el('p', { className: 'muted', textContent: 'No drop-off theme from the codebook was found in this text.' }));
+    for (const t of verified) {
+      out.append(el('div', { className: 'theme' }, el('b', { textContent: t.name }),
+        el('q', { textContent: t.evidence_span }), el('span', { className: 'sev', textContent: `severity ${t.severity} of 3 · model confidence ${Math.round(100 * t.confidence)}%` })));
+    }
+    for (const t of unverified) {
+      out.append(el('div', { className: 'theme' }, el('span', {}, el('span', { className: 'pill warn', textContent: 'unverified' }), ' ', t.name),
+        el('span', { className: 'muted', textContent: `The model quoted "${t.evidence_span}", which is not in your text, so this theme is not counted.` })));
+    }
+    out.append(el('p', { className: 'muted', textContent: `${r.disclaimer} Model: ${r.model}.` }));
+  }
+
+  btn.addEventListener('click', async () => {
+    const text = input.value.trim();
+    if (!text) { status.textContent = 'Paste a review or comment first.'; return; }
+    btn.disabled = true; status.textContent = 'Coding… this takes 5 to 20 seconds.'; out.hidden = true;
+    try {
+      const res = await fetch('/api/extract', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, source: $('#source').value }) });
+      const r = await res.json();
+      status.textContent = '';
+      render(text, r);
+    } catch (e) {
+      status.textContent = ''; out.hidden = false;
+      out.replaceChildren(el('h3', { textContent: 'Unavailable right now' }), el('p', { textContent: 'Could not reach the engine. Check your connection and try again.' }));
+    } finally { btn.disabled = false; }
+  });
+
+  // Results + evidence from the pipeline's report data
+  const fill = (sel, rows, cells) => { const tb = $(sel + ' tbody'); tb.replaceChildren(...rows.map((r) => { const tr = el('tr'); cells(r).forEach(([v, cls]) => tr.append(el('td', { className: cls || '', textContent: v }))); return tr; })); };
+  fetch('data/report_data.json').then((r) => r.json()).then((d) => {
+    const ranked = d.ranked.filter((r) => r.eligible === 'True');
+    $('#rank-note').textContent = `Priority = reach × severity × stop-lift × addressability, ranked by its lower 95% bound. Ranked only with at least ${d.scoring.min_theme_records} records from ${d.scoring.min_theme_sources}+ sources. ${d.scoring.n_droppers} records stopped, paused or reduced; ${d.scoring.n_continuers} still investing.`;
+    const maxP = Math.max(...ranked.map((r) => +r.priority_low));
+    const tb = $('#ranked tbody'); tb.replaceChildren();
+    ranked.forEach((r, i) => {
+      const tr = el('tr');
+      tr.append(el('td', { className: 'n', textContent: i + 1 }), el('td', { textContent: r.name }), el('td', { className: 'n', textContent: r.n_records }),
+        el('td', { textContent: `${pct(r.reach)} (${pct(r.reach_low)}–${pct(r.reach_high)})` }),
+        el('td', { className: 'n', textContent: r.lift_guarded === 'True' ? '—' : (+r.stop_lift).toFixed(1) + '×' }));
+      const td = el('td', { className: 'n' }); td.append(el('div', { className: 'bar', style: `width:${Math.max(4, 100 * r.priority_low / maxP)}%;margin-left:auto` }), (+r.priority_low).toFixed(3)); tr.append(td);
+      tb.append(tr);
+    });
+    fill('#contrast', d.contrast, (c) => [[c.name], [`${c.droppers_mentioning}/${c.n_droppers} (${pct(c.pct_droppers)})`, 'n'], [`${c.continuers_mentioning}/${c.n_continuers} (${pct(c.pct_continuers)})`, 'n'], [c.stop_lift === 'guarded' ? '—' : c.stop_lift + '×', 'n']]);
+    fill('#excluded', d.ranked.filter((r) => r.eligible !== 'True'), (r) => [[r.name], [r.n_records, 'n'], [r.excluded_reason]]);
+    const qbox = $('#quotes'); qbox.replaceChildren();
+    for (const r of ranked) {
+      const qs = d.quotes[r.theme_id] || []; if (!qs.length) continue;
+      const c = el('div', { className: 'card' }, el('b', { textContent: r.name }));
+      qs.forEach((q) => c.append(el('div', { className: 'quote' }, `“${q.quote}”`, el('cite', { textContent: q.app ? `${q.source}, ${q.app}` : q.source }))));
+      qbox.append(c);
+    }
+    const LBL = { check: 'Checks', worry: 'Worries in the app', outside_help: 'Turns to outside the app', segment_age_band: 'Age', segment_income_stability: 'Income', segment_money_source: 'Source of money', segment_influencer: 'Influenced by' };
+    fill('#context', (d.context || []).filter((c) => LBL[c.field]), (c) => [[LBL[c.field]], [c.value.replaceAll('_', ' ')], [c.records_all, 'n'], [c.records_dropper, 'n'], [c.records_continuer, 'n']]);
+    fill('#volume', d.volume, (v) => [[v.label], [v.raw.toLocaleString('en-IN'), 'n'], [v.pass_keyword.toLocaleString('en-IN'), 'n'], [v.relevant, 'n'], [v.extracted, 'n']]);
+    const v = d.validation, g = d.validation_gemini;
+    const cell = (x, f) => (x && x.agreement[f] ? `${x.agreement[f].agree}/${x.agreement[f].n} (${Math.round(x.agreement[f].pct)}%)` : '—');
+    const rate = (x, k) => (x && x[k] != null ? pct(x[k]) : '—');
+    if (v) {
+      fill('#validation', [['SIP status', 'sip_status'], ['First-time investor', 'first_time_investor'], ['Time since starting', 'time_since_start'], ['Severity within ±1', 'severity_within_1'], ['Theme precision', 'theme_precision'], ['Theme recall', 'theme_recall']],
+        ([label, f]) => [[label], [f.startsWith('theme') ? rate(v, f) : cell(v, f), 'n'], [f.startsWith('theme') ? rate(g, f) : cell(g, f), 'n']]);
+      const causes = {}; (d.validation_failures || []).forEach((f) => { causes[f.likely_cause] = (causes[f.likely_cause] || 0) + 1; });
+      fill('#causes', Object.entries(causes).sort((a, b) => b[1] - a[1]), ([c, n]) => [[c], [n, 'n']]);
+    }
+    fill('#corrections', d.corrections, (c) => [[c[0]], [c[2]], [c[3]], [c[4]]]);
+    $('#limits').replaceChildren(...d.limitations.map((l) => el('li', { textContent: l })));
+  }).catch(() => { $('#rank-note').textContent = 'Could not load the results data.'; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_382cc64a9138",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "Please introduce option for scheme switch over, STP, SIP PAUSE through your App",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Wants SIP pause in app."
+}

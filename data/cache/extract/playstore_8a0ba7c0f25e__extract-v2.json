@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_8a0ba7c0f25e",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "the payment does not happen and remains pending",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "auto payment fails in mutual fund sip and there is no retry done by the app",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Autopay fails with no retry, so instalments stay pending.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

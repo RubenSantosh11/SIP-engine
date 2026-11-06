@@ -1,0 +1,15 @@
+{
+ "record_id": "appstore_0a91f0079a22",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "wants to skip an instalment",
+   "quote": "trying to skip sip"
+  },
+  {
+   "question": "stop",
+   "code": "app bug blocks skipping instalment",
+   "quote": "I have been taken to login screen whenever I am trying to skip sip"
+  }
+ ]
+}

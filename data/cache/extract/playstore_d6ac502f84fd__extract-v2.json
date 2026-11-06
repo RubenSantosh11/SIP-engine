@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_d6ac502f84fd",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "Missed may SIP installment july onward",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Frustrated in making payment after 1st july SEBI order",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Missed instalments after payment rules changed.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

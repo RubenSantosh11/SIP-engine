@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_9e46d5485168",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "there is no option to stop to sip as they claim",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "I accidentally started a portfolio and want to close this",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Accidentally started; no option to stop."
+}

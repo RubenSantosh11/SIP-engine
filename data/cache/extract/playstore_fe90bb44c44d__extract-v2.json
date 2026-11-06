@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_fe90bb44c44d",
+ "source": "playstore",
+ "sip_status": "continuing",
+ "sip_status_evidence": "we have to manually accept the pending payments and pay the amount in for SIPs",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "we have to manually accept the pending payments and pay the amount in for SIPs",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Continues but must accept payments manually.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

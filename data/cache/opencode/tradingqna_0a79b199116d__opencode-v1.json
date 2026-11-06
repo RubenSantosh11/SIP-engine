@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_0a79b199116d",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "wants to increase SIP amount",
+   "quote": "now I would to increase it to 5000 rupees",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "cannot modify amount, only terminate",
+   "quote": "I can only terminate the SIP",
+   "verified": true
+  }
+ ]
+}

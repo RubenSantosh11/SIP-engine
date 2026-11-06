@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_e1f4db68830e",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I’m having difficulties switching my regular sips to direct",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "no one is available to help me",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Wants to switch regular to direct; no help."
+}

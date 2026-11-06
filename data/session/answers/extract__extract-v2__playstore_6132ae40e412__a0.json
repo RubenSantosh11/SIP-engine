@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_6132ae40e412",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "Today was my installment due date, but the AutoPay didn't work",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "the AutoPay didn't work",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "The payment process takes 3–4 days",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Autopay failed on the due date."
+}

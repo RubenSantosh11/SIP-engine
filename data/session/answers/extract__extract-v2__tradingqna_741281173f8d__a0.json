@@ -1,0 +1,25 @@
+{
+ "record_id": "tradingqna_741281173f8d",
+ "source": "tradingqna",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "3 yersa ago of 1000 rs sip each month",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "since it is not performing well in past year",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I want to switch from regular to direct",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Underperformance and regular plan prompt switch."
+}

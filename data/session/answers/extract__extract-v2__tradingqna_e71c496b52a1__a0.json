@@ -1,0 +1,25 @@
+{
+ "record_id": "tradingqna_e71c496b52a1",
+ "source": "tradingqna",
+ "sip_status": "continuing",
+ "sip_status_evidence": "I have to transfer money every month to continue my SIP",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "I have to transfer money every month to continue my SIP",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "each time I have to pay Zerodha/payment gateway Rs 9",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Manual transfers with a per-payment fee."
+}

@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_458ae7d734c1",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "stop",
+   "code": "investors stop when markets fall",
+   "quote": "the falling Mutual Fund flows do seem to be a reaction to the pain",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "buy high sell low behaviour",
+   "quote": "retail investors will always buy high and sell low",
+   "verified": true
+  }
+ ]
+}

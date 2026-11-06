@@ -1,0 +1,31 @@
+{
+ "record_id": "playstore_0f5219599cbb",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "sip withdrawal k liye bank change Kiya th kyunki old bank freeze h per vo change reject krdiy h",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "ab roj sip ki value ghatti ja rhi h",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "cash_need_affordability",
+   "evidence_span": "khud ke paise khud ki saving khud hi jarurat k time withdrawal nhi kar pa rh h",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Needs savings but bank change rejected; value falling."
+}

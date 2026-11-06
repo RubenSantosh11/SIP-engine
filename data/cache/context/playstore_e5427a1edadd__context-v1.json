@@ -1,0 +1,32 @@
+{
+ "record_id": "playstore_e5427a1edadd",
+ "checks": [],
+ "worries": [],
+ "outside_help": [
+  {
+   "channel": "other",
+   "evidence_span": "Guys you can move to \"Value Research\" app where you can track your external portfolio"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 1,
+ "n_dropped": 0
+}

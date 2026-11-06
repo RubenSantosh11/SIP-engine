@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_393872080834",
+ "checks": [],
+ "worries": [],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "salaried",
+   "evidence_span": "I was earning 13k monthly"
+  },
+  "money_source": {
+   "value": "salary_savings",
+   "evidence_span": "I was earning 13k monthly so I started my 1st sip of 2k"
+  },
+  "influencer": {
+   "value": "self",
+   "evidence_span": "I just wanted to be deciplined in investings"
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

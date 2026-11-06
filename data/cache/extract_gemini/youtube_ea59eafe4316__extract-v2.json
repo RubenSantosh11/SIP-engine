@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_ea59eafe4316",
+ "source": "youtube",
+ "sip_status": "paused",
+ "sip_status_evidence": "decided to pause",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "I have been going through the same confusion and decided to pause",
+   "severity": 2,
+   "confidence": 0.75,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Decided to pause SIP due to confusion during market crash conditions.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "gemini-3.8-flash",
+ "codebook_status": "final"
+}

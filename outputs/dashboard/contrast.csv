@@ -1,0 +1,17 @@
+theme_id,theme,droppers_mentioning,n_droppers,pct_droppers,continuers_mentioning,n_continuers,pct_continuers
+app_reliability_errors,"App bugs, slow processing and confusing status",49,175,0.28,3,60,0.05
+payment_autopay_failure,Autopay / mandate / payment failures,40,175,0.229,4,60,0.067
+support_trust_breakdown,Unresponsive support and loss of trust,28,175,0.16,0,60,0.0
+fees_paywall,"New fees, paywalls and upselling",24,175,0.137,3,60,0.05
+disruptive_app_updates,App updates that break or hide SIP flows,17,175,0.097,2,60,0.033
+missing_sip_controls,"Can't pause, skip, reduce or cancel easily",17,175,0.097,3,60,0.05
+returns_disappointment,Disappointing returns or market fear,6,175,0.034,6,60,0.1
+switching_plan_or_platform,"Switching plan, fund or platform (not a real drop)",28,175,0.16,0,60,0.0
+early_confusion_first_months,Early confusion after the first instalment,16,175,0.091,0,60,0.0
+platform_or_fund_initiated,Stopped or changed by the platform or fund,11,175,0.063,2,60,0.033
+missed_reminders_forgetting,"No reminders, so instalments are forgotten",6,175,0.034,0,60,0.0
+charges_lockin_surprise,"Surprise charges, lock-ins or tax at exit",2,175,0.011,0,60,0.0
+cash_need_affordability,Cash need or amount too high,3,175,0.017,4,60,0.067
+conflicting_advice,Conflicting or misleading advice,2,175,0.011,4,60,0.067
+return_expectations,Specific return expectations at the start,1,175,0.006,4,60,0.067
+long_term_discipline,Long-term discipline (protective),0,175,0.0,24,60,0.4

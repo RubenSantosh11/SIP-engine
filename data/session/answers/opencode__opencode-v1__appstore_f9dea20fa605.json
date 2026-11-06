@@ -1,0 +1,15 @@
+{
+ "record_id": "appstore_f9dea20fa605",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "changed bank for autopay",
+   "quote": "i change my primary bank to HDFC"
+  },
+  {
+   "question": "stop",
+   "code": "cannot verify autopay is working",
+   "quote": "how can i check my new auto pay is working or not"
+  }
+ ]
+}

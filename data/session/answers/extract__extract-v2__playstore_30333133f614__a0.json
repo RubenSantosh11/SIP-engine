@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_30333133f614",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "my query is not yet solved",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "other",
+   "evidence_span": "I wanted to start an SIP with Zerodha but it's been more than a month",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Could not start a SIP for a month; ticket unresolved."
+}

@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_699a11594d82",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "maine cancel krke reedem bhi kr liya h",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_friction",
+   "evidence_span": "SIP Autopay in progress dikh rha",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Cancelled and redeemed, yet the app still shows autopay in progress.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "seed"
+}

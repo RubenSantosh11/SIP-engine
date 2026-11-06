@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_659f217df885",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "SIPs missed many times",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "SIPs missed many times even with having the required balance before the due date",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIPs missed despite balance."
+}

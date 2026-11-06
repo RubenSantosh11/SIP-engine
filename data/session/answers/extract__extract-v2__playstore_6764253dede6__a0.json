@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_6764253dede6",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "missed so many SIPS",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "now I can't seem to pay or find the portal for payment at all",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Can no longer find payment option; missed many SIPs."
+}

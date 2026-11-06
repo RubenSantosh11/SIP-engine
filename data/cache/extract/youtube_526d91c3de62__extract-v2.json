@@ -1,0 +1,27 @@
+{
+ "record_id": "youtube_526d91c3de62",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "8 yers may Keya thh",
+ "themes": [
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "Nahi karna chahiye sip bahut kharab hai",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "After 8 years says SIP is bad.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

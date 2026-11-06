@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_a0c5f6b99e21",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "unable to cancel SIP",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "showing canceled on UI but still showing the SIP in active SIP",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cancellation shows done but SIP stays active."
+}

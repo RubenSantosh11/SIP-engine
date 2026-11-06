@@ -1,0 +1,13 @@
+row_id,field,model,agree,n,pct
+sip_status|Pipeline engine (Claude),sip_status,Pipeline engine (Claude),11,20,0.55
+first_time_investor|Pipeline engine (Claude),first_time_investor,Pipeline engine (Claude),11,20,0.55
+time_since_start|Pipeline engine (Claude),time_since_start,Pipeline engine (Claude),2,7,0.28600000000000003
+severity_within_1|Pipeline engine (Claude),severity_within_1,Pipeline engine (Claude),12,12,1.0
+theme_precision|Pipeline engine (Claude),theme_precision,Pipeline engine (Claude),,,0.545
+theme_recall|Pipeline engine (Claude),theme_recall,Pipeline engine (Claude),,,0.522
+sip_status|Deployed model (Gemini Flash),sip_status,Deployed model (Gemini Flash),12,20,0.6
+first_time_investor|Deployed model (Gemini Flash),first_time_investor,Deployed model (Gemini Flash),11,20,0.55
+time_since_start|Deployed model (Gemini Flash),time_since_start,Deployed model (Gemini Flash),2,7,0.28600000000000003
+severity_within_1|Deployed model (Gemini Flash),severity_within_1,Deployed model (Gemini Flash),12,14,0.857
+theme_precision|Deployed model (Gemini Flash),theme_precision,Deployed model (Gemini Flash),,,0.56
+theme_recall|Deployed model (Gemini Flash),theme_recall,Deployed model (Gemini Flash),,,0.609

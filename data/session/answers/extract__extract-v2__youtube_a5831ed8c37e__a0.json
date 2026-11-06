@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_a5831ed8c37e",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "मैने वो बंद कि",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "early_confusion_first_months",
+   "evidence_span": "मुझे मेरे 1000 रुपया वापस मिलेगा क्या",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Stopped early; expects refund of instalment."
+}

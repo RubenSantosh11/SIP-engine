@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_daf5b414e17d",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "close all my sips through etmoney",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "u are continuously forcing us to subscribe for ur paid service by disabling one by one features",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Features disabled to force subscriptions; closing SIPs.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_df99e9bf9bd9",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "There should be an option to change the bank account or multiple accounts in the NACH mandate",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot change the mandate bank account."
+}

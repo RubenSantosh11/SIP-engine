@@ -1,0 +1,34 @@
+{
+ "record_id": "playstore_96bd93cd2809",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "moved on",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "Even to see your complete portfolio in this app, you are forced to pay",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "Just to cancel a SIP you need to literally press \"nevermind\" six times",
+   "severity": 3,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Paywalls and upsell screens in the cancel flow; moved on.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

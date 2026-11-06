@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_c5d3d4a633fd",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "no option to edit SiP amount in app",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No SIP amount edit in app."
+}

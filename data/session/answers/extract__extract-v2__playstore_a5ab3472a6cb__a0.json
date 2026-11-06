@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_a5ab3472a6cb",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "change the amount of existing sip",
+   "severity": 1,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Purchased units of sip take time to reflect in app",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot change amount; slow unit reflection."
+}

@@ -1,0 +1,38 @@
+{
+ "record_id": "playstore_0f5219599cbb",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "daily",
+   "evidence_span": "ab roj sip ki value ghatti ja rhi h"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "losing_money",
+   "evidence_span": "minus m ja rh h"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "salary_savings",
+   "evidence_span": "khud ki saving"
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

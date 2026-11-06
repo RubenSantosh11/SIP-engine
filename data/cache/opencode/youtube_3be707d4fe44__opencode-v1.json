@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_3be707d4fe44",
+ "source": "youtube",
+ "codes": [
+  {
+   "question": "start",
+   "code": "40-year horizon",
+   "quote": "40 saal ke Liye Nifty 50 me SIP karna Chahta Hu",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "expects 12% return",
+   "quote": "12 % Return Milega Ki nahi",
+   "verified": true
+  },
+  {
+   "question": "start",
+   "code": "wants safety",
+   "quote": "To kya Safe Rahega ?",
+   "verified": true
+  }
+ ]
+}

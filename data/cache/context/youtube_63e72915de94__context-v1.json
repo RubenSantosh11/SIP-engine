@@ -1,0 +1,43 @@
+{
+ "record_id": "youtube_63e72915de94",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "kabi 1500 plus kabi Waps loss"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "whether_to_continue",
+   "evidence_span": "sip me kya band kar du"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "youtube_creator",
+   "evidence_span": "sip me kya band kar du"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

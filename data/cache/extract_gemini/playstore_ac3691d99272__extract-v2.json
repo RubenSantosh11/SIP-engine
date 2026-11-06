@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_ac3691d99272",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "not able to do the SIP payment",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "App updated but not able to do the SIP payment. option not showing for payment.",
+   "severity": 3,
+   "confidence": 0.95,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Unable to make SIP payment after app update because the payment option is not showing.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "gemini-3.8-flash",
+ "codebook_status": "final"
+}

@@ -1,0 +1,25 @@
+{
+ "record_id": "youtube_408c4c24a4c0",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "i am planning to sell everything and will put in rd instead of sip",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I am investing from last 3 yrs",
+ "themes": [
+  {
+   "theme_id": "return_expectations",
+   "evidence_span": "I thought in 3-5 yrs i will definitely get minimum 10-12 percent",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "returns_disappointment",
+   "evidence_span": "Now i have gain of 6 percent",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Expected 10-12% but got 6% in 3 years; moving to RD."
+}

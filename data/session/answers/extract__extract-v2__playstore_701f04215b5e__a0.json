@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_701f04215b5e",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "their app did not show the transaction, i did not receive mutual fund unit neither my money was returned ever",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "they gave tentative deadline of refund every time but it has never been refunded",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "SIP money neither invested nor refunded; lost trust."
+}

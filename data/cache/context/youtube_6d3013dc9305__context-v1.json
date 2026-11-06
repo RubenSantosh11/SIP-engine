@@ -1,0 +1,43 @@
+{
+ "record_id": "youtube_6d3013dc9305",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "value is decreasing"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "whether_to_continue",
+   "evidence_span": "should i redeem it because value is decreasing"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "youtube_creator",
+   "evidence_span": "should i redeem it"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 3,
+ "n_dropped": 0
+}

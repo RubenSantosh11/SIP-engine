@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_ab8bd611fcb2",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "I am missing SIP's",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "1-6m",
+ "time_since_start_evidence": "I opened my account 2 months back",
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "my bank mandate is under processing due to which I am missing SIP's",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Mandate stuck for 2 months; missing SIPs."
+}

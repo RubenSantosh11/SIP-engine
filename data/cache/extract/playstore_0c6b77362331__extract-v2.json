@@ -1,0 +1,41 @@
+{
+ "record_id": "playstore_0c6b77362331",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "After recent app updates, this app has become worst app for SIP",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "so that customer buys their Genius membership",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "Time to switch to other apps for SIP",
+   "severity": 1,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Updates push membership; time to switch.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

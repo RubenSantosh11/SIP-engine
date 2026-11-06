@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_f1c642034c6e",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Ky bakwaa UI bana diya he",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Mera auto pay set he still me set nhi kr pa rha hu",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "New UI breaks autopay setup."
+}

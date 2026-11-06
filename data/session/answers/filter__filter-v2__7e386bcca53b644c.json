@@ -1,0 +1,42 @@
+[
+ {
+  "i": 1,
+  "relevant": false
+ },
+ {
+  "i": 2,
+  "relevant": true
+ },
+ {
+  "i": 3,
+  "relevant": false
+ },
+ {
+  "i": 4,
+  "relevant": false
+ },
+ {
+  "i": 5,
+  "relevant": true
+ },
+ {
+  "i": 6,
+  "relevant": false
+ },
+ {
+  "i": 7,
+  "relevant": true
+ },
+ {
+  "i": 8,
+  "relevant": false
+ },
+ {
+  "i": 9,
+  "relevant": false
+ },
+ {
+  "i": 10,
+  "relevant": true
+ }
+]

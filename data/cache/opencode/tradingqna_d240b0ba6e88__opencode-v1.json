@@ -1,0 +1,18 @@
+{
+ "record_id": "tradingqna_d240b0ba6e88",
+ "source": "tradingqna",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "new SIP, wants pause/edit",
+   "quote": "I had started my SIP last month in Coin",
+   "verified": true
+  },
+  {
+   "question": "stop",
+   "code": "no pause or edit option",
+   "quote": "Pause & Edit button are not available",
+   "verified": true
+  }
+ ]
+}

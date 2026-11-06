@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_bd5c94ec0111",
+ "source": "appstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Old UI was so good",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "I am not able to modify the SIPs as it shows half screen",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "New UI breaks SIP modification."
+}

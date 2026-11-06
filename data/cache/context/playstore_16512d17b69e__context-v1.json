@@ -1,0 +1,32 @@
+{
+ "record_id": "playstore_16512d17b69e",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "app_status_or_error",
+   "evidence_span": "Auto-pay is approved but when it returns to the app, it shows failed"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ },
+ "routed": "llm",
+ "n_values": 1,
+ "n_dropped": 0
+}

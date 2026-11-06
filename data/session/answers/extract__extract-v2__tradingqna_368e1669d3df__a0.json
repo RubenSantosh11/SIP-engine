@@ -1,0 +1,19 @@
+{
+ "record_id": "tradingqna_368e1669d3df",
+ "source": "tradingqna",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I m planning to switch over all SIP’s through coin platform",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I was investing through fundsindia for past 5 years",
+ "themes": [
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I m planning to switch over all SIP’s through coin platform",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Moving SIPs between platforms."
+}

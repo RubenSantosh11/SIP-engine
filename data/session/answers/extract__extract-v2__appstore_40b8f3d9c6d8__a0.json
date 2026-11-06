@@ -1,0 +1,31 @@
+{
+ "record_id": "appstore_40b8f3d9c6d8",
+ "source": "appstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I will switch to Groww it’s far better",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "I have been using it from past 5 years",
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "from past few months the App has gone worst modification possible",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "SIP payments has become my headache now",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "I will switch to Groww it’s far better",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Redesign made payments painful; switching."
+}

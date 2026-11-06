@@ -1,0 +1,25 @@
+{
+ "record_id": "appstore_e978bb2b45a9",
+ "source": "appstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "for last 2 - 3 months my contribution stopped",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "disruptive_app_updates",
+   "evidence_span": "Who reviewed/approved this design",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Not Getting any Pay Option In SIP",
+   "severity": 3,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No pay option; contributions stopped for months."
+}

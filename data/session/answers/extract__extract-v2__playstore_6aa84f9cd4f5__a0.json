@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_6aa84f9cd4f5",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "it's asking for 5k initial amt for one of my fav sip",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Dislikes the initial investment requirement."
+}

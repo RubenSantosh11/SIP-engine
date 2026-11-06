@@ -1,0 +1,15 @@
+{
+ "record_id": "tradingqna_2380b4d97549",
+ "codes": [
+  {
+   "question": "behaviour",
+   "code": "set and forget, stops checking",
+   "quote": "I have lately stopped visiting since all SIP are automated"
+  },
+  {
+   "question": "stop",
+   "code": "fund-paused SIP not auto-resumed",
+   "quote": "it wasn’t resumed automatically"
+  }
+ ]
+}

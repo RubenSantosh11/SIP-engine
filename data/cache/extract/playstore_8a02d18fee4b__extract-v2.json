@@ -1,0 +1,41 @@
+{
+ "record_id": "playstore_8a02d18fee4b",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "So finally I delete",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": ">12m",
+ "time_since_start_evidence": "After last 10 years of using this app",
+ "themes": [
+  {
+   "theme_id": "fees_paywall",
+   "evidence_span": "External portfolio tracking is now locked in jenious membership",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "et money app shows six scheme",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "No customer care support on call",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Paywalled tracking, wrong data, no support; deleted app.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

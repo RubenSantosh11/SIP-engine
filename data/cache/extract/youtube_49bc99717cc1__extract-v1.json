@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_49bc99717cc1",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "mandate_payment_issue",
+   "evidence_span": "ek bhi kist miss hui, 150 se750 tk account se cut jayega bank panelty ke naam se",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Feels SIPs are not worth it because one missed instalment brings bank penalties.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "seed"
+}

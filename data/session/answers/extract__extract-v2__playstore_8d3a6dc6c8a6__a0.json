@@ -1,0 +1,19 @@
+{
+ "record_id": "playstore_8d3a6dc6c8a6",
+ "source": "playstore",
+ "sip_status": "paused",
+ "sip_status_evidence": "some sip I paused in between",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "if I've taken decision to pause a sip for 3 or 6 months, I can think best time to enable in between",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Wants control over pause length and resume."
+}

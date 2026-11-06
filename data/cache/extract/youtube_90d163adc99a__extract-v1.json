@@ -1,0 +1,24 @@
+{
+ "record_id": "youtube_90d163adc99a",
+ "source": "youtube",
+ "sip_status": "stopped",
+ "sip_status_evidence": "amount for sip is stop",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "themes": [
+  {
+   "theme_id": "other",
+   "evidence_span": "any plenty imposes to me",
+   "severity": 1,
+   "confidence": 0.6,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Stopped by deleting the bank biller; worried about penalties.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "seed"
+}

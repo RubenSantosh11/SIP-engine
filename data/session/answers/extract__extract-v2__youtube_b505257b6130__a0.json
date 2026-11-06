@@ -1,0 +1,19 @@
+{
+ "record_id": "youtube_b505257b6130",
+ "source": "youtube",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "I am under discussion with one of my bank rep to invest in SIP",
+   "severity": 1,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Bank rep pitching SIP; video gave confidence."
+}

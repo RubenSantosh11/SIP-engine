@@ -1,0 +1,14 @@
+/data/
+/outputs/
+/tests/
+/research/
+collect_*.py
+s2_*.py
+s3_*.py
+s5_*.py
+s6_*.py
+s7_*.py
+session_queue.py
+dev_server.py
+*.md
+!README.md

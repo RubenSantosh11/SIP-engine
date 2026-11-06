@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_97145b21b8a5",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "can't even edit the SIP date",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "app_reliability_errors",
+   "evidence_span": "Funds are not processing after selecting them",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot edit SIP date; orders not processing."
+}

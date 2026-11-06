@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_68a0c897c3f4",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I WANT TO STOP MY SIP FROM LAST 2 MONTH",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "WHEN I GO THROUGH YOUR DESCRIBED PROCESS NOTHING HAPPEND",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "THERE IS NO CUSTOMER CARE NUMBER",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Trying to stop SIP for two months; process fails."
+}

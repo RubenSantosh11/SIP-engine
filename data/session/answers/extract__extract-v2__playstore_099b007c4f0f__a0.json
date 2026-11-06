@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_099b007c4f0f",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "I've now stopped all SIPs",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missed_reminders_forgetting",
+   "evidence_span": "Never received notifications for my registered SIPs",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "support_trust_breakdown",
+   "evidence_span": "Emailed support, but no response even after 15 days",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "No SIP notifications and no support; stopped all SIPs."
+}

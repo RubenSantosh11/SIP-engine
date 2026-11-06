@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_a51eaa827fc7",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "missing_sip_controls",
+   "evidence_span": "they don't let you cancel before 6 months",
+   "severity": 3,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "conflicting_advice",
+   "evidence_span": "They fool customers by having regular schemes and no direct schemes",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot cancel within 6 months; regular-plan commissions."
+}

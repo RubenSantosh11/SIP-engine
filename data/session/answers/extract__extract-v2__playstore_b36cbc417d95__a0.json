@@ -1,0 +1,25 @@
+{
+ "record_id": "playstore_b36cbc417d95",
+ "source": "playstore",
+ "sip_status": "stopped",
+ "sip_status_evidence": "i will sell all & convert to grow",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "unable to add another bank account auto pay",
+   "severity": 2,
+   "confidence": 0.8
+  },
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "i will sell all & convert to grow",
+   "severity": 2,
+   "confidence": 0.8
+  }
+ ],
+ "one_line_reason": "Cannot add autopay bank; moving to another app."
+}

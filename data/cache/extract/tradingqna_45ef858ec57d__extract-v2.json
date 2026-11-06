@@ -1,0 +1,27 @@
+{
+ "record_id": "tradingqna_45ef858ec57d",
+ "source": "tradingqna",
+ "sip_status": "stopped",
+ "sip_status_evidence": "Stop my SIPs in the regular plans",
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "switching_plan_or_platform",
+   "evidence_span": "Start the same SIPs in the Direct Funds",
+   "severity": 2,
+   "confidence": 0.8,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Moved regular SIPs to direct.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "claude-opus (Claude Code session)",
+ "codebook_status": "final"
+}

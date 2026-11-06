@@ -1,0 +1,35 @@
+{
+ "record_id": "youtube_c49bb76b7ab9",
+ "checks": [
+  {
+   "what": "returns_or_value",
+   "frequency": "unclear",
+   "evidence_span": "mera profit 4month se lose me he"
+  }
+ ],
+ "worries": [
+  {
+   "kind": "losing_money",
+   "evidence_span": "mera profit 4month se lose me he"
+  }
+ ],
+ "outside_help": [],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "unclear",
+   "evidence_span": null
+  }
+ }
+}

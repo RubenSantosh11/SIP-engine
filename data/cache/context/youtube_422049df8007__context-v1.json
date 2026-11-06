@@ -1,0 +1,37 @@
+{
+ "record_id": "youtube_422049df8007",
+ "checks": [],
+ "worries": [
+  {
+   "kind": "other",
+   "evidence_span": "ek dar bhi tha"
+  }
+ ],
+ "outside_help": [
+  {
+   "channel": "youtube_creator",
+   "evidence_span": "aapka ek video dekha tha kal shaam ko kisi key saath podcast tha"
+  }
+ ],
+ "segment": {
+  "age_band": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "income_stability": {
+   "value": "homemaker",
+   "evidence_span": "kaisey merey husband ko support karoon"
+  },
+  "money_source": {
+   "value": "unclear",
+   "evidence_span": null
+  },
+  "influencer": {
+   "value": "youtube_creator",
+   "evidence_span": "mujhmey itna dhairy bhar diya aapki baaton ney"
+  }
+ },
+ "routed": "llm",
+ "n_values": 4,
+ "n_dropped": 0
+}
