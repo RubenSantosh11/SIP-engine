@@ -51,17 +51,18 @@ def main() -> None:
         ["started_within_12m", d["early"]["n"]], ["coded_values", s["coded_values_with_span"]],
         ["span_failures", s["span_failures_after_retry"]], ["span_pass_rate", s["span_pass_rate"]],
         ["golden_labelled", (d["validation"] or {}).get("n_labelled", 0)]])
-    v = d["validation"]
     vrows = []
-    if v:
+    for model, v in (("Pipeline engine (Claude)", d["validation"]), ("Deployed model (Gemini Flash)", d.get("validation_gemini"))):
+        if not v:
+            continue
         for f in ["sip_status", "first_time_investor", "time_since_start", "severity_within_1"]:
-            if f in v["agreement"]:
-                a = v["agreement"][f]
-                vrows.append([f, a["agree"], a["n"], a["pct"] / 100 if a["pct"] is not None else ""])
-        th = [a for k, a in v["agreement"].items() if k.startswith("theme:")]
-        vrows.append(["theme_present_absent", sum(a["agree"] for a in th), sum(a["n"] for a in th),
-                      v["theme_presence_overall_pct"] / 100 if v["theme_presence_overall_pct"] is not None else ""])
-    write("validation", ["field", "agree", "n", "pct"], vrows)
+            a = v["agreement"].get(f)
+            if a and a["pct"] is not None:
+                vrows.append([f"{f}|{model}", f, model, a["agree"], a["n"], a["pct"] / 100])
+        for k, label in (("theme_precision", "theme_precision"), ("theme_recall", "theme_recall")):
+            if v.get(k) is not None:
+                vrows.append([f"{label}|{model}", label, model, "", "", v[k]])
+    write("validation", ["row_id", "field", "model", "agree", "n", "pct"], vrows)
     write("failures", ["failure_id", "record_id", "field", "pm_label", "engine_output", "likely_cause"],
           [[i, f["record_id"], f["field"], f["my_label"], f["engine_output"], f["likely_cause"]]
            for i, f in enumerate(d["validation_failures"], 1)])

@@ -1,0 +1,45 @@
+record_id,field,my_label,engine_output,likely_cause
+playstore_dac9d146993c,sip_status,stopped,unclear,"engine stricter: status implied, not stated"
+playstore_dac9d146993c,theme:payment_autopay_failure,False,True,codebook boundary: payment failure vs app processing error
+playstore_dac9d146993c,theme:missing_sip_controls,True,False,codebook boundary: payment failure vs app processing error
+playstore_dac9d146993c,theme:app_reliability_errors,True,False,codebook boundary: payment failure vs app processing error
+playstore_3fa49f13b810,sip_status,stopped,unclear,"engine stricter: status implied, not stated"
+playstore_3fa49f13b810,theme:payment_autopay_failure,True,False,codebook boundary: payment failure vs app processing error
+playstore_3fa49f13b810,theme:app_reliability_errors,False,True,codebook boundary: payment failure vs app processing error
+playstore_3018feafae4f,sip_status,continuing,unclear,"engine stricter: status implied, not stated"
+playstore_3018feafae4f,first_time_investor,no,unclear,engine stricter: only codes what the text states
+playstore_3018feafae4f,time_since_start,>12m,unclear,engine missed or did not infer a stated period
+playstore_98377bef9d3d,first_time_investor,no,unclear,engine stricter: only codes what the text states
+playstore_98377bef9d3d,time_since_start,1-6m,unclear,engine missed or did not infer a stated period
+playstore_98377bef9d3d,theme:app_reliability_errors,False,True,codebook boundary: support vs app error
+playstore_98377bef9d3d,severity:support_trust_breakdown,3,1,severity judgement
+playstore_45ddb6e83981,theme:payment_autopay_failure,True,False,codebook boundary: payment failure vs app processing error
+playstore_45ddb6e83981,theme:app_reliability_errors,False,True,codebook boundary: payment failure vs app processing error
+playstore_ac3691d99272,sip_status,unclear,paused,different reading of status
+appstore_7e6e3c1d8bb7,theme:missing_sip_controls,False,True,engine over-coded
+appstore_b36952b0e8cd,first_time_investor,no,unclear,engine stricter: only codes what the text states
+appstore_b36952b0e8cd,time_since_start,<1m,unclear,engine missed or did not infer a stated period
+youtube_ea59eafe4316,theme:returns_disappointment,False,True,engine over-coded
+youtube_ea59eafe4316,theme:early_confusion_first_months,True,False,engine missed it
+youtube_dda8c52fbbc4,first_time_investor,no,unclear,engine stricter: only codes what the text states
+youtube_dda8c52fbbc4,time_since_start,>12m,unclear,engine missed or did not infer a stated period
+youtube_dda8c52fbbc4,theme:early_confusion_first_months,True,False,engine missed it
+youtube_3be707d4fe44,sip_status,starting,unclear,label outside the scheme
+youtube_3be707d4fe44,first_time_investor,yes,unclear,engine stricter: only codes what the text states
+youtube_3be707d4fe44,theme:early_confusion_first_months,True,False,codebook boundary: early confusion vs advice / expectations
+youtube_3be707d4fe44,theme:return_expectations,False,True,codebook boundary: early confusion vs advice / expectations
+youtube_2de4d2bdeab0,sip_status,paused,unclear,"engine stricter: status implied, not stated"
+youtube_2de4d2bdeab0,first_time_investor,yes,unclear,engine stricter: only codes what the text states
+youtube_2de4d2bdeab0,theme:early_confusion_first_months,True,False,engine missed it
+youtube_843555b54ba8,first_time_investor,no,unclear,engine stricter: only codes what the text states
+youtube_843555b54ba8,severity:long_term_discipline,3,1,severity judgement
+tradingqna_4e72cc7b3d19,first_time_investor,no,unclear,engine stricter: only codes what the text states
+tradingqna_4e72cc7b3d19,theme:platform_or_fund_initiated,False,True,codebook boundary: switching vs platform-initiated
+tradingqna_ae3ce10612b0,sip_status,unclear,stopped,different reading of status
+tradingqna_ae3ce10612b0,theme:platform_or_fund_initiated,False,True,engine over-coded
+tradingqna_a6b91692c576,sip_status,continuing,unclear,"engine stricter: status implied, not stated"
+tradingqna_a6b91692c576,first_time_investor,no,unclear,engine stricter: only codes what the text states
+tradingqna_a6b91692c576,theme:switching_plan_or_platform,False,True,engine over-coded
+valuepickr_ab8c8ea6814d,time_since_start,1-6m,unclear,engine missed or did not infer a stated period
+valuepickr_ab8c8ea6814d,theme:conflicting_advice,True,False,engine missed it
+valuepickr_ab8c8ea6814d,theme:long_term_discipline,False,True,engine over-coded

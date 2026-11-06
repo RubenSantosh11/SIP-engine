@@ -1,0 +1,118 @@
+{
+ "n_labelled": 20,
+ "agreement": {
+  "first_time_investor": {
+   "agree": 11,
+   "n": 20,
+   "pct": 55.0
+  },
+  "severity_within_1": {
+   "agree": 12,
+   "n": 14,
+   "pct": 85.7
+  },
+  "sip_status": {
+   "agree": 12,
+   "n": 20,
+   "pct": 60.0
+  },
+  "theme:app_reliability_errors": {
+   "agree": 16,
+   "n": 20,
+   "pct": 80.0
+  },
+  "theme:cash_need_affordability": {
+   "agree": 20,
+   "n": 20,
+   "pct": 100.0
+  },
+  "theme:charges_lockin_surprise": {
+   "agree": 20,
+   "n": 20,
+   "pct": 100.0
+  },
+  "theme:conflicting_advice": {
+   "agree": 19,
+   "n": 20,
+   "pct": 95.0
+  },
+  "theme:disruptive_app_updates": {
+   "agree": 20,
+   "n": 20,
+   "pct": 100.0
+  },
+  "theme:early_confusion_first_months": {
+   "agree": 16,
+   "n": 20,
+   "pct": 80.0
+  },
+  "theme:fees_paywall": {
+   "agree": 20,
+   "n": 20,
+   "pct": 100.0
+  },
+  "theme:long_term_discipline": {
+   "agree": 19,
+   "n": 20,
+   "pct": 95.0
+  },
+  "theme:missed_reminders_forgetting": {
+   "agree": 20,
+   "n": 20,
+   "pct": 100.0
+  },
+  "theme:missing_sip_controls": {
+   "agree": 18,
+   "n": 20,
+   "pct": 90.0
+  },
+  "theme:payment_autopay_failure": {
+   "agree": 17,
+   "n": 20,
+   "pct": 85.0
+  },
+  "theme:platform_or_fund_initiated": {
+   "agree": 18,
+   "n": 20,
+   "pct": 90.0
+  },
+  "theme:return_expectations": {
+   "agree": 19,
+   "n": 20,
+   "pct": 95.0
+  },
+  "theme:returns_disappointment": {
+   "agree": 19,
+   "n": 20,
+   "pct": 95.0
+  },
+  "theme:support_trust_breakdown": {
+   "agree": 20,
+   "n": 20,
+   "pct": 100.0
+  },
+  "theme:switching_plan_or_platform": {
+   "agree": 19,
+   "n": 20,
+   "pct": 95.0
+  },
+  "time_since_start": {
+   "agree": 2,
+   "n": 7,
+   "pct": 28.6
+  }
+ },
+ "theme_presence_overall_pct": 93.8,
+ "theme_precision": 0.56,
+ "theme_recall": 0.609,
+ "records_theme_overlap": 12,
+ "span_check": {
+  "records_extracted": 626,
+  "malformed_after_retry": 0,
+  "needed_retry": 0,
+  "coded_values_with_span": 1182,
+  "span_failures_after_retry": 0,
+  "span_pass_rate": 1.0,
+  "pending": 0
+ }
+}

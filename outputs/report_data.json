@@ -1266,8 +1266,545 @@
   ]
  },
  "first_time_n": 7,
- "validation": null,
- "validation_failures": [],
+ "validation": {
+  "n_labelled": 20,
+  "agreement": {
+   "first_time_investor": {
+    "agree": 11,
+    "n": 20,
+    "pct": 55.0
+   },
+   "severity_within_1": {
+    "agree": 12,
+    "n": 12,
+    "pct": 100.0
+   },
+   "sip_status": {
+    "agree": 11,
+    "n": 20,
+    "pct": 55.0
+   },
+   "theme:app_reliability_errors": {
+    "agree": 15,
+    "n": 20,
+    "pct": 75.0
+   },
+   "theme:cash_need_affordability": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:charges_lockin_surprise": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:conflicting_advice": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:disruptive_app_updates": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:early_confusion_first_months": {
+    "agree": 16,
+    "n": 20,
+    "pct": 80.0
+   },
+   "theme:fees_paywall": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:long_term_discipline": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:missed_reminders_forgetting": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:missing_sip_controls": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:payment_autopay_failure": {
+    "agree": 17,
+    "n": 20,
+    "pct": 85.0
+   },
+   "theme:platform_or_fund_initiated": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:return_expectations": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:returns_disappointment": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:support_trust_breakdown": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:switching_plan_or_platform": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "time_since_start": {
+    "agree": 2,
+    "n": 7,
+    "pct": 28.6
+   }
+  },
+  "theme_presence_overall_pct": 93.8,
+  "theme_precision": 0.545,
+  "theme_recall": 0.522,
+  "records_theme_overlap": 11,
+  "span_check": {
+   "records_extracted": 626,
+   "malformed_after_retry": 0,
+   "needed_retry": 0,
+   "coded_values_with_span": 1182,
+   "span_failures_after_retry": 0,
+   "span_pass_rate": 1.0,
+   "pending": 0
+  }
+ },
+ "validation_gemini": {
+  "n_labelled": 20,
+  "agreement": {
+   "first_time_investor": {
+    "agree": 11,
+    "n": 20,
+    "pct": 55.0
+   },
+   "severity_within_1": {
+    "agree": 12,
+    "n": 14,
+    "pct": 85.7
+   },
+   "sip_status": {
+    "agree": 12,
+    "n": 20,
+    "pct": 60.0
+   },
+   "theme:app_reliability_errors": {
+    "agree": 16,
+    "n": 20,
+    "pct": 80.0
+   },
+   "theme:cash_need_affordability": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:charges_lockin_surprise": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:conflicting_advice": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:disruptive_app_updates": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:early_confusion_first_months": {
+    "agree": 16,
+    "n": 20,
+    "pct": 80.0
+   },
+   "theme:fees_paywall": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:long_term_discipline": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:missed_reminders_forgetting": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:missing_sip_controls": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:payment_autopay_failure": {
+    "agree": 17,
+    "n": 20,
+    "pct": 85.0
+   },
+   "theme:platform_or_fund_initiated": {
+    "agree": 18,
+    "n": 20,
+    "pct": 90.0
+   },
+   "theme:return_expectations": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:returns_disappointment": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "theme:support_trust_breakdown": {
+    "agree": 20,
+    "n": 20,
+    "pct": 100.0
+   },
+   "theme:switching_plan_or_platform": {
+    "agree": 19,
+    "n": 20,
+    "pct": 95.0
+   },
+   "time_since_start": {
+    "agree": 2,
+    "n": 7,
+    "pct": 28.6
+   }
+  },
+  "theme_presence_overall_pct": 93.8,
+  "theme_precision": 0.56,
+  "theme_recall": 0.609,
+  "records_theme_overlap": 12,
+  "span_check": {
+   "records_extracted": 626,
+   "malformed_after_retry": 0,
+   "needed_retry": 0,
+   "coded_values_with_span": 1182,
+   "span_failures_after_retry": 0,
+   "span_pass_rate": 1.0,
+   "pending": 0
+  }
+ },
+ "validation_failures": [
+  {
+   "record_id": "playstore_dac9d146993c",
+   "field": "sip_status",
+   "my_label": "stopped",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_dac9d146993c",
+   "field": "theme:app_reliability_errors",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "engine missed it"
+  },
+  {
+   "record_id": "playstore_3fa49f13b810",
+   "field": "sip_status",
+   "my_label": "stopped",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_3fa49f13b810",
+   "field": "theme:payment_autopay_failure",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "playstore_3fa49f13b810",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "playstore_521ffa4138b8",
+   "field": "sip_status",
+   "my_label": "stopped",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_3018feafae4f",
+   "field": "sip_status",
+   "my_label": "continuing",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "playstore_3018feafae4f",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "playstore_3018feafae4f",
+   "field": "time_since_start",
+   "my_label": ">12m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "time_since_start",
+   "my_label": "1-6m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: support vs app error"
+  },
+  {
+   "record_id": "playstore_98377bef9d3d",
+   "field": "theme:support_trust_breakdown",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: support vs app error"
+  },
+  {
+   "record_id": "playstore_45ddb6e83981",
+   "field": "theme:payment_autopay_failure",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "playstore_45ddb6e83981",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "time_since_start",
+   "my_label": "<1m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "theme:payment_autopay_failure",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "appstore_b36952b0e8cd",
+   "field": "theme:app_reliability_errors",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: payment failure vs app processing error"
+  },
+  {
+   "record_id": "appstore_5c863a2d7879",
+   "field": "sip_status",
+   "my_label": "paused",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "youtube_ea59eafe4316",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_ea59eafe4316",
+   "field": "theme:conflicting_advice",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_dda8c52fbbc4",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "youtube_dda8c52fbbc4",
+   "field": "time_since_start",
+   "my_label": ">12m",
+   "engine_output": "unclear",
+   "likely_cause": "engine missed or did not infer a stated period"
+  },
+  {
+   "record_id": "youtube_dda8c52fbbc4",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "engine missed it"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "sip_status",
+   "my_label": "starting",
+   "engine_output": "unclear",
+   "likely_cause": "label outside the scheme"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "first_time_investor",
+   "my_label": "yes",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_3be707d4fe44",
+   "field": "theme:return_expectations",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_2de4d2bdeab0",
+   "field": "sip_status",
+   "my_label": "paused",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "youtube_2de4d2bdeab0",
+   "field": "first_time_investor",
+   "my_label": "yes",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "youtube_2de4d2bdeab0",
+   "field": "theme:early_confusion_first_months",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: early confusion vs advice / expectations"
+  },
+  {
+   "record_id": "youtube_843555b54ba8",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "tradingqna_4e72cc7b3d19",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "tradingqna_4e72cc7b3d19",
+   "field": "theme:platform_or_fund_initiated",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "codebook boundary: switching vs platform-initiated"
+  },
+  {
+   "record_id": "tradingqna_4e72cc7b3d19",
+   "field": "theme:switching_plan_or_platform",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "codebook boundary: switching vs platform-initiated"
+  },
+  {
+   "record_id": "tradingqna_ae3ce10612b0",
+   "field": "sip_status",
+   "my_label": "unclear",
+   "engine_output": "stopped",
+   "likely_cause": "different reading of status"
+  },
+  {
+   "record_id": "tradingqna_ae3ce10612b0",
+   "field": "theme:platform_or_fund_initiated",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "engine over-coded"
+  },
+  {
+   "record_id": "tradingqna_a6b91692c576",
+   "field": "sip_status",
+   "my_label": "continuing",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: status implied, not stated"
+  },
+  {
+   "record_id": "tradingqna_a6b91692c576",
+   "field": "first_time_investor",
+   "my_label": "no",
+   "engine_output": "unclear",
+   "likely_cause": "engine stricter: only codes what the text states"
+  },
+  {
+   "record_id": "valuepickr_ab8c8ea6814d",
+   "field": "time_since_start",
+   "my_label": "1-6m",
+   "engine_output": "6-12m",
+   "likely_cause": "different period from the same text"
+  },
+  {
+   "record_id": "valuepickr_ab8c8ea6814d",
+   "field": "theme:conflicting_advice",
+   "my_label": "True",
+   "engine_output": "False",
+   "likely_cause": "engine missed it"
+  },
+  {
+   "record_id": "valuepickr_ab8c8ea6814d",
+   "field": "theme:long_term_discipline",
+   "my_label": "False",
+   "engine_output": "True",
+   "likely_cause": "engine over-coded"
+  }
+ ],
  "corrections": [
   [
    "2026-11-02",

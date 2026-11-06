@@ -72,11 +72,34 @@ def parse_themes(cell: str) -> dict:
     return out
 
 
-def score() -> None:
+BOUNDARIES = [({"payment_autopay_failure", "app_reliability_errors"}, "codebook boundary: payment failure vs app processing error"),
+              ({"early_confusion_first_months", "conflicting_advice", "return_expectations", "other"},
+               "codebook boundary: early confusion vs advice / expectations"),
+              ({"switching_plan_or_platform", "platform_or_fund_initiated"}, "codebook boundary: switching vs platform-initiated"),
+              ({"support_trust_breakdown", "app_reliability_errors"}, "codebook boundary: support vs app error")]
+
+
+def cause_of(f: dict) -> str:
+    """Deterministic first-pass cause for a disagreement; the PM can overrule it in the failures table."""
+    field, mine, eng = f["field"], str(f["my_label"]), str(f["engine_output"])
+    if field == "sip_status":
+        if mine not in {"stopped", "paused", "reduced", "continuing", "unclear"}:
+            return "label outside the scheme"
+        return "engine stricter: status implied, not stated" if eng == "unclear" else "different reading of status"
+    if field == "first_time_investor":
+        return "engine stricter: only codes what the text states" if eng == "unclear" else "different reading"
+    if field == "time_since_start":
+        return "engine missed or did not infer a stated period" if eng == "unclear" else "different period from the same text"
+    if field.startswith("theme:"):
+        return "engine over-coded or used a neighbouring theme" if eng == "True" else "engine missed it or used a neighbouring theme"
+    return "severity judgement"
+
+
+def score(engine_file: str = "extractions.jsonl", suffix: str = "") -> None:
     codebook = yaml.safe_load(config.CODEBOOK_PATH.read_text())
     theme_ids = [t["id"] for t in codebook["themes"]]
     labelled = list(csv.DictReader(open(config.OUTPUT_DIR / "golden_set_labelled.csv", encoding="utf-8")))
-    engine = {r["record_id"]: r for r in read_jsonl(config.PROCESSED_DIR / "extractions.jsonl")}
+    engine = {r["record_id"]: r for r in read_jsonl(config.PROCESSED_DIR / engine_file)}
     agree = defaultdict(lambda: [0, 0])  # field -> [agreements, comparisons]
     failures = []
 
@@ -109,6 +132,26 @@ def score() -> None:
                     failures.append({"record_id": rid, "field": f"severity:{tid}", "my_label": mine[tid],
                                      "engine_output": eng[tid], "likely_cause": "severity judgement"})
 
+    # Theme precision / recall over positive labels (the per-theme table is dominated by true negatives)
+    tp = fp = fn = overlap = 0
+    for row in labelled:
+        e = engine.get(row["record_id"])
+        if not e or e.get("status") != "ok":
+            continue
+        mine = {t for t in parse_themes(row.get("themes", "")) if t in theme_ids or t == "other"}
+        eng = {t["theme_id"] for t in e["themes"] if t.get("verified")}
+        tp += len(mine & eng); fp += len(eng - mine); fn += len(mine - eng)
+        overlap += bool(mine & eng) or (not mine and not eng)
+    labels_by_id = {row["record_id"]: row for row in labelled}
+    for f in failures:
+        f["likely_cause"] = f["likely_cause"] or cause_of(f)
+        if f["field"].startswith("theme:") and f["record_id"] in engine:
+            mine = set(parse_themes(labels_by_id[f["record_id"]].get("themes", "")))
+            eng = {t["theme_id"] for t in engine[f["record_id"]]["themes"] if t.get("verified")}
+            for pair, label in BOUNDARIES:
+                if (mine & pair) and (eng & pair) and (mine & pair) != (eng & pair):
+                    f["likely_cause"] = label
+                    break
     theme_fields = [k for k in agree if k.startswith("theme:")]
     any_theme = [sum(agree[k][0] for k in theme_fields), sum(agree[k][1] for k in theme_fields)]
     summary = {
@@ -116,10 +159,13 @@ def score() -> None:
         "agreement": {k: {"agree": a, "n": n, "pct": round(100 * a / n, 1) if n else None}
                       for k, (a, n) in sorted(agree.items())},
         "theme_presence_overall_pct": round(100 * any_theme[0] / any_theme[1], 1) if any_theme[1] else None,
+        "theme_precision": round(tp / (tp + fp), 3) if tp + fp else None,
+        "theme_recall": round(tp / (tp + fn), 3) if tp + fn else None,
+        "records_theme_overlap": overlap,
         "span_check": json.loads((config.OUTPUT_DIR / "span_check_stats.json").read_text()),
     }
-    (config.OUTPUT_DIR / "validation_summary.json").write_text(json.dumps(summary, indent=1))
-    with open(config.OUTPUT_DIR / "validation_failures.csv", "w", newline="", encoding="utf-8") as f:
+    (config.OUTPUT_DIR / f"validation_summary{suffix}.json").write_text(json.dumps(summary, indent=1))
+    with open(config.OUTPUT_DIR / f"validation_failures{suffix}.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["record_id", "field", "my_label", "engine_output", "likely_cause"])
         w.writeheader()
         w.writerows(failures)
@@ -129,5 +175,30 @@ def score() -> None:
             print(f"{k:45} {v['agree']}/{v['n']} = {v['pct']}%")
 
 
+def gemini() -> None:
+    """Run the deployed model (Gemini) on the 20 golden records, then score it the same way."""
+    import yaml
+    from sip import llm
+    import s4_extract
+    config.LLM_PROVIDER = "gemini"
+    cb = yaml.safe_load(config.CODEBOOK_PATH.read_text())
+    rel = {r["record_id"]: r for r in read_jsonl(config.PROCESSED_DIR / "relevant.jsonl")}
+    out = []
+    for row in csv.DictReader(open(config.OUTPUT_DIR / "golden_set_labelled.csv", encoding="utf-8")):
+        rid = row["record_id"]
+        cached = llm.cache_get("extract_gemini", rid, config.PROMPT_VERSION_EXTRACT)
+        if cached is None:
+            cached = s4_extract.extract(rel[rid], cb)
+            cached["model"] = config.MODEL_EXTRACT
+            llm.cache_put("extract_gemini", rid, config.PROMPT_VERSION_EXTRACT, cached)
+        out.append(cached)
+    from sip.common import write_jsonl
+    write_jsonl(config.PROCESSED_DIR / "extractions_gemini_golden.jsonl", out)
+    spans = [t["verified"] for x in out if x["status"] == "ok" for t in x["themes"]]
+    print(f"gemini: {len(out)} records, {sum(x['status'] != 'ok' for x in out)} malformed, "
+          f"{sum(x.get('attempts', 1) > 1 for x in out)} needed retry, theme spans verified {sum(spans)}/{len(spans)}")
+    score("extractions_gemini_golden.jsonl", "_gemini")
+
+
 if __name__ == "__main__":
-    {"blank": blank, "score": score}[sys.argv[1] if len(sys.argv) > 1 else "blank"]()
+    {"blank": blank, "score": score, "gemini": gemini}[sys.argv[1] if len(sys.argv) > 1 else "blank"]()

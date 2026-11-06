@@ -19,7 +19,82 @@ Pipeline: collect (public data, usernames stored only as hashes) -> keyword filt
 
 Evidence-span check: 1182 coded values, 0 failures, pass rate 100%.
 
-Golden-set agreement: pending. The PM is labelling `outputs/golden_set_blank.csv`.
+Agreement with the PM's hand labels on 20 records:
+
+| Field | Pipeline engine (Claude, session) | Deployed model (Gemini Flash) |
+|---|---|---|
+| SIP status | 11/20 (55%) | 12/20 (60%) |
+| First-time investor | 11/20 (55%) | 11/20 (55%) |
+| Time since starting | 2/7 (29%) | 2/7 (29%) |
+| Severity within ±1 | 12/12 (100%) | 12/14 (86%) |
+| Theme precision (engine themes the PM also chose) | 55% | 56% |
+| Theme recall (PM themes the engine also chose) | 52% | 61% |
+| Records whose theme sets overlap | 11/20 | 12/20 |
+
+Where the pipeline engine disagreed, by likely cause:
+
+| Likely cause | Disagreements |
+|---|---|
+| engine stricter: only codes what the text states | 9 |
+| engine stricter: status implied, not stated | 7 |
+| codebook boundary: payment failure vs app processing error | 6 |
+| codebook boundary: early confusion vs advice / expectations | 5 |
+| engine missed or did not infer a stated period | 4 |
+| engine missed it | 3 |
+| codebook boundary: support vs app error | 2 |
+| codebook boundary: switching vs platform-initiated | 2 |
+| engine over-coded | 2 |
+| label outside the scheme | 1 |
+| different reading of status | 1 |
+| different period from the same text | 1 |
+
+Every disagreement:
+
+| Record | Field | PM label | Engine | Likely cause |
+|---|---|---|---|---|
+| playstore_dac9d146993c | sip_status | stopped | unclear | engine stricter: status implied, not stated |
+| playstore_dac9d146993c | theme:app_reliability_errors | True | False | engine missed it |
+| playstore_3fa49f13b810 | sip_status | stopped | unclear | engine stricter: status implied, not stated |
+| playstore_3fa49f13b810 | theme:payment_autopay_failure | True | False | codebook boundary: payment failure vs app processing error |
+| playstore_3fa49f13b810 | theme:app_reliability_errors | False | True | codebook boundary: payment failure vs app processing error |
+| playstore_521ffa4138b8 | sip_status | stopped | unclear | engine stricter: status implied, not stated |
+| playstore_3018feafae4f | sip_status | continuing | unclear | engine stricter: status implied, not stated |
+| playstore_3018feafae4f | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| playstore_3018feafae4f | time_since_start | >12m | unclear | engine missed or did not infer a stated period |
+| playstore_98377bef9d3d | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| playstore_98377bef9d3d | time_since_start | 1-6m | unclear | engine missed or did not infer a stated period |
+| playstore_98377bef9d3d | theme:app_reliability_errors | False | True | codebook boundary: support vs app error |
+| playstore_98377bef9d3d | theme:support_trust_breakdown | True | False | codebook boundary: support vs app error |
+| playstore_45ddb6e83981 | theme:payment_autopay_failure | True | False | codebook boundary: payment failure vs app processing error |
+| playstore_45ddb6e83981 | theme:app_reliability_errors | False | True | codebook boundary: payment failure vs app processing error |
+| appstore_b36952b0e8cd | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| appstore_b36952b0e8cd | time_since_start | <1m | unclear | engine missed or did not infer a stated period |
+| appstore_b36952b0e8cd | theme:payment_autopay_failure | True | False | codebook boundary: payment failure vs app processing error |
+| appstore_b36952b0e8cd | theme:app_reliability_errors | False | True | codebook boundary: payment failure vs app processing error |
+| appstore_5c863a2d7879 | sip_status | paused | unclear | engine stricter: status implied, not stated |
+| youtube_ea59eafe4316 | theme:early_confusion_first_months | True | False | codebook boundary: early confusion vs advice / expectations |
+| youtube_ea59eafe4316 | theme:conflicting_advice | False | True | codebook boundary: early confusion vs advice / expectations |
+| youtube_dda8c52fbbc4 | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| youtube_dda8c52fbbc4 | time_since_start | >12m | unclear | engine missed or did not infer a stated period |
+| youtube_dda8c52fbbc4 | theme:early_confusion_first_months | True | False | engine missed it |
+| youtube_3be707d4fe44 | sip_status | starting | unclear | label outside the scheme |
+| youtube_3be707d4fe44 | first_time_investor | yes | unclear | engine stricter: only codes what the text states |
+| youtube_3be707d4fe44 | theme:early_confusion_first_months | True | False | codebook boundary: early confusion vs advice / expectations |
+| youtube_3be707d4fe44 | theme:return_expectations | False | True | codebook boundary: early confusion vs advice / expectations |
+| youtube_2de4d2bdeab0 | sip_status | paused | unclear | engine stricter: status implied, not stated |
+| youtube_2de4d2bdeab0 | first_time_investor | yes | unclear | engine stricter: only codes what the text states |
+| youtube_2de4d2bdeab0 | theme:early_confusion_first_months | True | False | codebook boundary: early confusion vs advice / expectations |
+| youtube_843555b54ba8 | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| tradingqna_4e72cc7b3d19 | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| tradingqna_4e72cc7b3d19 | theme:platform_or_fund_initiated | False | True | codebook boundary: switching vs platform-initiated |
+| tradingqna_4e72cc7b3d19 | theme:switching_plan_or_platform | True | False | codebook boundary: switching vs platform-initiated |
+| tradingqna_ae3ce10612b0 | sip_status | unclear | stopped | different reading of status |
+| tradingqna_ae3ce10612b0 | theme:platform_or_fund_initiated | False | True | engine over-coded |
+| tradingqna_a6b91692c576 | sip_status | continuing | unclear | engine stricter: status implied, not stated |
+| tradingqna_a6b91692c576 | first_time_investor | no | unclear | engine stricter: only codes what the text states |
+| valuepickr_ab8c8ea6814d | time_since_start | 1-6m | 6-12m | different period from the same text |
+| valuepickr_ab8c8ea6814d | theme:conflicting_advice | True | False | engine missed it |
+| valuepickr_ab8c8ea6814d | theme:long_term_discipline | False | True | engine over-coded |
 
 ## 3. Where AI output was rejected or corrected
 

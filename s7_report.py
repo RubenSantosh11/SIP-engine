@@ -47,6 +47,8 @@ def main() -> None:
     spans = json.loads((config.OUTPUT_DIR / "span_check_stats.json").read_text())
     val_path = config.OUTPUT_DIR / "validation_summary.json"
     validation = json.loads(val_path.read_text()) if val_path.exists() else None
+    gem_path = config.OUTPUT_DIR / "validation_summary_gemini.json"
+    validation_gemini = json.loads(gem_path.read_text()) if gem_path.exists() else None
     failures = list(csv.DictReader(open(config.OUTPUT_DIR / "validation_failures.csv", encoding="utf-8"))) \
         if (config.OUTPUT_DIR / "validation_failures.csv").exists() else []
 
@@ -115,7 +117,7 @@ def main() -> None:
                          "addressability": t["addressability"]} for tid, t in themes.items()},
         "early": {"n": len(early), "themes": early_themes.most_common()},
         "first_time_n": len(first_time),
-        "validation": validation, "validation_failures": failures,
+        "validation": validation, "validation_gemini": validation_gemini, "validation_failures": failures,
         "corrections": [[c.strip() for c in l.strip("|").split("|")] for l in corrections],
         "context": context, "context_stats": context_stats,
         "limitations": LIMITATIONS, "addressability_scores": cb["addressability_scores"],
@@ -191,20 +193,32 @@ def write_markdown(d: dict) -> None:
     (config.OUTPUT_DIR / "evidence_log.md").write_text("\n".join(E) + "\n")
 
 
+VAL_ROWS = [("sip_status", "SIP status"), ("first_time_investor", "First-time investor"),
+            ("time_since_start", "Time since starting"), ("severity_within_1", "Severity within ±1")]
+
+
 def validation_md(d: dict) -> list[str]:
     s = d["span_check"]
     out = [f"Evidence-span check: {s['coded_values_with_span']} coded values, {s['span_failures_after_retry']} failures, pass rate {pct(s['span_pass_rate'])}.", ""]
-    v = d["validation"]
+    v, g = d["validation"], d.get("validation_gemini")
     if not v:
         return out + ["Golden-set agreement: pending. The PM is labelling `outputs/golden_set_blank.csv`."]
-    a = v["agreement"]
-    out += ["| Field | Agreement |", "|---|---|"]
-    for f in ["sip_status", "first_time_investor", "time_since_start", "severity_within_1"]:
-        if f in a:
-            out.append(f"| {f} | {a[f]['agree']}/{a[f]['n']} ({a[f]['pct']}%) |")
-    out.append(f"| theme present/absent (all themes x records) | {v['theme_presence_overall_pct']}% |")
+    cell = lambda x, f: (f"{x['agreement'][f]['agree']}/{x['agreement'][f]['n']} ({x['agreement'][f]['pct']:.0f}%)"
+                         if x and f in x["agreement"] and x["agreement"][f]["pct"] is not None else "—")
+    out += ["Agreement with the PM's hand labels on 20 records:", "",
+            "| Field | Pipeline engine (Claude, session) | Deployed model (Gemini Flash) |", "|---|---|---|"]
+    for f, label in VAL_ROWS:
+        out.append(f"| {label} | {cell(v, f)} | {cell(g, f)} |")
+    pr = lambda x, k: f"{100 * x[k]:.0f}%" if x and x.get(k) is not None else "—"
+    out += [f"| Theme precision (engine themes the PM also chose) | {pr(v, 'theme_precision')} | {pr(g, 'theme_precision')} |",
+            f"| Theme recall (PM themes the engine also chose) | {pr(v, 'theme_recall')} | {pr(g, 'theme_recall')} |",
+            f"| Records whose theme sets overlap | {v.get('records_theme_overlap', '—')}/20 | {g.get('records_theme_overlap', '—') if g else '—'}/20 |", ""]
     if d["validation_failures"]:
-        out += ["", "Failures:", "", "| Record | Field | PM label | Engine | Likely cause |", "|---|---|---|---|---|"]
+        from collections import Counter
+        causes = Counter(f["likely_cause"] for f in d["validation_failures"])
+        out += ["Where the pipeline engine disagreed, by likely cause:", "", "| Likely cause | Disagreements |", "|---|---|"]
+        out += [f"| {c} | {n} |" for c, n in causes.most_common()]
+        out += ["", "Every disagreement:", "", "| Record | Field | PM label | Engine | Likely cause |", "|---|---|---|---|---|"]
         for f in d["validation_failures"]:
             out.append(f"| {f['record_id']} | {f['field']} | {f['my_label']} | {f['engine_output']} | {f['likely_cause']} |")
     return out

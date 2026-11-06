@@ -1,0 +1,27 @@
+{
+ "record_id": "playstore_3018feafae4f",
+ "source": "playstore",
+ "sip_status": "unclear",
+ "sip_status_evidence": null,
+ "first_time_investor": "unclear",
+ "first_time_evidence": null,
+ "time_since_start": "unclear",
+ "time_since_start_evidence": null,
+ "themes": [
+  {
+   "theme_id": "payment_autopay_failure",
+   "evidence_span": "Still my bank \nmandate is not being done.",
+   "severity": 3,
+   "confidence": 0.95,
+   "verified": true
+  }
+ ],
+ "one_line_reason": "Bank mandate has not been set up despite starting the SIP.",
+ "status": "ok",
+ "attempts": 1,
+ "sip_status_verified": true,
+ "first_time_verified": true,
+ "time_since_start_verified": true,
+ "model": "gemini-3.8-flash",
+ "codebook_status": "final"
+}

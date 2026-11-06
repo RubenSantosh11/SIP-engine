@@ -1,0 +1,44 @@
+golden_id,record_id,source,app,context,text,sip_status,first_time_investor,time_since_start,themes,notes
+1,playstore_dac9d146993c,playstore,angelone,,"Extremely user-unfriendly and cluttered app! Navigating and managing basic Mutual Fund investments or monthly SIP payments is a complete nightmare. Confusing Interface: Basic options like making a simple manual SIP payment or making a one-time investment into an existing fund are hidden behind confusing menus. Flawed Workflows: If an SIP cancellation is in progress or AutoPay isn't enabled, the app completely blocks normal payment buttons instead of offering a clear workaround. Poor User Guidance",stopped,unclear,,missing_sip_controls: 3; app_reliability_errors: 3,
+2,playstore_3fa49f13b810,playstore,coin,,"Today I experienced payments are not updating in the app, even after paying it is still there in the queue of pending SIP payment. After bulk payment unable to identify which payment has been done and which is pending. Dissatisfied with this app.",stopped,unclear,,payment_autopay_failure: 3,
+3,playstore_521ffa4138b8,playstore,etmoney,,Major bug issue in the app. the SIP option does not work now. when i try to open it the page does try to open a bit closes down midway and says something error happened. please try again later. I have reinstalled the app and the same issue is persisting still. i am unable to stop SIP. and this is a serious flaw.,stopped,unclear,,app_reliability_errors: 3; missing_sip_controls: 3,tried to stop SIP
+4,playstore_3018feafae4f,playstore,fundsindia,,"Worst service ever, I have started SIP from January 2018. Still my bank 
+mandate is not being done.",continuing,no,>12m,payment_autopay_failure: 3,
+5,playstore_b3dc0f3f0776,playstore,groww,,mandate nhi aate time pr.,unclear,unclear,,payment_autopay_failure: 3,
+6,playstore_98377bef9d3d,playstore,indmoney,,"I have been investing in Mutual funds SIPs for months through this app, now it shows security maintenance for some days and i can't even login my account for days...it keep asking to restart the app but it fails every time. please review it ASAP or give me customer care number for your app to talk.",continuing,no,1-6m,support_trust_breakdown: 3,
+7,playstore_45ddb6e83981,playstore,paytmmoney,,I will open daily sip from paytm and when I withdraw the money from paytm they doesn't deposit money in my account this is very dificult for me and I chat with help line but they doesn't help me very bad app for trading,unclear,unclear,,support_trust_breakdown: 3; payment_autopay_failure: 3,
+8,playstore_ac3691d99272,playstore,upstox,,App updated but not able to do the SIP payment. option not showing for payment.,unclear,unclear,,disruptive_app_updates: 3,
+9,appstore_7e6e3c1d8bb7,appstore,etmoney,,"App crash
+Not able to change sip value,app crashed while modifying sip value.Even after frequent updates,still feel like garbage app",unclear,unclear,,app_reliability_errors: 3,
+10,appstore_b36952b0e8cd,appstore,groww,,"Sip Declined
+On groww when I will do sip it is rejected after 7-8 days dont know why it is happened with 4 different mutual funds, I have raised a ticket but they are not responding worst experience ever, I will not use groww anymore",stopped,no,<1m,support_trust_breakdown: 3; payment_autopay_failure: 3,
+11,appstore_5c863a2d7879,appstore,indmoney,,"Unintuitive app
+No way to remove/delete SIPs from the list all I can do is pause. no way to use wallet balance for SIP, I have no idea why this is not one of the priorities. Instead we get a mindless AI. I am sick of every app implementing a useless AI on top.
+
+If it can’t be my broker then put it in the bin, do not release it",paused,unclear,,missing_sip_controls: 3,
+12,youtube_ea59eafe4316,youtube,,We Tested What Happens When You Stop Your SIP During a Crash,"Very informative and nicely explained. 
+
+I have been going through the same confusion and decided to pause.
+
+Good to know it won't make a lot of difference.",paused,unclear,,early_confusion_first_months: 3,
+13,youtube_dda8c52fbbc4,youtube,,Stop your SIPs right now says Shankar Sharma,Mene to 2021 me hi stop kr di thi,stopped,no,>12m,early_confusion_first_months: 3,
+14,youtube_3be707d4fe44,youtube,,Groww में SIP कैसे करें? - How To Start Mutual Fund SIP in Groww App 2026,"Sir Ji Namaskar 🙏 
+Im From Surat, Gujarat I'm New Subscriber ❤. 
+Me 10,000₹/ Month 40 saal ke Liye Nifty 50 me SIP karna Chahta Hu. To kya Safe Rahega ?  Aur 12 % Return Milega Ki nahi Kyuki Mera Short Term Invest nahi Long Time ke liye hai . 
+
+I wait your Reply",starting,yes,,early_confusion_first_months: 3,asking about a long term plan query
+15,youtube_2de4d2bdeab0,youtube,,Groww में SIP कैसे करें 2026? How to Start Mutual Funds SIP in Groww App in Hindi,Mera sip Chalu nhi huaa sip Chalu karney ke liye Kya Kya lagta hai grow app par,paused,yes,,early_confusion_first_months: 3,steps to start details
+16,youtube_843555b54ba8,youtube,,Should You Stop Your SIP Now ?? Indian Market Update !!,I'm step up my sip by value and top-up my fund,continuing,no,,long_term_discipline: 3,increasing amount in SIP
+17,tradingqna_4e72cc7b3d19,tradingqna,,How to convert Coin SIP to Coin AMC SIP,"No. I used to invest in Reliance small cap fund through Coin. Then Reliance small cap fund stopped taking lump sum investment.
+ Now i have started AMC sip in Reliance small cap fund through Coin, folio number is same.",continuing,no,,switching_plan_or_platform: 3,switching SIP provider
+18,tradingqna_ae3ce10612b0,tradingqna,,Motilal Oswal - Temporary Suspension of Lumpsum Investments,"@Bhuvan 
+ Why SIP also cancelled for the above mutual funds…",unclear,unclear,unclear,unclear,not detailed query
+19,tradingqna_a6b91692c576,tradingqna,,About MF Regular plan,"Hi Friends,
+ Since 2 years ago I have started SIP in Mutual Fund regular plan. Now here I come to know the difference between mutual fund direct and Regular plan. So, why do I unnecessarily give the commission from my profit to the broker? because I don’t know at the time of started SIP in regular plan. So, do I redeem my SIP or continue to invest? Pls suggest. Thanks",continuing,no,>12m,conflicting_advice: 2,general info question
+20,valuepickr_ab8c8ea6814d,valuepickr,,Mutual Fund Portfolio Review- Suggestions,"hi guys ,i’m new to stock market …started SIPs in march 25
+right now i’m in
+ parag parekh flexi cap 60% of PF
+ TATA small cap 40% of PF
+ will soon add a mid cap fund
+ → idea is to just keep investing for next 20 years.
+ pls. suggest if i’m missing anything important in my portfolio",continuing,yes,1-6m,conflicting_advice: 2,general info question
