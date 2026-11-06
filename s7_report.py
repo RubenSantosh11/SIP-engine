@@ -123,6 +123,9 @@ def main() -> None:
         "limitations": LIMITATIONS, "addressability_scores": cb["addressability_scores"],
     }
     (config.OUTPUT_DIR / "report_data.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
+    # Same data for the deployed site (public/): aggregates, public quotes and record ids only
+    (config.ROOT / "public" / "data").mkdir(parents=True, exist_ok=True)
+    (config.ROOT / "public" / "data" / "report_data.json").write_text(json.dumps(data, ensure_ascii=False))
     write_markdown(data)
     print("wrote report_data.json, results.md, evidence_log.md, sources_volume.csv, top_quotes.csv")
 

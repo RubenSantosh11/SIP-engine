@@ -3,20 +3,23 @@
 Free-tier limits change often, so the numbers below are deliberately conservative.
 Raise them only after checking your quota in AI Studio.
 """
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+ON_VERCEL = bool(os.environ.get("VERCEL"))  # the deployed "Try it" app
 RAW_DIR = ROOT / "data" / "raw"
 PROCESSED_DIR = ROOT / "data" / "processed"
-CACHE_DIR = ROOT / "data" / "cache"
-STATE_DIR = ROOT / "data" / "state"
+# Vercel's filesystem is read-only except /tmp
+CACHE_DIR = Path("/tmp/sip/cache") if ON_VERCEL else ROOT / "data" / "cache"
+STATE_DIR = Path("/tmp/sip/state") if ON_VERCEL else ROOT / "data" / "state"
 OUTPUT_DIR = ROOT / "outputs"
 
 # ---- LLM provider ----
 # "session": prompts are written to data/session/requests/ and answered by Claude (Opus) inside a
 #            Claude Code session; answers land in data/session/answers/. No API key needed.
 # "gemini":  the Gemini REST API (needs GEMINI_API_KEY with available quota or credits).
-LLM_PROVIDER = "session"
+LLM_PROVIDER = os.environ.get("SIP_LLM_PROVIDER", "gemini" if ON_VERCEL else "session")
 SESSION_DIR = ROOT / "data" / "session"
 SESSION_MODEL_LABEL = "claude-opus (Claude Code session)"
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
@@ -28,12 +31,12 @@ TEMPERATURE = 0.0
 # The pipeline stops cleanly when the budget is hit; re-run tomorrow to resume.
 DAILY_REQUEST_BUDGET = {
     MODEL_FILTER: 400,
-    MODEL_EXTRACT: 200,
+    MODEL_EXTRACT: 300 if ON_VERCEL else 200,
 }
-MIN_SECONDS_BETWEEN_CALLS = 6.0   # about 10 requests per minute, under typical free-tier RPM
-MAX_RETRIES = 5                   # on 429 / 5xx
-BACKOFF_BASE_SECONDS = 4.0        # 4, 8, 16, 32, 64 s
-REQUEST_TIMEOUT_SECONDS = 90
+MIN_SECONDS_BETWEEN_CALLS = 0.0 if ON_VERCEL else 6.0   # pipeline: about 10 requests per minute
+MAX_RETRIES = 1 if ON_VERCEL else 5                      # on 429 / 5xx
+BACKOFF_BASE_SECONDS = 2.0 if ON_VERCEL else 4.0         # pipeline: 4, 8, 16, 32, 64 s
+REQUEST_TIMEOUT_SECONDS = 25 if ON_VERCEL else 90
 
 # Bump a version whenever its prompt changes; cached results are keyed by record_id + version.
 PROMPT_VERSION_FILTER = "filter-v2"
@@ -159,7 +162,8 @@ MAX_ONE_LINE_REASON_WORDS = 20
 
 # ---- Streamlit "Try it" tab ----
 APP_MAX_INPUT_CHARS = 2000
-APP_MAX_CALLS_PER_SESSION = 5
-APP_MIN_SECONDS_BETWEEN_CALLS = 20
+APP_MIN_INPUT_CHARS = 15
+APP_MAX_CALLS_PER_IP_PER_HOUR = 10       # best effort: counted per serverless instance
+APP_DAILY_REQUEST_BUDGET = 300           # Gemini requests per day per instance; billing alert is the real backstop
 
 CODEBOOK_PATH = ROOT / "codebook.yaml"
